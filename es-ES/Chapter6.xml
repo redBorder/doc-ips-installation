@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2015">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Gestión de fuentes de reglas y versiones</title>
+	<para>Las reglas son patrones de detección de anomalías por parte de Snort. 
+	La plataforma redBorder nos permite realizar la gestión de las reglas de Snort con una interfaz gráfica y de fácil manejo, desde su descarga hasta la aplicación en nuestros sensores. </para>
+	<para>Para acceder al panel de gestión de fuentes de reglas y versiones hay que dirigirse a la sección <literal>Tools</literal> y seleccionar la opción <literal>Rule's versions.</literal></para>
+	<mediaobject>
+		<imageobject>
+			<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img001.png"/>
+		</imageobject>
+		<caption>
+			<para>Tools->Rule's versions</para>
+		</caption>
+	</mediaobject>
+	<section>
+		<title>Panel de administración de reglas: Tools->Rule's versions</title>
+		<para>En esta interfaz el usuario visualiza dos secciones diferenciadas:</para>
+		<itemizedlist="bullet">
+			<listitem>
+				<para><emphasis role="bold">Fuentes de reglas:</emphasis> en este apartado se administran las fuentes de reglas.</para>	
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Versiones:</emphasis> en este apartado se visualizan todas las versiones de las reglas que se han descargado y 
+				que se encuentran disponibles para la creación y aplicación de políticas a los sensores. </para>
+			</listitem>
+		</itemizedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img002.png"/>		
+			</imageobject>
+			<caption>
+				<para>Panel de administración de reglas: Tools->Rule's versions</para>
+			</caption>
+		</mediaobject>
+		<section>
+			<title>Panel de administración de fuentes de reglas</title>
+			<para>En este apartado el usuario puede gestionar el origen de las reglas que se van a utilizar para la creación de las políticas que se aplicarán al sensor. </para>
+			<para>La dirección de origen de las reglas es doble: <emphasis role="bold"> dirección URL</emphasis> (fuentes remotas) o bien, la subida de un <emphasis role="bold"> archivo local</emphasis> (fuentes locales) al Manager. </para>
+			<para>El redBorder Manager gestiona por defecto reglas procedentes de fuentes oficiales de Snort.  Existen dos tipos de reglas admitidas en redBorder: </para>
+			<itemizedlist mark="circle">
+				<listitem>
+					<para>VRT: para la gestión de las fuentes de reglas VRT el usuario deberá registrarse previamente en Snort y obtener un código de acceso (oinkcode) que variará 
+					según se adscriba al plan Community o a un plan de pago. Al introducirlo en redborder, el sistema reconocerá el tipo de plan asociado al código.</para>				
+				</listitem>
+				<listitem>
+					<para>Emerging Threats: en el caso de esta fuente de reglas, encontramos dos repositorios <emphasis role="bold">Emerging threats (Community) y etpro (Professional).</emphasis>
+					En el caso de la fuente etpro es necesaria la obtención de un código de acceso que se obtiene a través de la web de Snort.</para>
+				</listitem>
+			</itemizedlist>
+			<note>
+				<title>Nota</title>
+				<para>Más información sobre las fuentes de reglas en <ulink url="https://www.snort.org/products/"></ulink></para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img003.png"/>		
+				</imageobject>
+				<caption>
+					<para>Fuentes de reglas</para>
+				</caption>
+			</mediaobject>
+			<para>Como se puede observar en la imagen, el apartado de Fuentes de reglas nos ofrece un listado de las fuentes que han sido añadidas o subidas 
+			incluyendo la siguiente información: nombre, descripción, URL, MD5 URL, sensor y código (se indica si aplica y si se ha validado o no).</para>
+			<para>Para <emphasis role="bold">habilitar o deshabilitar</emphasis> una fuente de reglas para la descarga de versiones de reglñas, basta con activar el check. En el margen derecho de cada una de las filas se encuentran 
+			los iconos de "Edición" (para modificar URL de origen de las reglas o añadir una descripción) y eliminación.</para>
+			<para><emphasis role="bold">Añadir o subir fuente de reglas</emphasis></para>
+			<para>Para añadir una nueva fuente de reglas existen dos vías según se realice la subida a través de un archivo local o una URL de destino:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><literal>Upload Source:</literal> subida de archivo local. </para>
+				</listitem>
+				<listitem>
+					<para><literal>+Add Source:</literal> subida de fuente de reglas mediante enlace URL.</para>
+				</listitem>
+			</itemizedlist>		
+		</section>
+		<section>
+			<title>Versiones de las reglas</title>
+			<para>Para obtener una "captura" de las reglas que existen en una fuente de reglas es necesario "forzar su actualización". Esta acción creará una <emphasis role="bold">versión</emphasis> que contendrá las reglas que existen en una fuente
+			y el estado de las mismas en ese preciso momento.</para>
+			<para>El procedimiento es muy sencillo: seleccionar la fuente o fuentes de reglas de las que se quiere obtener una versión y hacer clic en el botón <literal>Force Update</literal> 
+			que se encuentra situado en el margen superior derecho de la pantalla. </para>
+			<para>En el apartado de versiones de las reglas el usuario puede visualizar un listado de las versiones capturadas clasificadas por fuente de reglas. En cada una de ellas se ofrece la siguiente información:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Fecha de "captura" de la versión</para>
+				</listitem>
+				<listitem>
+					<para>Políticas: número de políticas que se han creado en base a esas reglas</para>
+				</listitem>
+				<listitem>
+					<para>Número de reglas que hay en esa versión</para>
+				</listitem>
+				<listitem>
+					<para>Nuevas reglas: nuevas reglas que se han encontrado para esa versión (en comparación con la anterior)</para>
+				</listitem>
+				<listitem>
+					<para>Reglas modificadas: número de reglas que han sido mdificadas de una versión a otra</para>
+				</listitem>
+				<listitem>
+					<para>Reglas eliminadas: número de reglas que han sido eliminadas de una versión a otra</para>
+				</listitem>
+			</itemizedlist>	
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img004.png"/>		
+				</imageobject>
+				<caption>
+					<para>Versiones de reglas</para>
+				</caption>
+			</mediaobject> 
+			<para>Cada vez que se "fuerza" una actualización de las reglas, obtendremos una nueva versión de las reglas manteniendo la versión anterior disponible. 
+			El usuario puede borrar en cualquier momento las versiones que no esté utlizando haciendo clic en el botón Eliminar.</para>
+			<para>Es posible añadir una etiqueta a cada versión de reglas para facilitar su identificación. Para ello, hacer clic en el icono editar y seleccionar la opción <literal>Edit.</literal> 
+			El usuario visualizará una ventana emergente en la que insertar la etiqueta (Tag) y activar la versión de las reglas haciendo clic en Checked.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img005.png"/>		
+				</imageobject>
+				<caption>
+					<para>Editar versiones de reglas</para>
+				</caption>
+			</mediaobject> 
+			<para>Para conocer el contenido de cada una de las versiones de las reglas basta con hacer clic en el icono Editar y seleccionar la opción <literal>Rules.</literal> El usuario tendrá acceso a una
+			interfaz en la que se muestra el tipo de reglas que contiene esa versión, los mensajes asociados a esas reglas y el número de reglas que activan dicho mensaje.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img006.png"/>		
+				</imageobject>
+				<caption>
+					<para>Detalle de reglas por versión: tipos de reglas y mensaje que activan</para>
+				</caption>
+			</mediaobject> 
+			<para>Una vez que tenemos versiones de las reglas disponibles es posible crear políticas de reglas y aplicarlas a cada uno de los sensores IDS/IPS que hayamos registrado en el Manager.</para>
+		</section>
+	</section> 	
+</chapter>
