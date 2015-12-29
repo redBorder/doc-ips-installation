@@ -7,146 +7,138 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Creación de una Signature Policy en redBorder</title>
-	<para>Una vez que disponemos de versiones de reglas descargadas en la sección <literal>Tools>Rule's version</literal> ya estamos en condiciones de poder crear una nueva <emphasis role="bold">Signature policy.</emphasis></para> 
+	<title>Gestión de fuentes de reglas y versiones</title>
+	<para>Las reglas son patrones de detección de anomalías por parte de Snort. 
+	La plataforma redBorder nos permite realizar la gestión de las reglas de Snort con una interfaz gráfica y de fácil manejo, desde su descarga hasta la aplicación en nuestros sensores. </para>
+	<para>Para acceder al panel de gestión de fuentes de reglas y versiones hay que dirigirse a la sección <literal>Tools</literal> y seleccionar la opción <literal>Rule's versions.</literal></para>
 	<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img001.png"/>
-			</imageobject>
-			<caption>
-				<para>Sección Tools: Rule's versions</para>
-			</caption>
-		</mediaobject>
-    <section>
-		<title>Creación de una Signature Policy</title>
-		<para>Una Signature Policy es un subconjunto de reglas o selección obtenida a partir de una o más "versiones" de reglas descargadas.</para>
-		<para>Para crear una Signature Policy nos dirigimos a la sección <literal>Sensors</literal> donde tenemos los sensores registrados, y en las opciones del sensor (icono de la derecha) seleccionamos Signature Policies.</para> 
+		<imageobject>
+			<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img001.png"/>
+		</imageobject>
+		<caption>
+			<para>Tools->Rule's versions</para>
+		</caption>
+	</mediaobject>
+	<section>
+		<title>Panel de administración de reglas: Tools->Rule's versions</title>
+		<para>En esta interfaz el usuario visualiza dos secciones diferenciadas:</para>
+		<itemizedlist="bullet">
+			<listitem>
+				<para><emphasis role="bold">Fuentes de reglas:</emphasis> en este apartado se administran las fuentes de reglas.</para>	
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Versiones:</emphasis> en este apartado se visualizan todas las versiones de las reglas que se han descargado y 
+				que se encuentran disponibles para la creación y aplicación de políticas a los sensores. </para>
+			</listitem>
+		</itemizedlist>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img002.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img002.png"/>		
 			</imageobject>
 			<caption>
-				<para>Sensors: Signature Policies</para>
+				<para>Panel de administración de reglas: Tools->Rule's versions</para>
 			</caption>
 		</mediaobject>
-		<para>En la interfaz de Signature Policy se muestran todas las políticas creadas hasta el momento (en este caso ninguna). Para crear una nueva pulsamos sobre <literal>New Policy.</literal></para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img003.png"/>
-			</imageobject>
-			<caption>
-				<para>Añadir nueva política</para>
-			</caption>
-        </mediaobject>
-        <para>A continuación nos aparecerá una ventana emergente en la que introduciremos los datos de la nueva política a crear: Nombre, descripción, usuario propietario, fuentes de reglas y versiones disponibles. 
-        Debemos de seleccionar la fuente de reglas y la versión de la misma a partir de la cual crearemos la política de firmas (se permiten múltiples).</para> 
-        <mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img004.png"/>
-				</imageobject>
-				<caption>
-					<para>Crear una nueva política de reglas</para>
-				</caption>
-			</mediaobject>   
-        <section>
-			<title>Opciones de políticas de reglas</title>
-			<itemizedlist mark="bullet">
+		<section>
+			<title>Panel de administración de fuentes de reglas</title>
+			<para>En este apartado el usuario puede gestionar el origen de las reglas que se van a utilizar para la creación de las políticas que se aplicarán al sensor. </para>
+			<para>La dirección de origen de las reglas es doble: <emphasis role="bold"> dirección URL</emphasis> (fuentes remotas) o bien, la subida de un <emphasis role="bold"> archivo local</emphasis> (fuentes locales) al Manager. </para>
+			<para>El redBorder Manager gestiona por defecto reglas procedentes de fuentes oficiales de Snort.  Existen dos tipos de reglas admitidas en redBorder: </para>
+			<itemizedlist mark="circle">
 				<listitem>
-					<para><emphasis role="bold">Show only uncommented rules</emphasis></para>
-					<para>Si dejamos marcada esta opción, se omiten las reglas de Snort que vienen comentadas por el proveedor. Las reglas comentadas son reglas que no se recomiendan usar, a menos que sea de forma controlada. 
-					Suelen ser reglas que detectan amenazas antiguas, reglas experimentales, reglas que pueden tener un impacto elevado en el consumo de recursos, etc. (Esta opción se encuentra activada por defecto).</para>
+					<para>VRT: para la gestión de las fuentes de reglas VRT el usuario deberá registrarse previamente en Snort y obtener un código de acceso (oinkcode) que variará 
+					según se adscriba al plan Community o a un plan de pago. Al introducirlo en redborder, el sistema reconocerá el tipo de plan asociado al código.</para>				
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Auto resolve dependencies</emphasis></para>
-					<para>Resuelve de forma automática dependencias entre reglas. (Por defecto activada).</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Add new rules on update</emphasis></para>
-					<para>Añade nuevas reglas de forma automática cuando se actualicen las versiones de reglas. (Esta opción se encuentra desactivada por defecto).</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Block updates available</emphasis></para>
-					<para>Bloquea la actualización de reglas para esta política. (Esta opción se encuentra desactivada por defecto).</para>
+					<para>Emerging Threats: en el caso de esta fuente de reglas, encontramos dos repositorios <emphasis role="bold">Emerging threats (Community) y etpro (Professional).</emphasis>
+					En el caso de la fuente etpro es necesaria la obtención de un código de acceso que se obtiene a través de la web de Snort.</para>
 				</listitem>
 			</itemizedlist>
-        </section>
-        <section>
-			<title>Añadir reglas para crear nuestra política de firmas</title>
-			<para>Una vez pulsamos sobre <literal>Create Policy</literal> accederemos al menú de edición de las políticas. En éste nos aparecerán, según diferentes categorías y niveles de subcategorías, las reglas que podemos usar para la creación de nuestras políticas. </para>
-			<para>En principio, el número de reglas que tenemos es 0. Para poder ir  creando nuestra política, seleccionamos las reglas, 
-			o categorías de reglas que nos interesen y <emphasis role="bold">le asignamos la acción que creamos conveniente (alert, drop, sdrop, ...). </emphasis> Podemos usar diferentes acciones para cada regla o conjunto de reglas.</para>
-			<para><emphasis role="bold">Acciones disponibles para cada regla o conjunto de reglas</emphasis></para>
-			<itemizedlist mark="bullet">
-				<listitem>
-					<para><emphasis role="bold">Pass:</emphasis>  permite que el paquete pase y que no se apliquen las acciones de las reglas con las que este coincide.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Alert:</emphasis> informa sobre el paquete tras las inspección realizada por Snort.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Drop:</emphasis> en caso de que el paquete coincida con la regla, se paraliza y le es notificado al usuario.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Sdrop (Silent Drop):</emphasis> bloquea el paquete, pero no se notifica al usuario. </para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Clear:</emphasis> No aplica acciones; limpia todas las acciones que existan sobre esa regla.</para>
-				</listitem>
-			</itemizedlist>
+			<note>
+				<title>Nota</title>
+				<para>Más información sobre las fuentes de reglas en <ulink url="https://www.snort.org/products/"></ulink></para>
+			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img005.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img003.png"/>		
 				</imageobject>
 				<caption>
-					<para>Signature Policies de un sensor: acciones disponibles para un conjunto de reglas</para>
+					<para>Fuentes de reglas</para>
 				</caption>
 			</mediaobject>
-			<para>Las acciones podemos cambiarlas directamente en el listado de  reglas o categorías, o seleccionando la regla  y pulsando el botón del margen superior derecho <literal>Change action</literal>.</para>
-			<para>Una vez que se han cambiado las acciones de las reglas que nos interesen, el número de reglas totales se habrá incrementado, tal y como muestra la siguiente captura de pantalla:</para>
+			<para>Como se puede observar en la imagen, el apartado de Fuentes de reglas nos ofrece un listado de las fuentes que han sido añadidas o subidas 
+			incluyendo la siguiente información: nombre, descripción, URL, MD5 URL, sensor y código (se indica si aplica y si se ha validado o no).</para>
+			<para>Para <emphasis role="bold">habilitar o deshabilitar</emphasis> una fuente de reglas para la descarga de versiones de reglñas, basta con activar el check. En el margen derecho de cada una de las filas se encuentran 
+			los iconos de "Edición" (para modificar URL de origen de las reglas o añadir una descripción) y eliminación.</para>
+			<para><emphasis role="bold">Añadir o subir fuente de reglas</emphasis></para>
+			<para>Para añadir una nueva fuente de reglas existen dos vías según se realice la subida a través de un archivo local o una URL de destino:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><literal>Upload Source:</literal> subida de archivo local. </para>
+				</listitem>
+				<listitem>
+					<para><literal>+Add Source:</literal> subida de fuente de reglas mediante enlace URL.</para>
+				</listitem>
+			</itemizedlist>		
+		</section>
+		<section>
+			<title>Versiones de las reglas</title>
+			<para>Para obtener una "captura" de las reglas que existen en una fuente de reglas es necesario "forzar su actualización". Esta acción creará una <emphasis role="bold">versión</emphasis> que contendrá las reglas que existen en una fuente
+			y el estado de las mismas en ese preciso momento.</para>
+			<para>El procedimiento es muy sencillo: seleccionar la fuente o fuentes de reglas de las que se quiere obtener una versión y hacer clic en el botón <literal>Force Update</literal> 
+			que se encuentra situado en el margen superior derecho de la pantalla. </para>
+			<para>En el apartado de versiones de las reglas el usuario puede visualizar un listado de las versiones capturadas clasificadas por fuente de reglas. En cada una de ellas se ofrece la siguiente información:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Fecha de "captura" de la versión</para>
+				</listitem>
+				<listitem>
+					<para>Políticas: número de políticas que se han creado en base a esas reglas</para>
+				</listitem>
+				<listitem>
+					<para>Número de reglas que hay en esa versión</para>
+				</listitem>
+				<listitem>
+					<para>Nuevas reglas: nuevas reglas que se han encontrado para esa versión (en comparación con la anterior)</para>
+				</listitem>
+				<listitem>
+					<para>Reglas modificadas: número de reglas que han sido mdificadas de una versión a otra</para>
+				</listitem>
+				<listitem>
+					<para>Reglas eliminadas: número de reglas que han sido eliminadas de una versión a otra</para>
+				</listitem>
+			</itemizedlist>	
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img006.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img004.png"/>		
 				</imageobject>
 				<caption>
-					<para>Cambiar acción de regla aplicada a un sensor</para>
+					<para>Versiones de reglas</para>
 				</caption>
-			</mediaobject>		
-        </section>
-        <section>
-			<title>Asignación de la política de firmas a un sensor</title>
-			<para>Ya tenemos creada nuestra "Signature policy". Esta se encuentra disponible para asignarla a un sensor IPS. 
-			Para ello, seleccionamos un sensor del listado y en el menú desplegable seleccionamos la opción <literal>Signature Policies</literal>. 
-			Al acceder a la interfaz de políticas de reglas podremos visualizar la nueva política que hemos creado.</para>
+			</mediaobject> 
+			<para>Cada vez que se "fuerza" una actualización de las reglas, obtendremos una nueva versión de las reglas manteniendo la versión anterior disponible. 
+			El usuario puede borrar en cualquier momento las versiones que no esté utlizando haciendo clic en el botón Eliminar.</para>
+			<para>Es posible añadir una etiqueta a cada versión de reglas para facilitar su identificación. Para ello, hacer clic en el icono editar y seleccionar la opción <literal>Edit.</literal> 
+			El usuario visualizará una ventana emergente en la que insertar la etiqueta (Tag) y activar la versión de las reglas haciendo clic en Checked.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img007.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img005.png"/>		
 				</imageobject>
 				<caption>
-					<para>Asignar la Signature Policy a un sensor</para>
+					<para>Editar versiones de reglas</para>
 				</caption>
-			</mediaobject>	
+			</mediaobject> 
+			<para>Para conocer el contenido de cada una de las versiones de las reglas basta con hacer clic en el icono Editar y seleccionar la opción <literal>Rules.</literal> El usuario tendrá acceso a una
+			interfaz en la que se muestra el tipo de reglas que contiene esa versión, los mensajes asociados a esas reglas y el número de reglas que activan dicho mensaje.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img007b.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img006.png"/>		
 				</imageobject>
 				<caption>
-					<para>Asignar la Signature Policy a un sensor: confirmar la aplicación en dicho sensor</para>
+					<para>Detalle de reglas por versión: tipos de reglas y mensaje que activan</para>
 				</caption>
-			</mediaobject>	
-			<para>Para asignar esta política al sensor  basta con pulsar el icono en el que figura la leyenda <emphasis role="bold">Assign</emphasis>. 
-			La política seleccionada quedará rotulada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior.
-			Visualizaremos la siguiente pantalla.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img008.png"/>
-				</imageobject>
-				<caption>
-					<para>Signature Policy aplicada a un sensor</para>
-				</caption>
-			</mediaobject>	
-			<para>En esta pantalla tendremos un resumen de los cambios que vamos a realizar. Si todo es correcto pulsamos sobre <literal>Update</literal> para aplicar la nueva política al sensor.</para>
-			<para>Este proceso puede durar varios minutos, dependiendo del número de reglas a aplicar. Todo el proceso se realizará con un trabajo en segundo plano que podremos consultar en <literal>Tools>Worker and Job Queue.</literal></para>
-			<para>Una vez haya terminado el proceso de asignación, dicho sensor contará con la política aplicada.</para>
-        </section>
-    </section>
+			</mediaobject> 
+			<para>Una vez que tenemos versiones de las reglas disponibles es posible crear políticas de reglas y aplicarlas a cada uno de los sensores IDS/IPS que hayamos registrado en el Manager.</para>
+		</section>
+	</section> 	
 </chapter>

@@ -7,7 +7,7 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Sensores IPS/IDS</title>
+	<title>Instalación y registro de los sensores IPS/IDS</title>
 	<para>El proceso de configuración y registro de los sensores IDS/IPS consta fundamentalmente de dos pasos:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
@@ -20,7 +20,7 @@
 	<para>Al poner en funcionamiento el asistente de instalación, visualizaremos el menú principal en el que encontrará la opción <literal>Install Sensor IPS</literal>:</para>
 	<mediaobject>
 		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img000.png"/>
+			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img000.png"/>
 		</imageobject>
 		<caption>
 			<para>Asistente de instalación redBorder: Instalar sensor IPS</para>
@@ -45,7 +45,7 @@
 	<para>Este proceso es idéntico al expuesto en la <emphasis role="bold">Finalización del proceso de instalación del asistente para la configuración del Manager.</emphasis></para>
 	<mediaobject>
 		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img001.png"/>
+			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img001.png"/>
 	    </imageobject>
 		<caption>
 			<para>Login</para>
@@ -53,7 +53,7 @@
 	</mediaobject>
 	<mediaobject>
 		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img002.png"/>
+			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img002.png"/>
 	    </imageobject>
 	    <textobject>
 			<phrase>rb_sysconf: lanzar el menú de configuración de los sensores IPS</phrase>
@@ -88,7 +88,7 @@
 		</orderedlist>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img003.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img003.png"/>
 			</imageobject>
 			<textobject>
 				<phrase>Menú de configuración de los sensores IPS</phrase>
@@ -127,7 +127,7 @@
 		<para>Seleccione la opción <literal>Network Configuration</literal> insertando la opción <keycap>2</keycap> y pulsando <keycap>Enter.</keycap></para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img004.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img004.png"/>
 			</imageobject>
 		<caption>
 			<para>Asignación automática de segmentos con bypass</para>
@@ -136,7 +136,7 @@
 		<para>En caso de que el sistema reconozca interfaces con <emphasis>bypass</emphasis> estas serán asignadas automáticamente a los segmentos.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img005.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img005.png"/>
 			</imageobject>
 			<caption>
 				<para>Proceso de puesta en red de los sensores</para>
@@ -157,7 +157,7 @@
 		<para>Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos se encuentran disponibles para la creación del bonding.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img006.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img006.png"/>
 			</imageobject>
 			<textobject>
 				<phrase>Insertar puerto para el bonding</phrase>
@@ -179,7 +179,7 @@
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter.</keycap></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img007.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img007.png"/>
 				</imageobject>
 				<textobject>
 					<phrase>Creación de bonding: asignación de puertos</phrase>
@@ -201,7 +201,7 @@
 			<para>En caso de que desee insertar un nuevo puerto, teclee <keycap>y</keycap>.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img008.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img008.png"/>
 				</imageobject>
 			<textobject>
 				<phrase>Añadir nuevo puerto al bonding</phrase>
@@ -235,7 +235,7 @@
 			<para>Para insertar una ruta manualmente, seleccione la opción <keycap>y</keycap> en la línea <literal>Insert a route for this bonding (y/N)?:</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img009.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img009.png"/>
 				</imageobject>
 				<caption>
 				<para>Añadir manualmente una ruta al bonding</para>
@@ -244,7 +244,7 @@
 			<para>Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el Bonding se ha creado con éxito: <literal>Bonding 0 created successfully.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img010.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img010.png"/>
 				</imageobject>
 			</mediaobject>
 		</section>
@@ -275,7 +275,7 @@
 		<para>Una vez introducida esta información, el sistema avisará de que se ha aplicado esta configuración de manera correcta.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img011.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img011.png"/>
 			</imageobject>
 		<caption>
 			<para>Configuración DNS y dominio</para>
@@ -330,7 +330,7 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img012.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img012.png"/>
 				</imageobject>
 			<caption>
 				<para>Asignar puertos al segmento</para>
@@ -359,7 +359,7 @@
 			<para>Introduzca el número de puerto en la línea <literal>Insert segment second port [3]:</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img013.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img013.png"/>
 				</imageobject>
 			<caption>
 				<para>Asignar un nuevo puerto al segmento</para>
@@ -368,7 +368,7 @@
 			<para>Una vez que se han asignado los dos puertos a un segmento, el sistema le avisará de que el segmento ha sido creado correctamente: <literal>Segment 0 created successfully.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img014.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img014.png"/>
 				</imageobject>
 			<caption>
 				<para>Confirmación de creación de segmento</para>
@@ -391,7 +391,7 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img015.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img015.png"/>
 				</imageobject>
 			<caption>
 				<para>Resumen de segmentos y puertos asignados</para>
@@ -403,7 +403,7 @@
 			<para>Para volver al menú principal de configuración de red, seleccionar la opción <literal>quit</literal> con la letra <keycap>q.</keycap></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img017.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img017.png"/>
 				</imageobject>
 			<caption>
 				<para>Resumen de segmentos y puertos con bypass</para>
@@ -411,7 +411,7 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img019.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img019.png"/>
 				</imageobject>
 			<caption>
 				<para>Aplicar cambios para la finalización de creación de segmentos</para>
@@ -425,7 +425,7 @@
 		<para>Seleccionar en el Menú de Configuración de Red la opción <literal>4) IPMI Network configuration wizard.</literal></para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img021.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img021.png"/>
 			</imageobject>
 		<caption>
 			<para>Equipos gestionados con IPMI</para>
@@ -437,7 +437,7 @@
 		<para>Al aplicar cambios, el sistema terminará de realizar las configuraciones necesarias para comenzar el registro de los sensores.</para>	
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img020.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img020.png"/>
 			</imageobject>
 		<caption>
 				<para>Finalización de la configuración de los sensores previa al registro en el Manager</para>
@@ -450,7 +450,7 @@
 		<para>Hasta que no se haya completado el registro visualizará un mensaje en el que se indica que los sensores aún no han sido registrados en el Manager. </para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img022.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img022.png"/>
 			</imageobject>
 			<caption>
 				<para>Inicio del regsitro de los sensores en el Manager</para>
@@ -477,7 +477,7 @@
 			<para> A continuación, en la línea <literal>Insert Hostname [rbsensor]:</literal> escribir el nombre que se desea dar al sensor que se va a registrar en el Manager. A partir de este momento, este es el nombre que visualizará en la web cuando acceda al listado de sensores IPS.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img023.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img023.png"/>
 				</imageobject>
 			<caption>
 				<para>Asignar nombre al sensor</para>
@@ -510,7 +510,7 @@
 			<para>Pulsar <keycap>Enter</keycap> para continuar con el proceso de registro.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img024.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img024.png"/>
 			    </imageobject>
 			   <caption>
 				<para>Registro de los sensores en el Manager: Selección hora local</para>
@@ -525,7 +525,7 @@
 			<para> ¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img025.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img025.png"/>
 			    </imageobject>
 			   <caption>
 				<para>Insertar IP master Manager</para>
@@ -553,7 +553,7 @@
 		     </orderedlist>
 		     <mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img026.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img026.png"/>
 				</imageobject>
 			<caption>
 				<para>Finalización del registro de los sensores en el Manager</para>
@@ -563,7 +563,7 @@
 				<para><literal> Sensor registered succesfully with chef server</literal></para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img028.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img028.png"/>
 			        </imageobject>
 			    <caption>
 					<para>Registro del sensor en el servidor</para>
@@ -577,7 +577,7 @@
 			<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito:<literal>(Registered).</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img029.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img029.png"/>
 			    </imageobject>
 			    <caption>
 					<para>Registro del sensor realizado con éxito</para>
@@ -586,7 +586,7 @@
 		    <para> Para salir del asistente de registro de los sensores en el Manager, seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>
 		    <para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web redBorder. 
 		    El usuario puede acceder a la plataforma web redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
-		<para><screen>https://direccion-IP-manager</screen></para>				
+			<para><screen>https://direccion-IP-manager</screen></para>				
 		</section>
 	</section>
 </chapter>
