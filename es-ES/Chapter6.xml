@@ -15,7 +15,7 @@
 			Para acceder a su edición hacer clic sobre el nombre del sensor o bien, en "Editar-><literal>Edit".</literal> (Esta es la vista que se muestra por defecto al ingresar en la sección <literal>Sensors.</literal>)</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img001.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img001.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista árbol: editar sensor IDS/IPS</para>
@@ -27,7 +27,7 @@
 			Haciendo clic sobre cada uno de ellos accedemos a la interfaz de configuración de los parámetros generales del sensor. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img002.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img002.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista Access Points: editar sensor IDS/IPS</para>
@@ -39,7 +39,7 @@
 			Seleccionar <literal>IPS sensors</literal> para acceder al listado alfabético de los sensores IPS. Hacer clic en el icono Editar</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img003.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img003.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista IPS Sensors: IDS/IPS</para>
@@ -47,9 +47,6 @@
 			</mediaobject>
 		</listitem>
 	</itemizedlist>	
-	<section>
-		<title></title>
-	</section>
 	<section>
 		<title>Editar la configuración del sensor IDS/IPS</title>
 		<para>En todos los casos descritos el usuario accede a una pantalla en la que puede realizar la configuración de los parámetros básicos de los sensores IDS/IPS. 
@@ -90,7 +87,7 @@
 		</itemizedlist>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img004.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img004.png"/>
 			</imageobject>
 			<caption>
 				<para>Información editable para la configuración de los sensores IDS/IPS</para>
@@ -118,7 +115,7 @@
 		</warning>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img005.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img005.png"/>
 			</imageobject>
 		<caption>
 			<para>Opciones del submenú de sensores IPS/IDS: Stop Auto-apply y Recreate Private Key</para>
@@ -129,7 +126,7 @@
 			<para>En este apartado encontramos las opciones disponibles para configurar los sensores IPS/IDS en el modo requerido para el escenario en el que se esté trabajando así como comportamiento de Snort y PF_RING.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch13_img006.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img006.png"/>
 				</imageobject>
 				<caption>
 					<para>Campos editables para la configuración IPS/IDS (IPS Settings)</para>
@@ -217,7 +214,7 @@
 			<footnote><para>Ver capítulo 3 "Sensores IPS/IDS".</para></footnote></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch13_img007.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img007.png"/>
 				</imageobject>
 				<caption>
 					<para>Segmentos de sensor IPS/IDS</para>
@@ -228,7 +225,7 @@
 			Esta funcionalidad permite que con una sola máquina el usuario pueda crear numerosos entornos a los que aplicar distintas políticas según sus necesidades.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch13_img008.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img008.png"/>
 				</imageobject>	
 				<caption>
 					<para>Grupo de sensores</para>
@@ -279,7 +276,7 @@
 					<title>Advertencia</title>
 					<para>Los parámetros de a web son actualizados cada cierto tiempo, pudiendo sobreescribir la configuración realizadas desde la terminal. Una manera de solventar este problema es 
 					crear una copia local del fichero: </para>
-					<para><literal>/opt/rb/etc/sysconfig/snort-[id. grupo]_<emphasis role="bold">local</emphasis></literal></para>
+					<para><literal>/opt/rb/etc/sysconfig/snort-[id. grupo]_local</literal></para>
 				</warning>
 				<para>Snort está configurado para leer en local si existe el archivo <literal>_local</literal>. Los parámetros que pertenezcan a este archivo de texto ya no se podrán modificar desde la web (pfring clustermode, pfring watermark, etc.)
 				sino que deberán modificarse siempre desde el terminal.</para>				
@@ -291,7 +288,7 @@
 		<para>En este apartado el usuario puede definir la configuración de los servidores Proxy y Syslog.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/13_img009.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img009.png"/>
 			</imageobject>
 			<caption>
 				<para>Configuración servidores Proxy y Syslog</para>
@@ -323,7 +320,7 @@
 		<para>Esta sección permite realizar la configuración del SNMP de los <literal>Trap Servers</literal> .</para> 
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img010.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img010.png"/>
 			</imageobject>
 			<caption>
 				<para>Listado de Trap Servers</para>
@@ -333,7 +330,7 @@
 		<para><emphasis role="bold">Eliminar Trap Server:</emphasis> Clicar en el icono Eliminar que aparece junto a la información del Trap Server para descartarlo. </para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img011.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img011.png"/>
 			</imageobject>
 			<caption>
 				<para>Añadir nuevo Trap Server</para>
@@ -350,7 +347,7 @@
 		<para>Desde esta sección se puede <emphasis role="bold">activar o desactivar </emphasis> la función bypass. </para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img012.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img012.png"/>
 			</imageobject>
 			<caption>
 				<para>Información sobre los segmentos de red del sensor</para>
@@ -366,7 +363,7 @@
 		<para>Permite la configuración de rutas adicionales que complementan a la pasarela predeterminada.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img013.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img013.png"/>
 			</imageobject>
 			<caption>
 				<para>Rutas estáticas de red</para>
@@ -375,7 +372,7 @@
 		<para> Es posible añadir una nueva ruta mediante la pestaña <literal>+Add Route.</literal> A continuación insertar red y pasarela de red.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img014.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img014.png"/>
 			</imageobject>
 			<caption>
 				<para>Añadir nueva ruta de red: <literal>Network Route</literal></para>
@@ -390,7 +387,7 @@
 		Seleccionar "Add location" en el menú desplegable.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img015.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img015.png"/>
 			</imageobject>
 			<caption>
 				<para>Añadir localización del sensor</para>
@@ -408,7 +405,7 @@
 		Por ejemplo, en caso de que se hayan configurado redes locales con IPs públicas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img016.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img016.png"/>
 			</imageobject>
 			<caption>
 				<para>Variables IP</para>
@@ -422,7 +419,7 @@
 		</note>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img017.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img017.png"/>
 			</imageobject>
 			<caption>
 				<para>Editar valores de las Variables IP</para>
@@ -436,7 +433,7 @@
 		</warning>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img018.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img018.png"/>
 			</imageobject>
 			<caption>
 				<para>Importar variables IP</para>
@@ -449,7 +446,7 @@
 		De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img019.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img019.png"/>
 			</imageobject>
 			<caption>
 				<para>Port variables</para>
@@ -463,7 +460,7 @@
 		</note>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img020.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img020.png"/>
 			</imageobject>
 			<caption>
 				<para>Editar valores de las Variables de puertos Snort</para>
@@ -478,7 +475,7 @@
 		</warning>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img021.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img021.png"/>
 			</imageobject>
 			<caption>
 				<para>Importar variables de puertos Snort</para>
@@ -503,7 +500,7 @@
 		</note>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img022.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img022.png"/>
 			</imageobject>
 			<caption>
 				<para>Grupos de segmentos</para>
@@ -585,7 +582,7 @@
 		</note>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img023.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img023.png"/>
 			</imageobject>
 			<caption>
 				<para>Añadir/editar grupo de segmentos</para>
@@ -608,7 +605,7 @@
 		</note>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch13_img024.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img024.png"/>
 			</imageobject>
 			<caption>
 				<para>Editar configuración de bindings</para>

@@ -53,7 +53,7 @@
 		En este punto vamos a repasar cada una de las vistas disponibles y las acciones que podemos realizar desde las mismas.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img005.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img002.png"/>
 			</imageobject>
 			<caption>
 				<para>Opciones menú Vista</para>
@@ -64,7 +64,7 @@
 			<para>La vista árbol <literal>Tree</literal> es la que se muestra por defecto nada más acceder a la sección de sensores. En ella se visualiza un listado en el que se muestra la organización de dominios y sensores según niveles de jerarquía y dependencia. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img001.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img003.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista <literal>Tree</literal></para>
@@ -74,7 +74,7 @@
 			<para>Todos los elementos que se muestran en el árbol viene acompañados de dos iconos que permiten su edición o borrado (estos iconos aplican tanto para la vista árbol como para la de cada tipo de sensores):</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img012c.png"/>
+					<imagedata scale="40" align="center" fileref="images/ch05_img004b.png"/>
 				</imageobject>
 				<caption>
 					<para>Iconos "Editar" y "Eliminar"</para>
@@ -91,7 +91,7 @@
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img019.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img005.png"/>
 				</imageobject>
 				<caption>
 					<para>Confirmar eliminación de sensor</para>
@@ -101,7 +101,7 @@
 			Al hacer clic sobre él, accederemos a una interfaz en la que se muestran las firmas que componen esa política y desde la que podemos realizar diferentes acciones que serán explicadas con detalle en el capítulo en el que se abordan las <emphasis>Policy rules.</emphasis></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="50" fileref="images/ch05_img014.png"/>
+					<imagedata scale="40" align="center" fileref="images/ch05_img004c.png"/>
 				</imageobject>
 				<caption>
 					<para>Icono Políticas</para>
@@ -159,7 +159,7 @@
 				</note>		
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img001.png"/>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img004a.png"/>
 					</imageobject>
 					<caption>
 						<para>Detalle de niveles de organización en una infraestructura de sensores</para>
@@ -175,7 +175,7 @@
 					<para>Opción exclusiva de la vista árbol. Esta opción permite importar su organización de dominios y sensores mediante la subida de un archivo a redBorder.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="150" fileref="images/ch05_img010.png"/>
+							<imagedata scalefit="1" align="center" width="150" fileref="images/ch05_img006.png"/>
 						</imageobject>
 						<caption>
 						<para>Importar árbol</para>
@@ -192,7 +192,7 @@
 					</orderedlist>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img016.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img005.png"/>
 						</imageobject>
 						<caption>
 							<para>Importar árbol desde el menú <literal>Options</literal></para>
@@ -213,7 +213,7 @@
 					El usuario se descargará un archivo comprimido que podrá guardar en su equipo.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img011.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img007.png"/>
 						</imageobject>
 						<caption>
 							<para>Exportar árbol</para>
@@ -230,7 +230,7 @@
 					</orderedlist>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img018.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img008.png"/>
 						</imageobject>
 						<caption>
 							<para>Exportar árbol desde el menú <literal>Options</literal></para>
@@ -238,7 +238,7 @@
 					</mediaobject>	
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img020.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img008b.png"/>
 						</imageobject>
 						<caption>
 							<para>Exportar árbol desde el menú de configuración a nivel de dominio</para>
@@ -255,10 +255,10 @@
 					<para>La columna <literal>Technology</literal> indica el origen desde el que se están recogiendo los datos.</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img050.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img009.png"/>
 						</imageobject>
 						<caption>
-							<para>Monitors</para>
+							<para>Icono editar->Monitors</para>
 						</caption>
 					</mediaobject>	
 					<para><emphasis role="bold">Restaurar predeterminado:</emphasis> aplica las métricas predeterminadas que se inlcuyen en la creación de los sensores.</para>
@@ -266,10 +266,10 @@
 					<para><emphasis role="bold">Eliminar monitor:</emphasis> elimina la métrica aplicada.</para>	
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img055.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img010.png"/>
 						</imageobject>
 						<caption>
-							<para>Añadir Monitor: métricas disponibles</para>
+							<para> Interfaz de métricas disponibles para el sensor: Monitors</para>
 						</caption>	
 					</mediaobject>		
 				</section>
@@ -280,7 +280,7 @@
 			<para>Desde esta vista el usuario puede ver dónde están localizados geográficamente los dominios y sensores que tiene desplegados. Esta vista no permite realizar acciones. No obstante, se puede añadir una localización, tanto para un nuevo sensor o dominio como para uno existente, para que se muestre en el mapa al seleccionar esta vista.</para>
 			<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img056.png"/>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img012.png"/>
 					</imageobject>
 					<caption>
 						<para>Vista <literal>Map</literal></para>
@@ -292,7 +292,7 @@
 			<para>En ambos casos encontrará un apartado llamado <literal>Location</literal> en el que se muestra un mapa en el que puede buscar la localización deseada o indicarla haciendo clic sobre el mapa. A continuación, seleccionar la pestaña <literal>+Add Location.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img033.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img014.png"/><!--Cambiar captura por una de redborder 11, 13, 14, 17, 18, 18b, 18c-->
 				</imageobject>
 				<caption>
 					<para>Crear/editar sensor o dominio: Location</para>
@@ -301,7 +301,7 @@
 			<para>Los campos con las coordenadas aparecerán rellenos en caso de que, previamente haya buscado o señalado con el ratón esa localización. En caso contrario, insertar manualmente los valores de Latitud y Longitud.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img033b.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img013.png"/>
 				</imageobject>
 				<caption>
 					<para>Definir coordenadas para añadir una localización para sensor o dominio</para>
@@ -310,30 +310,24 @@
 		</section>
 		<section>
 			<title>Vista Access Points</title>
-			<para>Los Access Points (AP) son los puntos de acceso de la infraestructura de red que están asociados a una localización. Los Access Points dependen de la App Flow y aplican tanto a nivel de dominio como de sensores.</para>
-			<para>Este es otro modo de visualizar su organización de sensores, a través de la distribución de los AP por dominio. Se puede acceder a la visualización o creación de los Access Points de dos maneras distintas:</para><!--¿Existen más?-->
+			<para>Los Access Points (AP) son los puntos de acceso de la infraestructura de red que están asociados a una localización. 
+			Los Access Points dependen de la App Flow y aplican tanto a nivel de dominio como de sensores.</para>
+			<para>Este es otro modo de visualizar su organización de sensores, a través de la distribución de los AP por dominio. 
+			Se puede acceder a la visualización o creación de los Access Points de dos maneras distintas:</para><!--¿Existen más?-->
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>View>Access Points</para>
+					<para>View->Access Points</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034b.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img016.png"/>
 						</imageobject>
 						<caption>
-							<para>Vista>Access Points</para>
+							<para>Vista->Access Points</para>
 						</caption>
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para>Icono editar a nivel de sensor/dominio>Edit: <literal>View Access Points</literal> (situado en el submenú superior derecha).</para>
-					<mediaobject>
-						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034f.png"/>
-						</imageobject>
-						<caption>
-							<para>Editar dominio/sensor->View Access Points</para>
-						</caption>
-					</mediaobject>
+					<para>Icono editar a nivel de sensor/dominio->Edit: <literal>View Access Points</literal> (situado en el submenú superior derecha).</para>
 				</listitem>
 			</itemizedlist>
 			<note>
@@ -345,13 +339,15 @@
 			Las acciones que puede realizar desde esta pantalla son las siguientes (estas pueden variar según si se está consultando a nivel de dominio o sensor):</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>Mostrar en mapa (<literal>Show Map</literal>)/ Mostrar Plantas (<literal>Show Floors</literal>): muestra la distribución geográfica de los Access Points o su localización en plantas en el caso en el que estemos consultando un dominio <literal>Floor</literal> con más de un nivel de planta.</para>
+					<para>Mostrar en mapa (<literal>Show Map</literal>)/ Mostrar Plantas (<literal>Show Floors</literal>): 
+					muestra la distribución geográfica de los Access Points o su localización en plantas en el caso en el que estemos consultando un dominio <literal>Floor</literal> con más de un nivel de planta.</para>
 				</listitem>
 				<listitem>
 					<para>Editar (nombre del dominio o sensor): nos devuelve a la pantalla de edición del dominio o sensor.</para>
 				</listitem>
 				<listitem>
-					<para>Opciones>Exportar Access Points/Borrar todos los Access Points (<literal>Options>Export Access Points/Delete All Access Points.</literal>): permite exportar todos los Access Points a un archivo -csv o eliminar todos los Access Points definidos para esa localización. </para>
+					<para>Opciones>Exportar Access Points/Borrar todos los Access Points (<literal>Options>Export Access Points/Delete All Access Points.</literal>): 
+					permite exportar todos los Access Points a un archivo -csv o eliminar todos los Access Points definidos para esa localización. </para>
 				</listitem>
 				<listitem>
 					<para>Añadir sensores (<literal>+Add sensors</literal>): agrega sensores al dominio que estemos consultando. </para>
@@ -365,7 +361,7 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img011.png"/>
 				</imageobject>
 				<caption>
 					<para>Interfaz de Access Points (a nivel de dominio)</para>
@@ -373,15 +369,7 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="50" fileref="images/ch05_img034b.png"/>
-				</imageobject>
-				<caption>
-					<para>Acciones que se pueden realizar desde la interfaz de Access Points</para>
-				</caption>
-			</mediaobject>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034bc.png"/>
+					<imagedata scalefit="1" align="center" width="50" fileref="images/ch05_img018.png"/>
 				</imageobject>
 				<caption>
 					<para>Ejemplo de listado de Access Points (a nivel de dominio)</para>
@@ -389,15 +377,15 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034bd.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img018b.png"/>
 				</imageobject>
 				<caption>
-					<para>Ejemplo de Zonas de ubicación de Access Points</para>
+					<para>Detalle información Access Points</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img034be.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img019.png"/>
 			</imageobject>
 				<caption>
 					<para>Añadir una nueva zona de Access Points</para>
@@ -409,11 +397,11 @@
 		<title>Añadir sensor: <literal>+Add sensor</literal></title>
 		<para>Entre las opciones del submenú encontramos la de <literal>+Add Sensor.</literal> En el menú desplegable se muestran los diferentes tipos de sensores disponibles para su adición al árbol.</para>
 		<para>Seleccione el tipo de sensor en el menú desplegable y a continuación, complete la información que se solicita.</para>
-		<note>
-			<title>Nota</title>
-			<para>Recuerde que desde esta sección solo puedencrearse sensores de tipo Flow o Social. 
+		<warning>
+			<title>Advertencia</title>
+			<para>Recuerde que desde esta sección solo pueden crearse sensores de tipo Flow o Social. 
 			Los sensores de las Apps IPS y Malware se crearán durante el proceso de registro de los sensores tras la instalación del Manager y la configuración de red (creación de bonds y segmentos para los sensores).</para>
-		</note>
+		</warning>
 		<para><emphasis role="bold">Herencia de configuración: Tools->General Settings</emphasis></para>
 		<para>En la sección <literal>Tools</literal> encontramos la opción de <literal>General Settings</literal> desde la cual el usuario puede establecer la configuración de los parámetros generales del Manager, así como de las Apps que tenga registradas. </para>
 		<para>Este es el máximo nivel de configuración (es como si se tratara del dominio <emphasis role="bold">root</emphasis>) por lo que las propiedades que aquí se definan serán heredadas por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
@@ -429,29 +417,20 @@
 			<caption>
 				<para>Añadir sensor</para>
 			</caption>
-			</mediaobject>
-			<para>En las siguientes imágenes se muestran algunos  ejemplos de los tipos de sensores que se pueden añadir (App Flow) y la información que el sistema solicita para su creación.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img023a.png"/>
-			</imageobject>
-			<caption>
-				<para>Añadir sensor Flow</para>
-			</caption>
 		</mediaobject>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img021.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img020.png"/>
 			</imageobject>
 			<caption>
-				<para>Añadir sensor MSE</para>
+				<para>Añadir sensor Flow</para>
 			</caption>
 		</mediaobject>
 		<important>
 			<title>Importante</title>
 			<para>En el momento en el que se crea un sensor en redBorder este pasa, por defecto, a colocarse como raíz, por encima del nivel de dominio.</para>
 			<para>El usuario puede organizar su infraestructura de sensores en cualquier momento, arrastrando y soltando el sensor en el nivel en el que se quiera colocar.</para>
-			<para>El sensor heredará de manera automática las propiedades del dominio raíz (políticas, modo de operación, variables Snort, etc.).</para>
+			<para>El sensor heredará de manera automática las propiedades del dominio raíz.</para>
 		</important>
 	</section>
 	<section>
@@ -464,7 +443,7 @@
 			<para>Seleccionar la opción <literal>+Add Domain</literal> que se encuentra en el submenú superior derecha, elegir el tipo de dominio que se quiere añadir, y a continuación, rellenar los campos requeridos (estos variarán según el tipo de dominio a crear).</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img015.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img021.png"/>
 				</imageobject>
 				<caption>
 					<para>Añadir un dominio: selección del tipo de dominio</para>
@@ -472,7 +451,7 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img015b.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img022.png"/>
 				</imageobject>
 				<caption>
 					<para>Añadir un dominio: rellenar datos para su creación</para>
@@ -486,7 +465,7 @@
 			<para>Para acceder a esta pantalla el usuario deberá hacer clic en el botón de edición situado a la derecha del dominio que desea editar desde la vista árbol o <literal>Access Points</literal> y seleccionar la opción <literal>Edit.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img025.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img023.png"/>
 				</imageobject>
 				<caption>
 					<para>Ejemplo de edición de un dominio</para>
@@ -498,21 +477,45 @@
 					<para>General: muestra información general del sensor. Nombre (no editable desde la web), tipo de dominio-seleccionar el tipo de dominio en el desplegable) y descripción.</para>	
 				</listitem>
 				<listitem>
-					<para>Servidores (<literal>Servers</literal>):En este apartado el usuario puede definir la configuración de los servidores Proxy y Syslog. Todos los valores que se muestran son los heredados por defecto. Sobreescribir en caso de que sea necesario</para>
-				<mediaobject>
+					<para>Namespace Rules: permite añadir reglas que se aplicarán a nivel de dominio. </para><!--Preguntar-->
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img024b.png"/>
+						</imageobject>
+						<caption>
+							<para>Añadir una regla para Namespace</para>
+						</caption>
+					</mediaobject>
+				</listitem>
+				<listitem>
+					<para>IPS/IDS Settings: permite configurar los parámetros generales de los sensores IPS/IDS que cuelgan del dominio.
+					Esta será la configuración que hereden todos los sensores que se encuentren debajo de este dominio. Para realizar una configuración específica <emphasis role="bold">consultar el capitulo 6: "Sensores: Configuración de parámetros generales de los sensores IDS/IPS".</emphasis></para><!--Preguntar-->
+					<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img027.png"/>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img024.png"/>
 					</imageobject>
 					<caption>
-						<para>Configuración servidores Proxy y Syslog</para>
+						<para>Configuración IPS/IDS </para>
 					</caption>
 				</mediaobject>
+				</listitem>
+				<listitem>
+					<para>Servidores (<literal>Servers</literal>):En este apartado el usuario puede definir la configuración de los servidores Proxy y Syslog. 
+					Todos los valores que se muestran son los heredados por defecto. Sobreescribir en caso de que sea necesario</para>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img025.png"/>
+						</imageobject>
+						<caption>
+							<para>Configuración servidores Proxy y Syslog</para>
+						</caption>
+					</mediaobject>
 				</listitem>
 				<listitem>
 					<para>IP Variables: En este apartado se muestran los valores para las variables IP Snort. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img042.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img026.png"/>
 						</imageobject>
 						<caption>
 							<para>Variables IP</para>
@@ -523,7 +526,7 @@
 					<para>Variables de puertos (<literal>Port variables</literal>): En este apartado se muestran los valores para las variables de los puertos Snort. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
 					<mediaobject>
 						<imageobject>
-							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img045.png"/>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img027.png"/>
 						</imageobject>
 						<caption>
 							<para>Port variables</para>

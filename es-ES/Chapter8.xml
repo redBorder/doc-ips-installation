@@ -12,7 +12,7 @@
 	<literal>Tools>Rule's version</literal> ya estamos en condiciones de poder crear una nueva política (<emphasis role="bold">Signature policy.</emphasis>) y aplicarla a un sensor.</para> 
 	<mediaobject>
 		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img001.png"/>
+			<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img001.png"/>
 		</imageobject>
 		<caption>
 			<para>Sección Tools: Rule's versions</para>
@@ -23,16 +23,15 @@
 		<para>Para poder comenzar el proceso de creación de una política debemos asegurarnos de que se han creado versiones de reglas 
 		y que las versiones que vamos a necesitar la creación de las políticas y su aplicación a un sensor se encuentran activadas (Tools->Rule's versions).</para>
 	</note>
-    <section>
 	<para>El proceso de creación de una nueva política se realiza desde la sección <literal>Sensors</literal>. En ella, se muestra la vista de árbol de la organización de dominios y sensores que  se ha creado en redBorder. </para>
 	<para>Cada uno de los sensores registrados viene acompañado de un icono en el que se 
 	indican las políticas que se le han aplicado (si las hubiera) y otro de edición que despliega un submenú en el que se encuentra la opción de edición/creación de políticas. </para>
 	<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img002.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img002.png"/>
 			</imageobject>
 			<caption>
-				<para>Sensors: menú de edición, seleccionar opción de creación de políticas</para>
+				<para>Sensors->icono edición->Políticas</para>
 			</caption>
 		</mediaobject>
 	<para>La plataforma redBorder permite la creación y aplicación de dos tipos de políticas:</para>
@@ -51,7 +50,7 @@
 		 hacemos clic en el icono de edición en el nivel para el que deseamos crear dicha política y seleccionamos la opción <literal>Signature Policies.</literal></para> 
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img003.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img003.png"/>
 			</imageobject>
 			<caption>
 				<para>Sensors-> Signature Policies</para>
@@ -62,7 +61,7 @@
 		 <para>La política que está aplicada al sensor se muestra destacada en verde.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img004.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img004.png"/>
 			</imageobject>
 			<caption>
 				<para>Interfaz de Signature Policies</para>
@@ -91,7 +90,7 @@
 			<para>Una vez que se ha introducido toda esta información, hacer clic en <literal>Create Policy</literal> para añadir la nueva política al sensor.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img005.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img005.png"/>
 				</imageobject>
 				<caption>
 					<para>Crear una nueva política de reglas</para>
@@ -122,7 +121,7 @@
 				</itemizedlist>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img006.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img006.png"/>
 					</imageobject>
 					<caption>
 						<para>Opciones: notificación de actualizaciones y acciones para nuevas reglas</para>
@@ -140,10 +139,10 @@
 				<listitem>
 					<para>Definir las acciones que queremos aplicar para cada regla. </para>
 				</listitem>
-			</itemizedlist> 
+			</orderedlist> 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img007.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img007.png"/>
 				</imageobject>
 				<caption>
 					<para>Interfaz de reglas de las Signature Policies</para>
@@ -157,7 +156,7 @@
 			Para configurar la política que acabamos de crear debemos seleccionar las categorías, subcategorías o reglas que nos interesan: </para>	
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img008.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img008.png"/>
 				</imageobject>
 				<caption>
 					<para>Selección de reglas para la configuración de una Signature Policy</para>
@@ -187,7 +186,7 @@
 				</itemizedlist>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img010.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img010.png"/>
 					</imageobject>
 					<caption>
 						<para>Signature Policies: acciones disponibles para un conjunto de reglas</para>
@@ -196,7 +195,7 @@
 				<para>Una vez que se han cambiado las acciones de las reglas que nos interesen, el número de reglas totales se habrá incrementado, tal y como muestra la siguiente captura de pantalla:</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img011.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img011.png"/>
 					</imageobject>
 					<caption>
 						<para>Reglas añadidas a la política con acciones establecidas</para>
@@ -222,8 +221,8 @@
 						<para>-Security: aplica aquellas reglas que aseguran la seguridad. (Inconveniente: pueden generar muchos falsos positivos).</para>
 						<mediaobject>
 							<imageobject>
-								<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img012.png"/>
-							</imageobject>69.89.27.246
+								<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img009.png"/>
+							</imageobject>
 							<caption>
 								<para>Change Actions</para>
 							</caption>
@@ -239,7 +238,7 @@
 						<para>-Create Snapshots: permite realizar una copia o captura (versión) del estado actual de las reglas para su aplicación en diferentes políticas. </para>
 						<mediaobject>
 							<imageobject>
-								<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img015.png"/>
+								<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img015.png"/>
 							</imageobject>
 							<caption>
 								<para>Crear una nueva snapshot</para>
@@ -258,7 +257,7 @@
 				También es posible desde esta interfaz eliminar una o más reglas.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img013.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img013.png"/>
 					</imageobject>
 					<caption>
 						<para>Signature's rules->Event rules</para>
@@ -275,7 +274,7 @@
 				<para>Para guardar la configuración del filtro hacer clic en <literal>Update Event Filter.</literal></para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img014.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img012.png"/>
 					</imageobject>
 					<caption>
 						<para>Editar detalles de filtrado de eventos para cada regla</para>
@@ -292,7 +291,7 @@
 			en la que repetiremos la operación antes descrita.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img016.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img016.png"/>
 				</imageobject>
 				<caption>
 					<para>Signature Policies: políticas disponibles para un sensor</para>
@@ -307,7 +306,7 @@
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img017.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img017.png"/>
 				</imageobject>
 				<caption>
 					<para>Aplicar una política a un sensor y a todos los "hijos" que haya por debajo</para>
@@ -316,7 +315,7 @@
 			<para>La política seleccionada quedará sombreada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img018.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018.png"/>
 				</imageobject>
 				<caption>
 					<para>Signature Policy aplicada a un sensor</para>
@@ -324,7 +323,7 @@
 			</mediaobject>	
 			<para>Una vez que se ha aplicado la nueva configuración accedemos a una pantalla en la que se muestran las últimas actualizaciones (<literal>Configuration Update</literal>).
 			En esta pantalla tendremos un resumen de las políticas aplicadas al sensor (Signature Policies y Reputation Policies). Si todo es correcto pulsamos sobre <literal>Update</literal> para actualizar la configuración del sensor.</para>
-			<para>Este proceso puede durar varios minutos, dependiendo del número de reglas a aplicar. Todo el proceso se realizará con un trabajo en segundo plano que podremos consultar en <literal>Tools->Worker & Job Queue.</literal></para>
+			<para>Este proceso puede durar varios minutos, dependiendo del número de reglas a aplicar. Todo el proceso se realizará con un trabajo en segundo plano que podremos consultar en <literal>Tools->Worker &Aacute; Job Queue.</literal></para>
 			<para>Una vez haya terminado el proceso de asignación, dicho sensor contará con la política aplicada.</para>
 			<section>
 				<title>Acciones disponibles para la gestión de las políticas</title>
@@ -364,7 +363,7 @@
 				</itemizedlist>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img018b.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018b.png"/>
 					</imageobject>
 					<caption>
 						<para>Signature Policy: panel de Snapshots</para>
@@ -388,7 +387,7 @@
 				</itemizedlist>	
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img018c.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018c.png"/>
 					</imageobject>
 					<caption>
 						<para>Signature Policy: Rules->Snapshots</para>
@@ -397,7 +396,7 @@
 				<para><emphasis role="bold">Crear una nueva snapshot desde el panel de reglas</emphasis>: introducir una etiqueta descriptiva (Tag) y hacer clic en <literal>Create.</literal></para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img018d.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018d.png"/>
 					</imageobject>
 					<caption>
 						<para>Rules->Create Snapshots</para>
@@ -429,7 +428,7 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img019.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img019.png"/>
 				</imageobject>
 				<caption>
 					<para>Sensors->Tree: jerarquías y dependencias entre niveles</para>
@@ -447,7 +446,7 @@
 			por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img020.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img020.png"/>
 				</imageobject>
 				<caption>
 					<para>Configuración de sensores IPS/IDS heredada del "root"</para>
@@ -469,7 +468,7 @@
 			<para>Al crear una nueva política se puede elegir quién será el "owner" o propietario de la misma. En este caso, nos encontraremos un desplegable en el que seleccionar el nivel desde el cual se va a aplicar.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img021.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img021.png"/>
 				</imageobject>
 				<caption>
 					<para>New Policy: determinar Owner o propietario de la política</para>
@@ -490,7 +489,7 @@
 		</warning>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img022.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img022.png"/>
 			</imageobject>
 			<caption>
 				<para>Sensors-> Reputation Policies</para>
@@ -499,7 +498,7 @@
 		<para>En el panel Reputation Policies se muestran todas las políticas creadas y asignadas a ese sensor o grupo. La información que se muestra es la siguiente: Nombre y propietario de la política.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img023.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img023.png"/>
 			</imageobject>
 			<caption>
 				<para>Interfaz de Reputation Policies</para>
@@ -543,7 +542,7 @@
 			<para>Hacer clic en <literal>Options->Apply Conf</literal> para aplicar las reglas a la política de reputación recién creada.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img024.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img024.png"/>
 				</imageobject>
 				<caption>
 					<para>Añadir reglas de reputación</para>
@@ -551,7 +550,7 @@
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img025.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img025.png"/>
 				</imageobject>
 				<caption>
 					<para>Reglas de reputación</para>
@@ -579,7 +578,7 @@
 			en la que repetiremos la operación antes descrita.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img026.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
 				</imageobject>
 				<caption>
 					<para>Reputation Policies: políticas disponibles para un sensor</para>
@@ -594,7 +593,7 @@
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img027.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
 				</imageobject>
 				<caption>
 					<para>Aplicar una política a un sensor y a todos los "hijos" que haya por debajo</para>
@@ -603,7 +602,7 @@
 			<para>La política seleccionada quedará sombreada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch07_img018.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018.png"/>
 				</imageobject>
 				<caption>
 					<para>Reputation Policy aplicada a un sensor</para>
