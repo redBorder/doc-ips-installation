@@ -484,7 +484,7 @@
 		<para>Para crear una Reputation Policy nos dirigimos a la sección <literal>Sensors</literal> hacemos clic en el icono de Edición
 		del nivel para el que deseamos crear dicha política y seleccionamos la opción <literal>Reputation Policies.</literal></para> 
 		<warning>
-			<title></title>
+			<title>Advertencia</title>
 			<para>Es posible crear Signature Policies a nivel de dominio, sensor, grupo y binding.</para>
 			<para>En el caso de las Reputation Policies <emphasis role="bold">no es posible crear políticas a nivel de binding</emphasis> solo se pueden crear a nivel de dominio, sensor y grupo.</para>
 		</warning>
@@ -522,10 +522,20 @@
 		</section>
         <section>
 			<title>Creación de una nueva Reputation Policy</title>
-			<para>La creación de una nueva política de reputación se realiza desde el panel de Reputation Policies accesible desde Sensors->icono edición->Reputation Policies. En esta pantalla, hacer clic en <literal>+New Rep Policy</literal>
-			y completar la información que solicita el sistema: Nombre y comentarios; a continuación, hacer clic en el botón <literal>Create Reputation policy.</literal></para>
+			<para>La creación de una nueva política de reputación se realiza desde el panel de Reputation Policies accesible desde Sensors->icono edición->Reputation Policies. 
+			En esta pantalla, hacer clic en <literal>+New Rep Policy</literal>
+			y completar la información que solicita el sistema: Nombre y comentarios; a continuación, hacer clic en el botón <literal>Create Reputation Policy.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img024.png"/>
+				</imageobject>
+				<caption>
+					<para>Creación de una política de reputación</para>
+				</caption>
+			</mediaobject>
 			<para><emphasis role="bold">Añadir una nueva regla de reputación a la política</emphasis></para>
-			<para>Una vez que se ha creado la política de reputación accedemos a la interfaz de reglas desde la que se pueden añadir, editar y eliminar las reglas de reputación de dicha política. Para crear una regla, seleccionar la opción <literal>+Add.</literal></para>
+			<para>Una vez que se ha creado la política de reputación accedemos a la interfaz de reglas desde la que se pueden añadir, editar y eliminar las reglas de reputación de dicha política. 
+			Para crear una regla, seleccionar la opción <literal>+Add.</literal></para>
 			<para>Introducir los siguientes datos y hacer clic en <literal>Create Reputation</literal> para añadir una nueva regla a la política.</para>
 			<itemizedlist mark="bullet">
 				<listitem>
@@ -543,21 +553,13 @@
 			<para>Hacer clic en <literal>Options->Apply Conf</literal> para aplicar las reglas a la política de reputación recién creada.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img024.png"/>
-				</imageobject>
-				<caption>
-					<para>Añadir reglas de reputación</para>
-				</caption>
-			</mediaobject>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img025.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
 				</imageobject>
 				<caption>
 					<para>Reglas de reputación</para>
 				</caption>
 			</mediaobject>
-			<para><emphasis role="bold">Opciones disponibles en el panel de reglas</emphasis></para>
+			<para><emphasis role="bold">Opciones disponibles en el panel de reglas (Options)</emphasis></para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>Apply conf: incluye las reglas recién creadas en la política correspondiente.</para>
@@ -579,7 +581,7 @@
 			en la que repetiremos la operación antes descrita.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
 				</imageobject>
 				<caption>
 					<para>Reputation Policies: políticas disponibles para un sensor</para>
@@ -594,7 +596,7 @@
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img028.png"/>
 				</imageobject>
 				<caption>
 					<para>Aplicar una política a un sensor y a todos los "hijos" que haya por debajo</para>
@@ -603,7 +605,7 @@
 			<para>La política seleccionada quedará sombreada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img029.png"/>
 				</imageobject>
 				<caption>
 					<para>Reputation Policy aplicada a un sensor</para>
