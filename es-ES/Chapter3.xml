@@ -7,14 +7,14 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Instalación y registro de los sensores IPS/IDS</title>
-	<para>El proceso de configuración y registro de los sensores IDS/IPS consta fundamentalmente de dos pasos:</para>
+	<title>Inst y registro de los sensores IPS/IDS</title>
+	<para>El proceso de instalación, registro y configuración de los sensores IDS/IPS consta fundamentalmente de dos pasos:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
-			<para>Instalación y registro de los sensores IDS en el Manager</para>							
+			<para>Instalación y registro de los sensores IPS/IDS en el Manager (asistente de instalación o ISO).</para>							
 		</listitem>	
 		<listitem>
-			<para>Configuración de parámetros basicos de los sensores IDS en la plataforma redBorder</para>
+			<para>Configuración de parámetros basicos de los sensores IPS/IDS (plataforma web redBorder).</para>
 		</listitem>
 	</itemizedlist>
 	<para>Al poner en funcionamiento el asistente de instalación, visualizaremos el menú principal en el que encontrará la opción <literal>Install Sensor IPS</literal>:</para>
@@ -26,7 +26,9 @@
 			<para>Asistente de instalación redBorder: Instalar sensor IPS</para>
 		</caption>
 	</mediaobject>
-	<para>A continuación el usuario deberá introducir su nombre de usuario y contraseña <footnote><para>El nombre de usuario y contraseña que se deben introducir en este paso corresponden con los que se han indicado en el proceso de instalación del Manager ys erán los que le sirvan para acceder a la plataforma web redBorder.</para></footnote>, así como ejecutar el comando rb_sysconf:</para>
+	<para>A continuación el usuario deberá introducir su nombre de usuario y contraseña 
+	<footnote><para>El nombre de usuario y contraseña que se deben introducir en este paso corresponden con los que se han indicado en el proceso de instalación del Manager y serán los que le sirvan para acceder a la plataforma web redBorder.</para></footnote>, 
+	así como ejecutar el comando <literal>rb_sysconf:</literal></para>
     <itemizedlist mark="bullet">
 		<listitem>
 			<para>Login</para>
@@ -35,12 +37,12 @@
 			<para>Password</para>
 		</listitem>
 		<listitem>
-			<para>Comando rb_sysconf</para>
+			<para>Comando <literal>rb_sysconf</literal></para>
 		</listitem>
 	</itemizedlist>	
 	<note>
 		<title>Nota</title>
-		<para>Para realizar la instalación del Manager es necesario registrarse con el usuario que tiene mayores permisos: <emphasis>root.</emphasis></para>
+		<para>Para realizar la instalación y registro de los sensores es necesario ingresar con el usuario que tiene mayores permisos: <emphasis>root.</emphasis></para>
 	</note>	
 	<para>Este proceso es idéntico al expuesto en la <emphasis role="bold">Finalización del proceso de instalación del asistente para la configuración del Manager.</emphasis></para>
 	<mediaobject>
@@ -119,7 +121,7 @@
 		</note>
 		<warning>
 			<title>Advertencia</title>
-			<para>En caso de que el sistema se instale en un equipo real que disponga de más de una tarjeta de red, el usuario deberá elegir cuál será el bonding de gestión.</para>
+			<para>En caso de que el sistema se instale en un <emphasis role="bold">equipo físico</emphasis> que disponga de más de una tarjeta de red, el usuario deberá <emphasis role="bold">elegir cuál será el bonding de gestión.</emphasis></para>
 		</warning>
 	</section>
 	<section>
@@ -133,7 +135,10 @@
 			<para>Asignación automática de segmentos con bypass</para>
 		</caption>
 		</mediaobject>
-		<para>En caso de que el sistema reconozca interfaces con <emphasis>bypass</emphasis> estas serán asignadas automáticamente a los segmentos.</para>
+		<note>
+			<title>Nota</title>
+			<para>En caso de que el sistema reconozca interfaces con <emphasis>bypass</emphasis> estas serán asignadas automáticamente a los segmentos.</para>
+		</note>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img005.png"/>
@@ -145,25 +150,25 @@
 		<para>A continuación se realizarán las siguientes acciones para asegurarnos que la red de los sensores queda correctamete configurada:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para>Creación de un bonding: (máximo 4 bonds).</para>
+				<para><emphasis role="bold">Creación de un bonding:</emphasis> (máximo 4 bonds).</para>
 			</listitem>
 			<listitem>
-				<para>Selección y asignación de puertos al bonding.</para>
+				<para><emphasis role="bold">Selección y asignación de puertos al bonding.</emphasis></para>
 			</listitem>
 			<listitem>
-				<para>Configuración de la interfaz de gestión para los bondings creados.</para>
+				<para><emphasis role="bold">Configuración de la interfaz de gestión</emphasis> para los bondings creados.</para>
 			</listitem>
 		</itemizedlist>
-		<para>Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos se encuentran disponibles para la creación del bonding.</para>
+		<para>Para la selección de puertos, se muestra un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos se encuentran disponibles para la creación del bonding.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img006.png"/>
 			</imageobject>
 			<textobject>
-				<phrase>Insertar puerto para el bonding</phrase>
+				<phrase>Insertar puerto para asignar al bonding</phrase>
 			</textobject>
 			<caption>
-				<para>Insertar puerto para el bonding</para>
+				<para>Insertar puerto para  asignar al bonding</para>
 			</caption>
 		</mediaobject>
 		<note>
@@ -171,12 +176,12 @@
 			<para>Selección de opciones predeterminadas: <keycap>Enter</keycap></para>
 		</note>
 		<section>
-			<title>Creación de un nuevo bonding y asignación de puertos</title>
+			<title>Creación de un bonding: asignación de puertos</title>
 			<para>Para ilustrar este proceso crearemos un bonding (bond0) y le asignaremos 2 puertos.</para>
 			<para>Seleccione la opción <keycap>n</keycap> que aparece en el submenú lateral derecho de la pantalla.</para>
-			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bonding, tal y como aparece en el margen inferior de la pantalla anterior.</para>
+			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bonding, tal y como aparece en la imagen anterior.</para>
 			<para>Introduzca el número de puerto en la línea <literal>Insert bonding first port [0]:</literal></para>
-			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter.</keycap></para>
+			<para>El número que aparece entre corchetes <literal>[]:</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter.</keycap></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img007.png"/>
@@ -188,26 +193,26 @@
 					<para>Creación de bonding: asignación de puertos</para>
 				</caption>
 			</mediaobject>
-			<para>El puerto seleccionado desaparecerá de la opción de puertos disponibles.</para>
+			<para>El puerto seleccionado desaparecerá del listado de puertos disponibles.</para>
 			<important>
 				<title>Importante</title>
 				<para>El sistema solo permite la creación de un máximo de 4 bonds: (0-3).</para>
 			</important>
 		</section>
 		<section>
-			<title>Añadir un nuevo puerto al bonding</title>
+			<title>Añadir un segundo puerto al bonding</title>
 			<para>El sistema le hará la siguiente pregunta: <literal>Insert second port (y/N)</literal></para>
-			<para>La opción que viene predeterminada por defecto aparece en mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
+			<para>La opción por defecto (N) aparece en mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
 			<para>En caso de que desee insertar un nuevo puerto, teclee <keycap>y</keycap>.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img008.png"/>
 				</imageobject>
 			<textobject>
-				<phrase>Añadir nuevo puerto al bonding</phrase>
+				<phrase>Añadir segundo puerto al bonding</phrase>
 			</textobject>
 			<caption>
-				<para>Añadir nuevo puerto al bonding</para>
+				<para>Añadir segundo puerto al bonding</para>
 			</caption>
 			</mediaobject>
 			<para>Introduzca el número de puerto en la línea <literal>Insert bonding second port [1]:</literal></para>
@@ -215,23 +220,22 @@
 		</section>
 		<section>
 			<title>Configuración de la red del bonding</title>
-			<para>Una vez que ha realizado la asignación del segundo puerto al nuevo bond (bond0), el sistema le pedirá que introduzca los siguientes datos:</para>
+			<para>Con la asignación del segundo puerto hemos completado el primer paso para la creación de un bonding. El siguiente paso será su puesta en red, para ello, debe insertar los siguientes datos:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>Dirección IP</para>
+					<para><emphasis role="bold">Dirección IP:</emphasis> Si su equipo utiliza protocolo DHCP, le será asignada una dirección IP por defecto. </para>
 				</listitem>
 				<listitem>
-					<para>Máscara de red</para>
+					<para><emphasis role="bold">Máscara de red</emphasis></para>
 				</listitem>
 				<listitem>
-					<para>Pasarela</para>
+					<para><emphasis role="bold">Pasarela</emphasis></para>
 				</listitem>
 				<listitem>
-					<para>Rutas</para>
+					<para><emphasis role="bold">Rutas:</emphasis> El sistema también le otorga una ruta por defecto para el bonding creado.</para>
 				</listitem>
 			</itemizedlist>
-			<para>Si su equipo utiliza protocolo DHCP, le será asignada una dirección IP por defecto. Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema.  En caso contrario, introduzca manualmente estos valores.</para>
-			<para>El sistema también le otorga una ruta por defecto para el bonding creado.</para>
+			<para>Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema.  En caso contrario, introduzca manualmente estos valores.</para>
 			<para>Para insertar una ruta manualmente, seleccione la opción <keycap>y</keycap> en la línea <literal>Insert a route for this bonding (y/N)?:</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -286,7 +290,7 @@
 	<section>
 		<title>Configuración de los segmentos de red</title>
 		<para>Seleccionar en el Menú de Configuración de Red la opción <literal>Segment settings</literal> ingresando el número <keycap>3</keycap>.</para>
-		<para>En esta pantalla se muestran el número de segmentos que se han creado, los puertos asignados a cada segmento y si estos disponen o no de soporte por bypass.</para>
+		<para>En esta pantalla se muestran el número de segmentos que se han creado, los puertos asignados a cada segmento y si estos disponen, o no, de soporte por bypass.</para>
 		<para>En ella encontrará el siguiente submenú:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
@@ -303,7 +307,7 @@
 			</listitem>
 		</itemizedlist>
 		<para>Para comenzar la creación del segmento seleccione la opción <literal>n) new segment.</literal></para>
-		<para>El proceso de creación de los segmentos comprende las siguentes acciones:</para>
+		<para>El proceso de creación de los segmentos consiste en tres pasos:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
 				<para>Asignación de interfaces de tipo bypass a los segmentos (opcional).</para>
@@ -315,14 +319,14 @@
 				<para>Selección y asignación de puertos al segmento.</para>
 			</listitem>
 		</orderedlist>
-		<para> Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir en qué puertos estarán los segmentos creados.</para>
 		<section>
 			<title>Asignación de interfaces con bypass a los segmentos</title>
 			<para>Si el sistema detecta interfaces de tipo bypass, estas se asignan automáticamente a los segmentos cuando se ingresa en el menú de configuración de red.</para>
-			<para>Existen, además, otras dos modalidades de asignación de puertos o interfaces con bypass a segmentos:</para>
+			<para>Existen, además, otras dos modalidades de asignación de puertos o interfaces con bypass a los segmentos:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para><emphasis role="bold"> Forzar autoasignación de bypass:</emphasis> seleccionar la opción <literal>Force bypass auto assign</literal> en el menú de configuración de los segmentos, introduciendo la letra <keycap>f.</keycap></para>
+					<para><emphasis role="bold"> Forzar autoasignación de bypass:</emphasis> seleccionar la opción <literal>Force bypass auto assign</literal> 
+					en el menú de configuración de los segmentos, introduciendo la letra <keycap>f.</keycap></para>
 				</listitem>
 				<listitem>
 					<para><emphasis role="bold">Asignación manual:</emphasis> seleccionando los puertos con bypass del listado de puertos disponibles que se visualizará en el proceso de creación de los segmentos.</para>				
@@ -340,8 +344,8 @@
 		<section>
 			<title>Creación de un nuevo segmento y asignación de puertos</title>
 			<para>Para ilustrar este proceso crearemos un segmento (segment 0) y le asignaremos 2 puertos.</para>
-			<para> Para comenzar con el proceso de creación del segmento, seleccione la opción <keycap>n</keycap> que aparece en el submenú lateral derecho de la pantalla.</para>
-			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel al que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
+			<para>Para comenzar con el proceso de creación del segmento, seleccione la opción <keycap>n</keycap> del submenú.</para>
+			<para>Seleccione el puerto que desea asignar al segmento aquel al que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
 			<para>Introduzca el número que le va a dar al segmento en la línea <literal>Insert segment number (0-15) [0]:</literal></para>
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>
 		    <para>El puerto asignado anteriormente al segmento desaparecerá del listado de puertos disponibles.</para>
