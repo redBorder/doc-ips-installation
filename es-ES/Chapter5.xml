@@ -11,24 +11,25 @@
 	<title>Sensores</title>
 	<para>En la sección <literal>Sensors</literal> el usuario puede realizar la consulta, gestión y configuración de los sensores registrados en el Manager a través de la creación y edición de dominios y sensores. 
 	Para ello, dispone de varias vistas que le ofrecen la posibilidad de realizar diversas acciones sobre los sensores que haya registrado en el Manager.</para>
-	<para><literal>Sensors</literal> se encuentra disponible en el margen superior derecho del menú de cabecera, junto a la sección <emphasis role="bold">Tools</emphasis> y Zona de usuario.</para>
+	<para><literal>Sensors</literal> se encuentra disponible en el margen superior derecho del menú de cabecera, junto a la sección <emphasis role="bold">Tools</emphasis> y la zona de usuario.</para>
 	<section>
 		<title>Sensors: menú y opciones</title>
 		<para>La organización de esta sección es muy similar, en cuanto a estructura, a la de otras partes de la web. En este caso, encontraremos:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para>Submenú de la sección: en la que se encuentran las opciones disponibles para la configuración y gestión de los sensores.</para>
+				<para><emphasis role="bold">Submenú de la sección:</emphasis> en la que se encuentran las opciones disponibles para la configuración y gestión de los sensores.</para>
 				<para>-Opciones (<literal>Options</literal>)</para>
 				<para>-Añadir sensor (<literal>+Add sensor</literal>)</para>
 				<para>-Añadir dominio (<literal>+Add Domain</literal>)</para>
 				<para>-Vista (<literal>View</literal>)</para>
 			</listitem>
 			<listitem>
-				<para>Área principal: la información que se muestra en este área dependerá de la vista seleccionada en <literal>View.</literal> Existen cuatro vistas disponibles para visualizar la organización de los sensores registrados en el Manager:</para>
-				<para>-Árbol (<literal>Tree</literal>): listado que muestra la infraestructura de red según niveles de jerarquía y dependencia entre los elementos que la componen. Al lado de cada uno de los elementos se muestran dos iconos que permiten realizar las acciones de edición y borrado de los mismos. Esta es la vista que se muestra por defecto.</para>
+				<para><emphasis role="bold">Área principal:</emphasis> la información que se muestra en este área dependerá de la vista seleccionada en <literal>View.</literal> Existen cuatro vistas disponibles para visualizar la organización de los sensores registrados en el Manager:</para>
+				<para>-Árbol (<literal>Tree</literal>): listado que muestra la infraestructura de red según niveles de jerarquía y dependencia entre los elementos que la componen. </para>
+				<para>Al lado de cada uno de los elementos se muestran dos iconos que permiten realizar las acciones de edición y borrado de los mismos. Esta es la vista que se muestra por defecto.</para>
 				<para>-Mapa (<literal>Map</literal>): sitúa la localización de los dominios y sensores sobre un mapa.</para>
 				<para>-Puntos de acceso (<literal>Access Points</literal>): nos ofrece acceso directo a la visualización de los Access Points definidos para el acceso a su infraestructura de red.</para>
-				<para>-Sensores: en el submenú <literal>View</literal> el usuario encontrará un listado en el que aparecen los sensores que haya registrado en el Manager. De este modo, puede gestionar de manera directa los sensores Flow, MSE, Meraki, IPS, Mail, Social, etc., dependiendo de las  disponibles según las Apps que incluyan su licencia. 
+				<para>-Sensores: en el submenú <literal>View</literal> el usuario encontrará un listado en el que aparecen los sensores que haya registrado en el Manager. 
 				Al hacer clic sobre el tipo de sensor que desea consultar, visualizará un listado de todos los sensores registrados de ese tipo mostrados por orden alfabético.</para>
 			</listitem>		
 		</itemizedlist>
@@ -44,16 +45,14 @@
 			<title>Nota</title>
 			<para>Cada vista presenta su propio menú de opciones y las diferentes posibilidades de creación y edición de sensores o dominios.</para>
 			<para>La Vista Mapa no presenta opciones disponibles.</para>
-			<para>La gestión de las políticas será abordada en un capítulo independiente.</para>
 		</note>
 	</section>
 	<section>
-		<title>Vistas (<literal>View</literal>)</title>
-		<para>Al acceder a la sección <literal>Sensors</literal>, el usuario encuentra un listado (vista de árbol) en el que aparece la organización jerárquica de dominios y sensores.
-		En este punto vamos a repasar cada una de las vistas disponibles y las acciones que podemos realizar desde las mismas.</para>
+		<title>Vistas: <literal>View</literal></title>
+		<para>En la sección <literal>Sensors</literal> el usuario encuentra seleccionada una vista por defecto: <literal>Tree.</literal> Existen varias vistas disponibles para acceder a los sensores:</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img002.png"/>
+				<imagedata scale="40" align="center" fileref="images/ch05_img002.png"/>
 			</imageobject>
 			<caption>
 				<para>Opciones menú Vista</para>
@@ -61,20 +60,38 @@
 		</mediaobject>
 		<section>
 			<title>Vista árbol</title>
-			<para>La vista árbol <literal>Tree</literal> es la que se muestra por defecto nada más acceder a la sección de sensores. En ella se visualiza un listado en el que se muestra la organización de dominios y sensores según niveles de jerarquía y dependencia. </para>
+			<para>La vista árbol <literal>Tree</literal> es la que se muestra por defecto al acceder a <literal>Sensors</literal>.
+			 En ella se visualiza un listado en el que se muestra la organización de dominios y sensores según niveles de jerarquía y dependencia. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img003.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img003.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista <literal>Tree</literal></para>
 				</caption>
 			</mediaobject>
-			<para>Desde esta vista el usuario puede añadir un nuevo dominio o sensor, eliminar los ya existentes, acceder a otras vistas, importar y exportar el árbol así como realizar la edición directa de los dominios y sensores que se encuentran en el listado.</para>
+			<para><emphasis role="bold">Acciones disponibles en la vista Tree:</emphasis>
+			<itemizedlist mark="circle">
+				<listitem>
+					<para>Añadir un nuevo dominio o sensor</para>
+				</listitem>
+				<listitem>
+					<para>Eliminar un dominio o sensor</para>
+				</listitem>
+				<listitem>
+					<para>Acceder a otras vistas</para>
+				</listitem>
+				<listitem>
+					<para>Importar y exportar el árbol</para>
+				</listitem>
+				<listitem>
+					<para>Editar un dominio o sensor</para>
+				</listitem>
+			</itemizedlist>
 			<para>Todos los elementos que se muestran en el árbol viene acompañados de dos iconos que permiten su edición o borrado (estos iconos aplican tanto para la vista árbol como para la de cada tipo de sensores):</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scale="40" align="center" fileref="images/ch05_img004b.png"/>
+					<imagedata scale="100" align="center" fileref="images/ch05_img004b.png"/>
 				</imageobject>
 				<caption>
 					<para>Iconos "Editar" y "Eliminar"</para>
@@ -82,26 +99,24 @@
 			</mediaobject>
 			<note>
 				<title>Nota</title>
-				<para>Las opciones disponibles en el menú desplegado por el icono Editar variarán dependiendo de que si nos encontramos a nivel de dominio o sensores.</para>
-			</note>
-			<note>
-				<title>Nota</title>
-				<para>Algunos sensores no pueden ser eliminados. En este caso, el icono "Eliminar" aparecerá sombrado en gris.</para>
-				<para>Antes de que un dominio o sensor sea eliminado, el sistema le mostrará una pantalla de confirmación avisándole de que todos los usuarios asignados a ese dominio y sus descendientes serán desactivados y asignados a los padres del dominio.</para>	
+				<para>Las opciones del menú desplegado por el icono <emphasis role="bold">Editar</emphasis> variarán dependiendo de que si nos encontramos a nivel de dominio o sensores.</para>
+				<para><emphasis role="bold">Algunos sensores no pueden ser eliminados.</emphasis> En este caso, el icono "Eliminar" aparecerá sombrado en gris.</para>
+				<para>Antes de que un dominio o sensor sea eliminado, 
+				el sistema le mostrará una pantalla de confirmación avisándole de que todos los usuarios asignados a ese dominio y sus descendientes serán desactivados y asignados a los padres del dominio.</para>	
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img005.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img004.png"/>
 				</imageobject>
 				<caption>
 					<para>Confirmar eliminación de sensor</para>
 				</caption>
 			</mediaobject>
-			<para>En caso de que se hayan registrado <emphasis role="bold">sensores IPS/IDS</emphasis> se mostrará el tipo de política/s que se le hayan aplicado. 
-			Al hacer clic sobre él, accederemos a una interfaz en la que se muestran las firmas que componen esa política y desde la que podemos realizar diferentes acciones que serán explicadas con detalle en el capítulo en el que se abordan las <emphasis>Policy rules.</emphasis></para>
+			<para>En caso de que se hayan registrado <emphasis role="bold">sensores IPS/IDS</emphasis> se mostrará el tipo de política/s que se le hayan aplicado.</para> 
+			<para>Al hacer clic sobre él accedemos al panel de reglas incluidas en esa política. Para más información consulte el capítulo 8 <emphasis role="bold">"Creación de políticas".</emphasis></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scale="40" align="center" fileref="images/ch05_img004c.png"/>
+					<imagedata scale="100" align="center" fileref="images/ch05_img004c.png"/>
 				</imageobject>
 				<caption>
 					<para>Icono Políticas</para>
@@ -116,35 +131,31 @@
 						cada tipo de dominio tendrá un icono identificativo:</para>
 					</listitem>
 					<listitem>
-						<para>Genérico</para>
+						<para><emphasis>Genérico (Floor)</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Service Provider</para>
+						<para><emphasis>Service Provider</emphasis></para>
 						</listitem>
 					<listitem>
-						<para>Organización: es posible añadir más secciones para clasificar el sensor en la organización.</para>
-						<para>-Detalles de la organización</para>
-						<para>-Oficina Central</para>
-						<para>-Facturación</para>
-						<para>-Contabilidad</para>
+						<para><emphasis>Organización (Organization)</emphasis></para>
 					</listitem>
 					<listitem>
-					<para>Mercado</para>
+					<para><emphasis>Mercado (Market)</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Despliegue</para>
+						<para><emphasis>Despliegue (Deployment)</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Namespace</para>
+						<para><emphasis>Namespace</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Campus</para>
+						<para><emphasis>Campus</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Edificio</para>
+						<para><emphasis>Edificio (Building)</emphasis></para>
 					</listitem>
 					<listitem>
-						<para>Planta</para>
+						<para><emphasis>Planta (Floor)</emphasis></para>
 					</listitem>
 					<listitem>
 						<para><emphasis role="bold">Sensores:</emphasis> nodos finales que se corresponden con elementos físicos colocados en la red (switches, routers, IPS, etc.).</para>
@@ -154,15 +165,15 @@
 				<note>
 					<title>Nota</title>
 					<para>Recuerde que la creación de los sensores IPS o Gateway se debe realizar a través del registro de los sensores en el proceso de instalación del Manager. 
-					Desde esta sección podrá editar y sobreescribir los parámetros que hayan heredado de la Configuración General o <literal>General Settings</literal> como se verá más adelante.</para>
-					<para>Para el resto de Apps, la creación de sensores debe realizarse desde esta sección (<literal>Sensors.</literal>)</para>
+					Sensors le permite editar y sobreescribir los parámetros que hayan heredado de la Configuración General: <literal>Tools->General Settings</literal></para>
+					<para>Para el resto de Apps, la creación de sensores debe realizarse desde esta sección.</para>
 				</note>		
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" align="center" width="350" fileref="images/ch05_img004a.png"/>
 					</imageobject>
 					<caption>
-						<para>Detalle de niveles de organización en una infraestructura de sensores</para>
+						<para>Niveles de un sensor IPS: sensor, grupo, binding.</para>
 					</caption>
 				</mediaobject>
 			</section>

@@ -7,7 +7,7 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Aplicar reglas a un sensor</title>
+	<title>Creación de políticas</title>
 	<para>Una vez que disponemos de versiones de reglas descargadas en la sección 
 	<literal>Tools>Rule's version</literal> ya estamos en condiciones de poder crear una nueva política (<emphasis role="bold">Signature policy.</emphasis>) y aplicarla a un sensor.</para> 
 	<mediaobject>

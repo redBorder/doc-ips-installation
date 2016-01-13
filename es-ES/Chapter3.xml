@@ -357,9 +357,8 @@
 		<section>
 			<title>Añadir un segundo puerto al segmento</title>
 			<para>Una vez que haya asignado el primer puerto al segmento, el sistema le planteará la posibilidad de asignar un segundo puerto al segmento: <literal>Assign second port to the segment (Y/n):</literal></para>
-			<para>La opción que viene predeterminada por defecto aparece en mayúscula.</para>
 			<para>Recuerde que si desea asignar un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter.</keycap></para>
-			<para>En caso de que no desee asignar un nuevo puerto, teclee <keycap>n</keycap>. Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
+			<para>En caso de que no desee asignar un nuevo puerto, teclee <keycap>n</keycap>.</para>
 			<para>Introduzca el número de puerto en la línea <literal>Insert segment second port [3]:</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -381,7 +380,7 @@
 		</section>
 		<section>
 			<title>Finalizar el proceso de creación de los segmentos</title>
-			<para>Antes de aplicar cambios y finalizar el proceso de creación del segmento, visualizará una pantalla con un listado que incluye los siguientes elementos:</para>
+			<para>Antes de aplicar cambios y finalizar el proceso de creación delos segmento, visualizará una pantalla con un listado que incluye los siguientes elementos:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>Segmentos</para>
@@ -451,7 +450,7 @@
 	<section>
 		<title>Registro de los sensores en el Manager</title>
 		<para>Para finalizar el proceso de instalación de los sensores IPS, el último paso que debe llevarse a cabo es el <emphasis role="bold">Registro de los sensores en el Manager.</emphasis></para>
-		<para>Hasta que no se haya completado el registro visualizará un mensaje en el que se indica que los sensores aún no han sido registrados en el Manager. </para>
+		<para>Hasta que no se haya completado el registro visualizará un mensaje en el que se indica que los sensores aún no han sido registrados en el Manager:<literal>Not registered yet.</literal></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img022.png"/>
@@ -472,13 +471,14 @@
 				<para><literal>IP adress for rB Master Manager [127.0.0.1]:</literal> introducir la IP del Manager.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Register rB:</literal> registro de los sensores en el manager Sensor/Manager. Hasta que no se haya completado el proceso de registro el usuario visualizará el siguiente mensaje rotulado en rojo: <literal>(not registered yet)</literal></para>
+				<para><literal>Register rB:</literal> registro de los sensores en el manager Sensor/Manager.</para>
 			</listitem>
 		</orderedlist>
 		<section>
 			<title>Asignar nombre al sensor (Hostname)</title>
 			<para> Seleccionar la opción <literal>Hostname [rbsensor]</literal> del menú de registro de los sensores en el Manager insertando el número <keycap>1.</keycap></para>
-			<para> A continuación, en la línea <literal>Insert Hostname [rbsensor]:</literal> escribir el nombre que se desea dar al sensor que se va a registrar en el Manager. A partir de este momento, este es el nombre que visualizará en la web cuando acceda al listado de sensores IPS.</para>
+			<para><literal>Insert Hostname [rbsensor]:</literal> escribir el nombre que se desea dar al sensor que se va a registrar en el Manager. 
+			A partir de este momento, este es el nombre que visualizará en la plataforma web cuando acceda al listado de sensores IPS (Sección <emphasis role="bold">Sensors</emphasis> consultar capítulo 5).</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img023.png"/>
@@ -489,13 +489,15 @@
 			</mediaobject>
 			<note>
 				<title>Nota</title>
-				<para>Recuerde introducir un nombre coherente para el sensor. Evite utilizar el nombre “Sensor”, ya que ese es el nombre genérico que utiliza el Manager y que a la larga, podría causar confusión.</para>
+				<para>Recuerde introducir un nombre coherente para el sensor. <emphasis role="bold">Evite utilizar el nombre “Sensor”,</emphasis> ya que ese es el nombre genérico que utiliza el Manager
+				 y que, a la larga, podría causar confusión.</para>
 			</note>
 			<warning>
 				<title>Advertencia</title>
 				<para>El sistema le pedirá que verifique que el nombre elegido es el correcto, en ese caso, pulse <keycap>Enter</keycap></para>
 				<para>Si desea modificarlo inserte la letra <keycap>n</keycap></para>
-				<para>El sistema procederá a cambiar el nombre del sensor. Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
+				<para>El sistema procederá a cambiar el nombre del sensor. 
+				Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
 			</warning>	
 		</section>		
 		<section>
@@ -535,14 +537,12 @@
 				<para>Insertar IP master Manager</para>
 			</caption>
 		    </mediaobject>
-		    <para>Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
+		    <para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
 		</section>
 		<section>
 			<title>Registro de los sensores en el Manager</title>
-			<para>Este es el último paso que da por finalizado el proceso de implantación de la solución redBorder IPS.</para>
-			<para> A partir de este momento, usted podrá trabajar directamente desde la aplicación de gestión IPS, en cuyo dashboard visualizará de manera gráfica todos los eventos de tráfico captados por los sensores IPS. </para>
-			<para>En esta aplicación podrá crear informes, visualizar los eventos o configurar las reglas del Manager entre otras acciones. </para>
-			<para><emphasis>Finalización del proceso del registro de los sensores en el Manager</emphasis></para>
+			<para>Este es el último paso que da por finalizado el proceso de instalación de la plataforma redborder y la activación de la App IPS.</para>
+			<para><emphasis role="bold">Finalización del proceso del registro de los sensores en el Manager</emphasis></para>
 			<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
 			<orderedlist numeration="arabic">
 				<listitem>
@@ -577,7 +577,7 @@
 				<title>Advertencia</title>
 				<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
 			</warning>
-			<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
+			<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
 			<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito:<literal>(Registered).</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -587,7 +587,7 @@
 					<para>Registro del sensor realizado con éxito</para>
 				</caption>
 		    </mediaobject>
-		    <para> Para salir del asistente de registro de los sensores en el Manager, seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>
+		    <para> Para salir del asistente seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>
 		    <para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web redBorder. 
 		    El usuario puede acceder a la plataforma web redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
 			<para><screen>https://direccion-IP-manager</screen></para>				
