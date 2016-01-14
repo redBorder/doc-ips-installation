@@ -70,7 +70,7 @@
 					<para>Vista <literal>Tree</literal></para>
 				</caption>
 			</mediaobject>
-			<para><emphasis role="bold">Acciones disponibles en la vista Tree:</emphasis>
+			<para><emphasis role="bold">Acciones disponibles en la vista Tree:</emphasis></para>
 			<itemizedlist mark="circle">
 				<listitem>
 					<para>Añadir un nuevo dominio o sensor</para>
