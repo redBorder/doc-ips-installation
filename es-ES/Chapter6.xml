@@ -158,7 +158,7 @@
 			<para>El sensor debe estar configurado en <emphasis role="bold">modo IPS Test mode o IPS </emphasis> para el escenario básico de la instalación de redBorder IPS.</para>
 		</important>
 		<para>A continuación, el usuario puede editar una serie de parámetros relacionados con el comportamiento de PF_RING y Snort:</para>
-		<para><literal>PF_RING Watermark</literal></para><!--->
+		<para><literal>PF_RING Watermark</literal></para>
 		<para>Indica el número mínimo de paquetes entrantes para la función poll.</para>
 		<itemizedlist mark="bullet">	
 			<listitem>		
@@ -312,11 +312,7 @@
 	</section>
 	<section>
 		<title>Trap Servers</title>
-		<note>
-			<title>Nota</title>
-			<para>Esta sección aplica únicamente a nivel de sensor.</para>
-		</note>
-		<para>Esta sección permite realizar la configuración del SNMP de los <literal>Trap Servers</literal> .</para> 
+		<para>En este apartado se realiza la configuración del SNMP de los <literal>Trap Servers</literal> .</para> 
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img010.png"/>
@@ -325,8 +321,9 @@
 				<para>Listado de Trap Servers</para>
 			</caption>
 		</mediaobject>
-		<para><emphasis role="bold">Añadir Trap Server:</emphasis> Es posible añadir un nuevo <literal>Trap Server</literal> clicando sobre la pestaña <literal>+Add,</literal> a continuación, introducir la IP y la Comunidad SNMP a la que pertenece. <literal>Update</literal> para guardar los cambios introducidos.</para>		
-		<para><emphasis role="bold">Eliminar Trap Server:</emphasis> Clicar en el icono Eliminar que aparece junto a la información del Trap Server para descartarlo. </para>
+		<para><emphasis role="bold">Añadir Trap Server:</emphasis> Es posible añadir un nuevo <literal>Trap Server</literal> haciendo clic en <literal>+Add.</literal>
+		 A continuación, introducir la IP y la Comunidad SNMP a la que pertenece. <literal>Update</literal> para guardar los cambios introducidos.</para>		
+		<para><emphasis role="bold">Eliminar Trap Server:</emphasis> Pulsar en el icono "Eliminar" para descartar el Trap Server seleccionado.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img011.png"/>
@@ -338,12 +335,25 @@
 	</section>
 	<section>
 		<title>Segmentos</title>
-		<note>
-			<title>Nota</title>
-			<para>Esta sección aplica únicamente a nivel de sensor.</para>
-		</note>
-		<para>En este apartado se muestra un listado con los segmentos que se han creado durante el proceso de registro de sensores en el Manager. La información que muestra es la siguiente: Segmento, interfaces, Bypass (check activado o desactivado), tipo de segmento y velocidad.</para>
-		<para>Desde esta sección se puede <emphasis role="bold">activar o desactivar </emphasis> la función bypass. </para>
+		<para>En este apartado se muestra un listado con los segmentos que se han creado durante el proceso de registro de sensores en el Manager. 
+		Se muestra la siguiente información:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Segmento</para>
+			</listitem>
+			<listitem>
+				<para>Interfaces</para>
+			</listitem>
+			<listitem>
+				<para>Bypass: activar o desactivar la función bypass.</para>
+			</listitem>
+			<listitem>
+				<para>Tipo de segmento</para>
+			</listitem>
+			<listitem>
+				<para>Velocidad</para>
+			</listitem>
+		</itemizedlist> 
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img012.png"/>
@@ -355,17 +365,13 @@
 	</section>
 	<section>
 		<title>Network routes</title>
-		<note>
-			<title>Nota</title>
-			<para>Esta opción solo se encuentra disponible en el menú de configuración a nivel de sensor</para>
-		</note>
 		<para>Permite la configuración de rutas adicionales que complementan a la pasarela predeterminada.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img013.png"/>
 			</imageobject>
 			<caption>
-				<para>Rutas estáticas de red</para>
+				<para>Rutas estáticas de red o Network Routes</para>
 			</caption>
 		</mediaobject>
 		<para> Es posible añadir una nueva ruta mediante la pestaña <literal>+Add Route.</literal> A continuación insertar red y pasarela de red.</para>
@@ -381,15 +387,22 @@
 	<section>
 		<title>Location</title>
 		<para>Localiza el sensor o el dominio en un mapamundi.</para>
-		<para><emphasis role="bold">Añadir localización:</emphasis> para agregar una localización, el usuario puede hacerlo desde la pestaña <literal>+Add Location</literal> 
-		e introducir las coordenadas, o bien, añadir localización directamente en el mapa. Posar el ratón sobre la localización seleccionada y hacer clic en el botón derecho del ratón. 
-		Seleccionar "Add location" en el menú desplegable.</para>
+		<para><emphasis role="bold">Añadir localización:</emphasis> es posible agregar una localización desde la opción <literal>+Add Location</literal> 
+		e introducir las coordenadas, o bien, mediante el menú desplegado por el botón derecho del ratón.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img015.png"/>
 			</imageobject>
 			<caption>
-				<para>Añadir localización del sensor</para>
+				<para>Añadir localización del sensor: +Add Location</para>
+			</caption>
+		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img015b.png"/>
+			</imageobject>
+			<caption>
+				<para>Añadir localización del sensor: menú botón derecho</para>
 			</caption>
 		</mediaobject>
 		<warning>
@@ -399,9 +412,11 @@
 	</section>
 	<section>
 		<title>IP Variables</title> 
-		<para>En este apartado se muestran los valores para las variables IP Snort. 
-		Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y de este modo, Snort pueda reconocerlas. 
-		Por ejemplo, en caso de que se hayan configurado redes locales con IPs públicas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
+		<para>En este apartado se muestran los valores para las variables IP de Snort. </para>
+		<para>Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
+		Por ejemplo, en el caso de que se hayan configurado redes locales con IPs públicas. </para>
+		<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la casilla <literal> Inherited.</literal></para>
+		<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables IP. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img016.png"/>
@@ -410,8 +425,6 @@
 				<para>Variables IP</para>
 			</caption>
 		</mediaobject>
-		<para>En este apartado, el usuario puede editar la variable, haciendo clic en el icono de configuración; a continuación insertar el nombre de la variable y el valor.</para>
-		<para>También es posible eliminar una variable del listado mediante el icono "Eliminar" que aparece en cada una de las filas.</para>
 		<note>
 			<title>Nota</title>
 			<para>Para más información acerca de los valores de las variables IP consultar el siguiente enlace: http://manual.snort.org/node53.html</para>
@@ -424,11 +437,12 @@
 				<para>Editar valores de las Variables IP</para>
 			</caption>
 		</mediaobject>
-		<para>Es posible Exportar e importar variables IP desde las pestañas <literal>Export</literal> e <literal>Import.</literal>El formato de archivo usado en la importación y exportación debe ser .csv</para>
+		<para>Es posible Exportar e importar variables IP desde las pestañas <literal>Export</literal> e <literal>Import.</literal> El formato de archivo usado en la importación y exportación debe ser .csv</para>
 		<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
 		<warning>
 			<title>Advertencia</title>
-			<para>En el caso de seleccionar la opción Importar variables><literal>Replace variables</literal> las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y ésta, no fuera heredada.</para>
+			<para>En caso de seleccionar la opción Importar variables-><literal>Replace variables,</literal> 
+			las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y, ésta, no fuera heredada.</para>
 		</warning>
 		<mediaobject>
 			<imageobject>
@@ -438,11 +452,21 @@
 				<para>Importar variables IP</para>
 			</caption>
 		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img018b.png"/>
+			</imageobject>
+			<caption>
+				<para>Exportar variables IP</para>
+			</caption>
+		</mediaobject>
 	</section>
 	<section>
 		<title>Port variables</title>
-		<para>En este apartado se muestran los valores para las variables de los puertos Snort. Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-		De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
+		<para>En este apartado se muestran los valores para las variables de los puertos Snort.</para>
+		<para> Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
+		De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la casilla <literal> Inherited.</literal></para>
+		<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables de puertos. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img019.png"/>
@@ -451,8 +475,6 @@
 				<para>Port variables</para>
 			</caption>
 		</mediaobject>
-		<para>En este apartado, el usuario puede editar la variable, haciendo clic en el icono de configuración; a continuación insertar el nombre de la variable y el valor.</para>
-		<para>También es posible eliminar una variable del listado mediante el icono "Eliminar" que aparece en cada una de las filas.</para>
 		<note>
 			<title>Nota</title>
 			<para>Para más información acerca de los valores de las variables de puertos Snort consultar el siguiente enlace: http://manual.snort.org/node54.html</para>
@@ -469,7 +491,7 @@
 		<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
 		<warning>
 			<title>Advertencia</title>
-			<para>En el caso de seleccionar la opción Importar variables><literal>Replace variables</literal> las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y ésta, 
+			<para>En caso de seleccionar la opción Importar variables-><literal>Replace variables</literal> las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y ésta, 
 			no fuera heredada.</para>
 		</warning>
 		<mediaobject>
@@ -480,21 +502,28 @@
 				<para>Importar variables de puertos Snort</para>
 			</caption>
 		</mediaobject>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img021b.png"/>
+			</imageobject>
+			<caption>
+				<para>Exportar variables de puertos Snort</para>
+			</caption>
+		</mediaobject>
 	</section>
 	<section>
 		<title>Groups</title>
-		<para>Un grupo es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
-		<para>Definimos <emphasis role="bold">Instancia</emphasis> como la asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, 
-		se deberán tener el mismo número de bindings configurados.</para>
-		<para>Definimos <emphasis role="bold">Binding</emphasis> como una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
-		<para>Una de las nuevas funcionalidades de la web redBorder es la posibilidad de crear grupos de sensores y bindings. 
-		Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor (independientemente de los segmentos creados), 
+		<para><emphasis role="bold">Grupo:</emphasis> es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
+		<para><emphasis role="bold">Instancia:</emphasis> es una asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, 
+		es necesario tener configurados el mismo número de bindings que de instancias.</para>
+		<para><emphasis role="bold">Binding</emphasis> es una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
+		<para>El usuario puede asignar una política a tres niveles: sensor, grupo de segmentos o bindings.</para>
+		<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor (independientemente de los segmentos creados), 
 		permite la formación de grupos de segmentos independientes y bindings.</para>
-		<para>De este modo, el usuario puede asignar una política a tres niveles: sensor, grupo de segmentos o bindings.</para>
 		<note>
 			<title>Nota</title>
-			<para><emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
-			<para>Los parámetros de configuración y las políticas de los niveles superiores afecta a la de aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
+			<para><emphasis role="bold">El sistema de herencias se establece desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
+			<para>Los parámetros de configuración y las políticas de los niveles superiores afecta a aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
 			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre".</para> 	
 		</note>
 		<mediaobject>
@@ -505,130 +534,154 @@
 				<para>Grupos de segmentos</para>
 			</caption>
 		</mediaobject>
-		<para>En este apartado se pueden realizar las siguientes acciones:</para>
+		<para>En este apartado se puede realizar la configuración de los grupos de segmentos:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para>Name: editar nombre del grupo</para>
+				<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo</para>
 			</listitem>
 			<listitem>
-				<para>Sensor mode: selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor)</para>
+				<para><emphasis role="bold">Sensor mode:</emphasis> selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor)</para>
 			</listitem>
 			<listitem>
-				<para>Segments: indica el/los segmentos incluidos en el grupo</para>
+				<para><emphasis role="bold">Segments:</emphasis> indica el/los segmentos incluidos en el grupo</para>
 			</listitem>
 			<listitem>
-				<para>CPUs: asignación del procesador o procesadores de los que va a leer el grupo de segmentos.</para>
+				<para><emphasis role="bold">CPUs:</emphasis> asignación del procesador o procesadores de los que va a leer el grupo de segmentos.</para>
 			</listitem>
 		</itemizedlist>
-		<note>
-			<title>Nota</title>
-			<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen procesadores o CPUs diferentes a cada grupo para distribuir los procesos y balancear de este modo la carga de cada procesador.</para>
-		</note>
-		<para>Antes de proceder a explicar las diferentes acciones que se pueden realizar sobre un grupo de segmentos se deben tener en cuenta las siguientes consideraciones:</para>
-		<itemizedlist mark="bullet">
-			<listitem>
-				<para>No es posible que dos grupos compartan los mismos segmentos.</para>
-			</listitem>
-			<listitem>
-				<para>Dos instancias del mismo grupo no pueden tener distintos modos <literal>(Sensor mode).</literal></para>
-			</listitem>
-			<listitem>
-				<para>Sensores IPS/IDS: solo pueden colgar de ellos sus propios grupos y bindings.</para>
-			</listitem>
-			<listitem>
-				<para>Los grupos y los bindigs pueden moverse y hacerlos depender de dominios. Sin embargo, estos, tan solo pueden ser devueltos al sensor IPS al que pertenecían antes de moverlos.</para>
-			</listitem>
-		</itemizedlist>
-		<para><emphasis role="bold">Eliminar un grupo de segmentos</emphasis></para>
-		<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
 		<important>
 			<title>Importante</title>
-			<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
-			Los segmentos quedarán libres para su integración en otro grupo. </para>
+			<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen procesadores o CPUs diferentes a cada grupo para distribuir los procesos y balancear de este modo la carga de cada procesador.</para>
 		</important>
-		<para><emphasis role="bold">Añadir grupo de segmentos/ Editar grupo de segmentos</emphasis></para>
-		<para>Para añadir un nuevo grupo basta con seleccionar la opción <literal>+Add Group.</literal></para>
-		<para>Para la edición de un grupo ya existente, hacer clic sobre el icono de edición del grupo que se quiera editar.</para>
-		<para>En ambos casos, el usuario accederá a la interfaz de configuración a nivel de grupo. En ella puede añadir/editar la siguiente información:</para>
-		<itemizedlist mark="bullet">
-			<listitem>
-				<para>Name: editar nombre del grupo. </para>
-			</listitem>
-			<listitem>
-				<para>Description: añadir una descripción al grupo de segmentos.</para>
-			</listitem>
-			<listitem>
-				<para>IPS/IDS Settings: configuración de los parámetros de Snort a nivel de grupo. </para>
-			</listitem>
-			<listitem>
-				<para>IP Variables: listado de valores para las variables IP Snort a nivel de grupo. 
-		Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y de este modo, Snort pueda reconocerlas. 
-		Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
-			</listitem>
-			<listitem>
-				<para>Port Variables: En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. 
-				Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-		De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
-			</listitem>
-			<listitem>
-				<para>Bindings: los bindings son particiones del tráfico a través de red o VLAN. Actúan como "hijos" del grupo a nivel de herencias y aplicación de políticas. 
+		<section>
+			<title>Condiciones para la creación de grupos de segmentos</title>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>No es posible que dos grupos compartan los mismos segmentos.</para>
+				</listitem>
+				<listitem>
+					<para>Dos instancias del mismo grupo no pueden tener distintos modos <literal>(Sensor mode).</literal></para>
+				</listitem>
+				<listitem>
+					<para>Sensores IPS/IDS: solo pueden colgar de ellos sus propios grupos y bindings.</para>
+				</listitem>
+				<listitem>
+					<para>Los grupos y los bindigs pueden moverse y hacerlos depender de dominios. Sin embargo, estos, tan solo pueden ser devueltos al sensor IPS al que pertenecían antes de moverlos.</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+		<section>
+			<title>Añadir grupo de segmentos/ Editar grupo de segmentos</title>
+			<para>Para añadir un nuevo grupo basta con seleccionar la opción <literal>+Add Group.</literal></para>
+			<para>Para la edición de un grupo ya existente, hacer clic sobre el icono "Editar".</para>
+			<para>En ambos casos, el usuario accederá a la interfaz de configuración a nivel de grupo. En ella puede modificar la siguiente información:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo. </para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Description:</emphasis> añadir una descripción al grupo de segmentos.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuración de los parámetros de Snort a nivel de grupo. </para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">IP Variables:</emphasis> listado de valores para las variables IP de Snort a nivel de grupo. 
+			Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
+			Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Port Variables:</emphasis> En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. 
+					Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
+			De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas como <literal> Inherited.</literal></para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Bindings:</emphasis> los bindings son particiones del tráfico a través de red o VLAN. Actúan como "hijos" del grupo a nivel de herencias y aplicación de políticas. 
 				Para añadir un nuevo binding hacer clic en <literal>+Add binding</literal> e introducir el nombre.</para>
-			</listitem>
-		</itemizedlist>
-		<note>
-			<title>Nota</title>
-			<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
-		</note>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img023.png"/>
-			</imageobject>
-			<caption>
-				<para>Añadir/editar grupo de segmentos</para>
-			</caption>
-		</mediaobject>
-		<para><emphasis>Añadir/editar configuración de bindings</emphasis></para>
-		<para>Existen dos maneras de añadir o editar un binding:</para>
-		<orderedlist numeration="arabic">
-			<listitem>
-				<para>Pantalla de configuración de sensor IPS/IDS: Groups->Icono edición->Bindings-><literal>+Add binding</literal>/Icono edición</para>
-			</listitem>
-			<listitem>
-				<para>Pantalla de configuración de sensor IPS/IDS: <literal>+Add Group</literal>->Bindings-><literal>+Add binding</literal>/Icono edición</para>
-			</listitem>
-		</orderedlist>
-		<para>Cuando añadimos un nuevo binding el sistema nos solicita un nombre.</para>
-		<note>
-			<title>Nota</title>
-			<para>Para que un binding sea tenido en cuenta, hay que asignarle, al menos, una Vlan.</para>
-		</note>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img024.png"/>
-			</imageobject>
-			<caption>
-				<para>Editar configuración de bindings</para>
-			</caption>
-		</mediaobject>
-		<para>Los campos de edición para la configuración a nivel de binding son los siguientes:</para>
-		<itemizedlist>
-			<listitem>
-				<para>General: Nombre y descripción.</para>
-			</listitem>
-			<listitem>
-				<para>IPS/IDS Settings</para>
-			</listitem>
-			<listitem>
-				<para>IP Variables</para>
-			</listitem>
-			<listitem>
-				<para>Port Variables</para>
-			</listitem>
-		</itemizedlist>
-		<para>Para asegurarse de que las modificaciones realizadas en un binding ya existentes se van a aplicar correctamente, hacer clic en <literal>Update</literal></para>
-		<warning>
-			<title>Advertencia</title>
-			<para>En caso de que los campos IPS/IDS Settings, IP Variables y Port Variables no sean modificados, el binding heredará la configuración del grupo de segmentos del que depende. </para>
-		</warning>
+				</listitem>
+			</itemizedlist>
+			<note>
+				<title>Nota</title>
+				<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img023.png"/>
+				</imageobject>
+				<caption>
+					<para>Añadir/editar grupo de segmentos</para>
+				</caption>
+			</mediaobject>
+				<para><emphasis role="bold">Eliminar un grupo de segmentos</emphasis></para>
+			<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
+			<important>
+				<title>Importante</title>
+				<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
+			Los segmentos quedarán libres para su integración en otro grupo. </para>
+			</important>
+		</section>
+		<section>
+			<title>Eliminar un grupo de segmentos</title>
+			<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
+			<important>
+				<title>Importante</title>
+				<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
+				Los segmentos quedarán libres para su integración en otro grupo. </para>
+			</important>
+		</section>
+		<section>
+			<title>Bindings</title>
+			<para><emphasis role="bold">Añadir/editar configuración de bindings</emphasis></para>
+			<para>Existen dos maneras de añadir o editar un binding:</para>
+			<orderedlist numeration="arabic">
+				<listitem>
+					<para>Pantalla de configuración de sensor IPS/IDS: Groups->Icono edición->Bindings-><literal>+Add binding</literal>/Icono edición</para>
+				</listitem>
+				<listitem>
+					<para>Pantalla de configuración de sensor IPS/IDS: <literal>+Add Group</literal>->Bindings-><literal>+Add binding</literal>/Icono edición</para>
+				</listitem>
+			</orderedlist>
+			<para>Cuando añadimos un nuevo binding el sistema nos solicita un nombre.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img024.png"/>
+				</imageobject>
+				<caption>
+					<para>Grupos de segmentos->Bindings</para>
+				</caption>
+			</mediaobject>
+			<note>
+				<title>Nota</title>
+				<para>Para que un binding sea tenido en cuenta, hay que asignarle, al menos, una Vlan.</para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img024b.png"/>
+				</imageobject>
+				<caption>
+					<para>Editar configuración de bindings</para>
+				</caption>
+			</mediaobject>
+			<para>Los campos de edición para la configuración a nivel de binding son los siguientes:</para>
+			<itemizedlist>
+				<listitem>
+					<para>General: Nombre y descripción.</para>
+				</listitem>
+				<listitem>
+					<para>IPS/IDS Settings</para>
+				</listitem>
+				<listitem>
+					<para>IP Variables</para>
+				</listitem>
+				<listitem>
+					<para>Port Variables</para>
+				</listitem>
+			</itemizedlist>
+			<para>Para asegurarse de que las modificaciones realizadas en un binding ya existentes se van a aplicar correctamente, hacer clic en <literal>Update</literal></para>
+			<warning>
+				<title>Advertencia</title>
+				<para>En caso de que los campos IPS/IDS Settings, IP Variables y Port Variables no sean modificados, el binding heredará la configuración del grupo de segmentos del que depende. </para>
+			</warning>
+		</section>
 	</section>	
 </chapter>
