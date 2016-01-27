@@ -45,8 +45,8 @@
 				<para>Ir a panel de Signature Policies</para>
 			</caption>
         </mediaobject> 
-		<para>En el panel de Signature Policies se muestran todas las políticas creadas y asignadas a ese sensor. </para>
-		<para>La información que se muestra es la siguiente: 
+		<para>En el panel de Signature Policies se muestran todas las políticas creadas y asignadas a ese sensor.</para>
+		<para>La información que se muestra es la siguiente: </para>
 		<itemizedlist mark="bullet">
 			<listitem>
 				<para>Nombre de la política (Policy Name)</para>

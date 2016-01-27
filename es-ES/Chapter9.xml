@@ -27,7 +27,6 @@
 		</mediaobject>
 	<para>Este capítulo se centra en la creación de Reputation Policies y su aplicación a un sensor IPS/IDS.</para>
     <section>
-    <section>
 		<title>Reputation Policies</title>
 		<para>Las políticas de reputación permiten realizar acciones de bloqueo o acceso de paquetes en nuestra red por continente, país y/o IP.</para>
 		<para>Para crear una Reputation Policy nos dirigimos a la sección <literal>Sensors</literal> hacemos clic en el icono de Edición
@@ -130,8 +129,7 @@
 					</itemizedlist>
 				</section>
 			</section>
-		</section>
-	</section>		
+		</section>		
 		<section>
 			<title>Asignación de la política de reputación a un sensor</title>
 			<para>Ya tenemos creada nuestra "Reputation policy". Esta se encuentra disponible para asignarla a un sensor IPS/IDS. Existen dos modos de asignar la Reputation Policy a un sensor: </para>
@@ -194,7 +192,7 @@
 				</listitem>
 			</itemizedlist>
 		</section>
-	</section>
+	</section>		
 	<section>
 		<title>Herencias de las políticas</title>
 		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo 5: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
