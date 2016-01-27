@@ -28,7 +28,8 @@
 	<para>Este capítulo se centra en la creación de Signature Policies y su aplicación a un sensor IPS/IDS.</para>
     <section>
 		<title>Signature Policies</title>
-		<para>Una vez que disponemos de versiones de reglas descargadas en la sección <literal>Tools>Rule Versions</literal> ya estamos en condiciones de poder crear una nueva política (<emphasis role="bold">Signature policy.</emphasis>) y aplicarla a un sensor.</para> 
+		<para>Una vez que disponemos de versiones de reglas descargadas en la sección <literal>Tools>Rule Versions</literal> 
+		ya estamos en condiciones de poder crear una nueva política (<emphasis role="bold">Signature policy.</emphasis>) y aplicarla a un sensor.</para> 
 		<note>
 			<title>Nota</title>
 			<para>Para poder comenzar el proceso de creación de una política debemos asegurarnos de que se han creado versiones de reglas 
@@ -456,6 +457,7 @@
 				</itemizedlist>	
 			</section>	
         </section>
+    </section>
     <section>
 		<title>Herencias de las políticas</title>
 		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo 5: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
@@ -517,41 +519,41 @@
 				<para>Inherited: Configuración heredada de sensores IPS/IDS</para>
 	 		</caption>
 		</mediaobject>
-			<section>
-				<title>Creación de diferentes políticas en cada uno de los niveles existentes</title>
-				<para>Una de las nuevas funcionalidades de redBorder es la posibilidad de crear para los sensores IPS/IDS <emphasis role="bold">grupos de segmentos y bindings.</emphasis></para>
-				<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor, en redborder v.3 es posible
-				crear políticas independientes a nivel de grupo de segmentos o bindings.</para>	
-				<para><emphasis role="bold">Creación de Signature Pocicies en diferentes niveles</emphasis></para>
-				<para>Para crear una Signature Policy en diferentes niveles es necesario dirigirse a la vista <literal>Sensors</literal> (vista árbol). En ella, situarse en el nivel en el que se desee crear una política.</para>
-				<para>En el caso de los sensores estos están disponibles nada más visualizar el árbol. Para la creación a nivel de grupo o binding, el usuario deberá desplegar tantos niveles como sea necesario. 
-				Esa política se aplicará en ese nivel y en los "hijos" que dependan de él.</para>
-				<para>Una vez que se encuentre situado en el nivel deseado, hacer clic en el icono "Editar" y seleccionar la opción <literal>Signature Policies.</literal></para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img028.png"/>
-					</imageobject>
-					<caption>
-						<para>Creación de políticas diferentes en cada uno de los niveles existentes</para>
-					</caption>
-				</mediaobject>
-				<para>Al crear una nueva política se puede elegir quién será el "owner" o propietario de la misma. 
-				En este caso, nos encontraremos un desplegable en el que seleccionar el nivel desde el cual se va a aplicar.</para>
-				<para><emphasis role="bold">Owner:</emphasis> establece a partir de qué nivel deben aplicarse las políticas.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img019.png"/>
-					</imageobject>
-					<caption>
-						<para>New Policy: determinar Owner o propietario de la política</para>
-					</caption>
-				</mediaobject>
-				<para>Para gestionar la <emphasis role="bold">jerarquía de los sensores y los dominios</emphasis> solo es necesario dirigirse a la sección <literal>Sensors</literal> (vista árbol)
-				y mediante la acción de "selección y arrastre" situar el dominio o sensor en nivel que se desee.</para>	
-				<note>
-					<title>Nota</title>
-					<para>Gracias a los grupos de sensores y bindings, con una sola máquina, el usuario puede crear numerosos entornos para aplicar diferentes reglas.</para>
-				</note>
+		<section>
+			<title>Creación de diferentes políticas en cada uno de los niveles existentes</title>
+			<para>Una de las nuevas funcionalidades de redBorder es la posibilidad de crear para los sensores IPS/IDS <emphasis role="bold">grupos de segmentos y bindings.</emphasis></para>
+			<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor, en redborder v.3 es posible
+			crear políticas independientes a nivel de grupo de segmentos o bindings.</para>	
+			<para><emphasis role="bold">Creación de Signature Pocicies en diferentes niveles</emphasis></para>
+			<para>Para crear una Signature Policy en diferentes niveles es necesario dirigirse a la vista <literal>Sensors</literal> (vista árbol). En ella, situarse en el nivel en el que se desee crear una política.</para>
+			<para>En el caso de los sensores estos están disponibles nada más visualizar el árbol. Para la creación a nivel de grupo o binding, el usuario deberá desplegar tantos niveles como sea necesario. 
+			Esa política se aplicará en ese nivel y en los "hijos" que dependan de él.</para>
+			<para>Una vez que se encuentre situado en el nivel deseado, hacer clic en el icono "Editar" y seleccionar la opción <literal>Signature Policies.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img028.png"/>
+				</imageobject>
+				<caption>
+					<para>Creación de políticas diferentes en cada uno de los niveles existentes</para>
+				</caption>
+			</mediaobject>
+			<para>Al crear una nueva política se puede elegir quién será el "owner" o propietario de la misma. 
+			En este caso, nos encontraremos un desplegable en el que seleccionar el nivel desde el cual se va a aplicar.</para>
+			<para><emphasis role="bold">Owner:</emphasis> establece a partir de qué nivel deben aplicarse las políticas.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img019.png"/>
+				</imageobject>
+				<caption>
+					<para>New Policy: determinar Owner o propietario de la política</para>
+				</caption>
+			</mediaobject>
+			<para>Para gestionar la <emphasis role="bold">jerarquía de los sensores y los dominios</emphasis> solo es necesario dirigirse a la sección <literal>Sensors</literal> (vista árbol)
+			y mediante la acción de "selección y arrastre" situar el dominio o sensor en nivel que se desee.</para>	
+			<note>
+				<title>Nota</title>
+				<para>Gracias a los grupos de sensores y bindings, con una sola máquina, el usuario puede crear numerosos entornos para aplicar diferentes reglas.</para>
+			</note>
 		</section>		
     </section>
 </chapter>
