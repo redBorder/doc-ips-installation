@@ -500,7 +500,7 @@
 		por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img026.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
 			</imageobject>
 			<caption>
 				<para>General Settings: Configuración General del Manager o "root"</para>
@@ -513,7 +513,7 @@
 		Para cambiar esta configuración, el usuario deberá sobreescribir esa información.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img027.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
 			</imageobject>
 			<caption>
 				<para>Inherited: Configuración heredada de sensores IPS/IDS</para>
@@ -531,7 +531,7 @@
 			<para>Una vez que se encuentre situado en el nivel deseado, hacer clic en el icono "Editar" y seleccionar la opción <literal>Signature Policies.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img028.png"/>
+					<imagedata scalefit="1" align="center" width="50" fileref="images/ch08_img028.png"/>
 				</imageobject>
 				<caption>
 					<para>Creación de políticas diferentes en cada uno de los niveles existentes</para>
