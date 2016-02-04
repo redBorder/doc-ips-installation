@@ -147,7 +147,7 @@
 			que la asignación de la política a ese sensor afectará a todos los "hijos" que tenga por debajo. <footnote><para>En el apartado de <emphasis role="bold">Herencias de las políticas</emphasis> se explican con detalle </para></footnote></para>
 			<note>
 				<title>Nota</title>
-				<para>Un sensor o grupo puede ser propietario (Owner) de múltiples políticas, pero <emphasis rople="bold">solo es posible aplicar una política para cada sensor o grupo.</emphasis> 
+				<para>Un sensor o grupo puede ser propietario (Owner) de múltiples políticas, pero <emphasis role="bold">solo es posible aplicar una política para cada sensor o grupo.</emphasis> 
 				La política asignada quedará sombreada en verde.</para>
 			</note>
 			<mediaobject>
@@ -222,8 +222,8 @@
 		<note>
 			<title>Nota</title>
 			<para>El sistema de herencias establece que la configuración de los niveles superiores afecta a la de aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
-			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre". 
-			<emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
+			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre". </para>
+			<para><emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
 		</note>
 		<para><emphasis role="bold">General Settings</emphasis></para>
 		<para>En la sección <literal>Tools</literal> encontramos la opción de <literal>General Settings</literal> desde la cual el usuario puede establecer la configuración de los parámetros generales del Manager. </para>

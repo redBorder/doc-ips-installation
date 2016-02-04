@@ -229,7 +229,7 @@
 				<para><emphasis>Filter zoom:</emphasis> aisla gráficamente los eventos según un rango de tiempo.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis>Filtrar por valor de atributo</emphasis>emphasis> (<literal>Filter Selected</literal>): nos permite convertir en filtro a uno o más elementos presentes en la tabla.</para>
+				<para><emphasis>Filtrar por valor de atributo</emphasis> (<literal>Filter Selected</literal>): nos permite convertir en filtro a uno o más elementos presentes en la tabla.</para>
 			</listitem>
 			<listitem>
 				<para><emphasis>Búsqueda avanzada</emphasis> (<literal>Advanced Search</literal>): permite establecer condiciones para realizar una búsqueda avanzada que actúe a modo de filtro. 
@@ -801,66 +801,68 @@
 			<para>Seleccionar tipo de datos o agregación</para>
 		</caption>
 	</mediaobject>
-		<title>Events</title> 
-		<para>En las vistas <literal>Tops</literal> y <literal>Compare</literal> esta opción permite visualizar el total de eventos que se han registrado en un periodo de tiempo determinado filtrados por atributo. </para> 
-		<para>Es posible, por tanto, obtener una gráfica que nos muestre el número de eventos registrados por sensor, por IP de origen, por destino, etc.</para> 
-		<para>Al posar el ratón encima de la vista gráfica es posible visualizar la fecha, hora exactas y el número de eventos totales .</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img003.png"/>
-			</imageobject>
-			<caption>
-				<para>Eventos/sensor</para>
-			</caption>
-		</mediaobject>
-		<para>Recuerde que es posible un análisis más profundo añadiendo pestañas con atributos. Es posible añadir tantas pestañas como atributos se muestran en la sección <literal>+Add tab.</literal></para> 
-		<para>Por ejemplo, en las siguientes capturas observamos el total de firmas que se han recibido en un periodo de tiempo determinado 
-		o en el segundo caso, el total de eventos generados por las IPs de origen que han interactuado con la red.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img004.png"/>
-			</imageobject>	
-			<caption>
-				<para>Eventos/firmas</para>
-			</caption>
-		</mediaobject>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img005.png"/>
-			</imageobject>
-			<caption>
-				<para>Eventos/DST Address</para>
-			</caption>
-		</mediaobject>
-	</section>
-	<section>
-		<title>Events/s</title> 
-		<para>Muestra el total de eventos que se han producido en un segundo para un atributo dado. Nos ofrece el máximo grado de granuralidad.</para> 
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img006.png"/>
-			</imageobject>
-			<caption>
-				<para>Eventos/s-firmas</para>
-			</caption>
-		</mediaobject>
-	</section>
-	<section>
-		<title>Signatures</title> 
-		<para>Al seleccionar <literal>Signatures</literal> el usuario puede visualizar el número de reglas que se han activado para el atributo o pestaña seleccionada. </para>
-		<para>En caso de que se haya añadido una pestaña con el atributo <literal>Signature</literal> se observará cómo la distribución de firmas por firma tiene, por lógica, un valor de 1. 
-		No obstante, el resumen nos aportará información muy útil. </para>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img007.png"/>
-			</imageobject>
-			<textobject>
-				<phrase>Firmas/sensor</phrase>
-			</textobject>
-			<caption>
-				<para>Firmas/sensor</para>
-			</caption>
-		</mediaobject>
+		<section>
+			<title>Events</title> 
+			<para>En las vistas <literal>Tops</literal> y <literal>Compare</literal> esta opción permite visualizar el total de eventos que se han registrado en un periodo de tiempo determinado filtrados por atributo. </para> 
+			<para>Es posible, por tanto, obtener una gráfica que nos muestre el número de eventos registrados por sensor, por IP de origen, por destino, etc.</para> 
+			<para>Al posar el ratón encima de la vista gráfica es posible visualizar la fecha, hora exactas y el número de eventos totales .</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img003.png"/>
+				</imageobject>
+				<caption>
+					<para>Eventos/sensor</para>
+				</caption>
+				</mediaobject>
+				<para>Recuerde que es posible un análisis más profundo añadiendo pestañas con atributos. Es posible añadir tantas pestañas como atributos se muestran en la sección <literal>+Add tab.</literal></para> 
+				<para>Por ejemplo, en las siguientes capturas observamos el total de firmas que se han recibido en un periodo de tiempo determinado 
+				o en el segundo caso, el total de eventos generados por las IPs de origen que han interactuado con la red.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img004.png"/>
+				</imageobject>	
+				<caption>
+					<para>Eventos/firmas</para>
+				</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img005.png"/>
+				</imageobject>
+				<caption>
+					<para>Eventos/DST Address</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Events/s</title> 
+			<para>Muestra el total de eventos que se han producido en un segundo para un atributo dado. Nos ofrece el máximo grado de granuralidad.</para> 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img006.png"/>
+				</imageobject>
+				<caption>
+					<para>Eventos/s-firmas</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Signatures</title> 
+			<para>Al seleccionar <literal>Signatures</literal> el usuario puede visualizar el número de reglas que se han activado para el atributo o pestaña seleccionada. </para>
+			<para>En caso de que se haya añadido una pestaña con el atributo <literal>Signature</literal> se observará cómo la distribución de firmas por firma tiene, por lógica, un valor de 1. 
+			No obstante, el resumen nos aportará información muy útil. </para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch10_img007.png"/>
+				</imageobject>
+				<textobject>
+					<phrase>Firmas/sensor</phrase>
+				</textobject>
+				<caption>
+					<para>Firmas/sensor</para>
+				</caption>
+			</mediaobject>
+		</section>
 	</section>
 	<section>
 		<title>Granularidad</title>
