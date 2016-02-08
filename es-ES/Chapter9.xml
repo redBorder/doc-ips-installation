@@ -7,19 +7,19 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Creación de una Reputation Policy</title>
+	<title>Reputation Policies</title>
 	<para>La plataforma redBorder permite la creación y aplicación de dos tipos de políticas:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
-			<para><emphasis role="bold">Signature Policies:</emphasis> políticas de reglas.</para>
+			<para><emphasis role="bold">Signature Policies:</emphasis> políticas basadas en reglas de detección.</para>
 		</listitem>
 		<listitem>
-			<para><emphasis role="bold">Reputation Policies:</emphasis> políticas de reputación.</para>
+			<para><emphasis role="bold">Reputation Policies:</emphasis> políticas basadas en reputación de IPs, países o continentes.</para>
 		</listitem>
 	</itemizedlist>
 	<mediaobject>
 			<imageobject>
-				<imagedata scale="40" align="center" fileref="images/ch08_img001.png"/>
+				<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img001.png"/>
 			</imageobject>
 			<caption>
 				<para>Creación de Signature/Reputation Policies</para>
@@ -68,7 +68,7 @@
 				<para>Una vez que se ha creado la política de reputación accedemos a la interfaz de reglas desde la que se pueden añadir, editar y eliminar las reglas de reputación de dicha política.</para> 
 				<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img030.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img030.png"/>
 					</imageobject>
 					<caption>
 						<para>Panel de reglas de reputación</para>
@@ -79,9 +79,10 @@
 				<itemizedlist mark="bullet">
 					<listitem>
 						<para><emphasis role="bold">Action</emphasis></para>
-						<para>-<emphasis>Analize:</emphasis> permite excluir del bloqueo (drop) una red, continente o país</para>
-						<para><emphasis>-Drop:</emphasis> bloquea el paso del paquete procedente de esa red, continente o país.</para>
-						<para><emphasis>-Bypass:</emphasis> permite el paso del paquete procedente de esa red, continente o país.</para>
+						<para>-<emphasis>Analize:</emphasis> permite excluir del bloqueo (drop) una red, continente o país. Sirve para definir excepciones.</para>
+						<para><emphasis>-Drop:</emphasis> bloquea el paso del paquete procedente de esa red, continente o país. Actúa como lista negra.</para>
+						<para><emphasis>-Bypass:</emphasis> permite el paso del paquete procedente de esa red, continente o país. Actúa como lista blanca: las IPs no llegan a ser analizadas por el motor de detección, 
+						por lo que no se obtendrán eventos derivados de esas IPs.</para>
 					</listitem>
 					<listitem>
 						<para><emphasis role="bold">Value/Continent/Country:</emphasis> insertar el valor de la IP o seleccionar en el desplegable el continente o país sobre el que se desea aplicar la acción indicada.</para>
@@ -102,7 +103,7 @@
 					<title>Opciones disponibles en el panel de reglas (Options)</title>
 					<mediaobject>
 						<imageobject>
-							<imagedata scale="40" align="center" fileref="images/ch08_img031.png"/>
+							<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img031.png"/>
 						</imageobject>
 						<caption>
 							<para>Opciones disponibles en el panel de reglas</para>
@@ -161,7 +162,7 @@
 			<para>La política seleccionada quedará sombreada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img029.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img029.png"/>
 				</imageobject>
 				<caption>
 					<para>Reputation Policy aplicada a un sensor</para>
