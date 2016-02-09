@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2015">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Signature Policies</title>
+	<para>La plataforma redBorder permite la creación y aplicación de tres tipos de políticas:</para>
+	<itemizedlist mark="bullet">
+		<listitem>
+			<para><emphasis role="bold">Signature Policies:</emphasis> políticas basadas en reglas de detección.</para>
+		</listitem>
+		<listitem>
+			<para><emphasis role="bold">Reputation Policies:</emphasis> políticas basadas en reputación de IPs, países o continentes.</para>
+		</listitem>
+		<listitem>
+			<para><emphasis role="bold">Filter Policies:</emphasis> políticas basadas en la imposición de filtros al tráfico de red según Hash, IP o URL. </para>
+		</listitem>
+	</itemizedlist>
+	<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img001.png"/>
+			</imageobject>
+			<caption>
+				<para>Creación de Signature/Reputation Policies</para>
+			</caption>
+		</mediaobject>
+	<para>Este capítulo se centra en la creación de Signature Policies y su aplicación a un sensor IPS/IDS.</para>
+    <section>
+		<title>¿Qué son las Signature Policies?</title>
+		<para>Una vez que disponemos de versiones de reglas descargadas en la sección <literal>Tools->Rule Versions</literal> 
+		ya estamos en condiciones de poder crear una nueva política (<emphasis role="bold">Signature policy</emphasis>) y aplicarla a un sensor.</para> 
+		<note>
+			<title>Nota</title>
+			<para>Para poder comenzar el proceso de creación de una política debemos asegurarnos de que se han creado versiones de reglas 
+			y que las versiones que se encuentran activadas (Tools->Rule Versions).</para>
+		</note>
+		<para>Una <emphasis role="bold">Signature Policy </emphasis> es un subconjunto de reglas o selección obtenida a partir de una o más "versiones" de reglas descargadas.</para>
+		<para>Para crear una Signature Policy nos dirigimos a la sección <literal>Sensors</literal> 
+		 hacemos clic en el icono "Editar" en el nivel para el que deseamos crear dicha política y seleccionamos la opción <literal>Signature Policies.</literal></para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img003.png"/>
+			</imageobject>
+			<caption>
+				<para>Ir a panel de Signature Policies</para>
+			</caption>
+        </mediaobject> 
+		<para>En el panel de Signature Policies se muestran todas las políticas creadas y asignadas a ese sensor.</para>
+		<para>La información que se muestra es la siguiente: </para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Nombre de la política (Policy Name).</para>
+			</listitem>
+			<listitem>
+				<para>Fuentes de las reglas que se incluyen en la política (Sources).</para>
+			</listitem>
+			<listitem>
+				<para>Número de reglas incluidas en la política (Rules).</para>
+			</listitem>
+			<listitem>
+				<para>Propietario de la política (Owner).</para>
+			</listitem>
+			<listitem>
+				<para>Estado de la política (Status).</para>
+			</listitem>
+			<listitem>
+				<para>Fecha de creación de la política (Created at).</para>
+			</listitem>
+		</itemizedlist>
+		<para>La política que está aplicada al sensor se muestra destacada en verde.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img004.png"/>
+			</imageobject>
+			<caption>
+				<para>Panel de Signature Policies</para>
+			</caption>
+        </mediaobject>
+        <section>
+			<title>Creación de una nueva Signature Policy</title>
+			<para>Para la creación de una nueva política, hacer clic en <literal>+New Policy.</literal> A continuación visualizaremos una ventana emergente en la que introduciremos la siguiente información:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis role="bold">Nombre</emphasis></para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Descripción</emphasis></para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Dueño (owner):</emphasis> dominio, sensor, grupo o binding al que se le aplica la política. </para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Fuentes de las reglas (Rule's sources):</emphasis> seleccionar una o más fuentes y elegir la versión de esa fuente de reglas que se desea aplicar en la creación de esta política.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Opciones (Options)</emphasis></para>
+				</listitem>
+			</itemizedlist>
+			<para>Una vez que se ha introducido toda esta información, hacer clic en <literal>Create Policy</literal> para añadir la nueva política al sensor.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img005.png"/>
+				</imageobject>
+				<caption>
+					<para>Crear una nueva política de reglas</para>
+				</caption>
+			</mediaobject> 
+			<section>
+				<title>Opciones: notificación de actualizaciones y acciones para nuevas reglas</title>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><emphasis role="bold">Show only uncommented rules</emphasis></para>
+						<para>Si dejamos marcada esta opción, se omiten las reglas de Snort que vienen comentadas por el proveedor, es decir aquellas que no se encuentran activas.
+						 Las reglas comentadas son reglas que no se recomiendan usar, a menos que sea de forma controlada. 
+						Suelen ser reglas que detectan amenazas antiguas, reglas experimentales, reglas que pueden tener un impacto elevado en el consumo de recursos, etc. (Esta opción se encuentra activada por defecto).</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Auto resolve dependencies</emphasis></para>
+						<para>Resuelve de forma automática los problemas de dependencia que puedan existir entre las reglas de Snort. (Activada por defecto).</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Add new rules on update</emphasis></para>
+						<para>Añade nuevas reglas de forma automática cuando se actualicen las versiones de reglas. 
+						Además, el usuario puede establecer qué acción se va a llevar a cabo en las nuevas reglas: seleccionar entre las opciones que se muestran en el desplegable. (Esta opción se encuentra desactivada por defecto).</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Block updates available</emphasis></para>
+						<para>Al seleccionar esta opción, el usuario no será notificado de las actualizaciones que existan para las reglas de Snort seleccionadas para su aplicación en la política. (Esta opción se encuentra desactivada por defecto).</para>
+					</listitem>
+				</itemizedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img006.png"/>
+					</imageobject>
+					<caption>
+						<para>Opciones: notificación de actualizaciones y acciones para nuevas reglas</para>
+					</caption>
+				</mediaobject> 
+			</section>
+		</section>
+        <section>
+			<title>Configuración de una nueva Signature Policy</title>
+			<para>Una vez que pulsamos sobre <literal>Create Policy</literal> accederemos al panel de reglas. En él realizaremos fundamentalmente dos acciones: </para>
+			<orderedlist numeration="arabic">
+				<listitem>
+					<para>Activar las reglas que queremos añadir a la política.</para>
+				</listitem>
+				<listitem>
+					<para>Definir las acciones que queremos aplicar para cada regla. </para>
+				</listitem>
+			</orderedlist> 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img007.png"/>
+				</imageobject>
+				<caption>
+					<para>Interfaz de reglas de las Signature Policies</para>
+				</caption>
+			</mediaobject> 
+			<section>
+				<title>Activar las reglas que queremos añadir a la política </title>
+				<para>En este panel encontramos un listado que incluye las reglas que tenemos disponibles clasificadas por categorías, subcategorías y reglas según el mensaje que engloba ese conjunto o tipo de reglas. </para>
+				<para>En la columna derecha visualizamos el número de reglas seleccionadas/número de reglas que se incluyen en esa categoría o subcategoría 
+				(ejemplo: 0/1614. Donde 0 es el número de reglas seleccionadas y 1614 el número de reglas disponibles en la categoría ATTACKS). </para>
+				<para>En principio, el número de reglas que tenemos seleccionadas para la configuración de la política es cero.
+				Para configurar la política que acabamos de crear debemos seleccionar las categorías, subcategorías o reglas que nos interesan: </para>	
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img008.png"/>
+					</imageobject>
+					<caption>
+						<para>Selección de reglas para la configuración de una Signature Policy</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Definir las acciones para cada regla</title>
+				<para>Es posible definir de manera manual las acciones por categoría, subcategoría o reglas.</para>
+				<para>Para seleccionar todos: activar el check que se encuentra en la primera fila.</para>
+				<para><emphasis role="bold">Acciones disponibles para cada regla o conjunto de reglas</emphasis></para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><emphasis role="bold">Pass:</emphasis>  permite que el paquete pase y que no se apliquen las acciones de las reglas con las que este coincide.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Alert:</emphasis> informa sobre el paquete tras las inspección realizada por Snort.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Drop:</emphasis> en caso de que el paquete coincida con la regla, se paraliza y le es notificado al usuario.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Sdrop (Silent Drop):</emphasis> bloquea el paquete, pero no se notifica al usuario. </para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Clear:</emphasis> No aplica acciones; limpia todas las acciones que existan sobre esa regla. Con esta opción se deja de incluir una regla en una política. </para>
+					</listitem>
+				</itemizedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img010.png"/>
+					</imageobject>
+					<caption>
+						<para>Signature Policies: acciones disponibles para un conjunto de reglas</para>
+					</caption>
+				</mediaobject>
+				<para>Una vez que se han cambiado las acciones de las reglas que nos interesen <emphasis role="bold">el número de reglas totales se habrá incrementado</emphasis> tal y como muestra la siguiente captura de pantalla:</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img011.png"/>
+					</imageobject>
+					<caption>
+						<para>Reglas añadidas a la política con acciones establecidas</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Opciones disponibles en el panel de reglas</title>
+				<para>El submenú que se muestra en el panel de reglas incluye una serie de acciones que nos permiten afinar la configuración de las reglas que vamos a aplicar 
+				así como ejecutar acciones en bloque sobre las mismas:</para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><literal>Change actions:</literal> esta opción permite aplicar acciones en bloque sobre las reglas.</para>
+					</listitem> 
+					<listitem>
+						<para><literal>Signature's rules->Event Rules:</literal> permite realizar la configuración de una serie de filtros para los eventos asociados a las reglas.</para> 	
+					</listitem>
+					<listitem>
+						<para><literal>Options:</literal> en este apartado se encuentran diferentes opciones.</para>
+					</listitem>
+				</itemizedlist>
+				<section>
+					<title>Change Actions</title>
+					<para>Opción que permite establecer acciones en bloque sobre las categorías y subcategorías de las reglas.</para>
+					<para>Para ello, basta con seleccionar el conjunto de reglas al que queremos aplicar la acción (activación del check) y seleccionar en el menú de opciones la acción que deseamos realizar,
+                        o bien, seleccionar alguno de los grupos predefinidos para las reglas:</para>
+                        <itemizedlist mark="circle">
+							<listitem>
+								 <para>Pass</para>
+							</listitem>
+							<listitem>
+								<para>Alert</para>
+							</listitem>
+							<listitem>
+								<para>Drop</para>
+							</listitem>
+							<listitem>
+								 <para>Sdrop</para>
+							</listitem>
+							<listitem>
+								<para>Clear</para>
+							</listitem>
+                        </itemizedlist>
+                        <para><emphasis role="bold">Grupos predefinidos para reglas:</emphasis><footnote><para>Estos grupos han sido creados por el equipo de VRT. </para></footnote></para>
+                        <para><emphasis>Connectivity:</emphasis> aplica todas las reglas que aseguran la conectividad.</para>
+                        <para><emphasis>Balanced:</emphasis>  aplica aquellas reglas que aseguran tanto la seguridad como la conectividad.</para>
+                        <para><emphasis>Security:</emphasis>  aplica aquellas reglas que aseguran la seguridad. (Inconveniente: pueden generar muchos falsos positivos).</para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img009.png"/>
+                            </imageobject>
+                            <caption>
+                                <para>Change Actions</para>
+                            </caption>
+                        </mediaobject>
+				</section>
+				<section>
+					<title>Filtrado de eventos</title>
+					<para><literal>Signature's rules->Event Rules:</literal> Estos filtros limitan el número de veces que un evento debe ser registrado por el sistema durante un intervalo de tiempo específico.</para>
+					<para>Esta funcionalidad se utiliza para reducir el número de alertas registradas para las reglas más "ruidosas". También puede ser utilizado para reducir de manera significativa las falsas alarmas.</para>
+					<para>Al hacer clic sobre esta opción, visualizamos un panel con el listado total de las reglas, en este panel podremos determinar el umbral máximo o mínimo del número de ocurrencias y 
+				el tiempo que debe transcurrir para que se muestre una alerta para cada regla. Para realizar esta configuración, hacer clic en el icono de Edición que se encuentra junto a cada regla. 
+				También es posible desde esta interfaz eliminar una o más reglas.</para>
+					<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img013.png"/>
+					</imageobject>
+					<caption>
+						<para>Signature's rules->Event rules</para>
+					</caption>
+				</mediaobject>
+				<para>En la ventana emergente encontraremos los siguientes tipos de filtrado:</para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><emphasis role="bold">Type</emphasis></para>
+						<para>-Limit: limita el número de eventos que se muestran en el intervalo de tiempo indicado 
+				ignorando los demás eventos que se produzcan bajo la misma firma.</para>
+						<para>-Threshold: alerta cada n veces que se produzca un evento en el intervalo de tiempo determinado. </para>
+						<para>-Both: la alerta solo se muestra una vez por cada n veces que ha sucedido el evento en el intervalo de tiempo indicado,
+				 ignorando cualquier evento adicional que se produzca durante ese intervalo de tiempo.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Track:</emphasis> indicar qué eventos deben ser limitados.</para>
+						<para>-Por origen (By source)</para>
+						<para>-Por destino By destination)</para>	
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Count/Seconds:</emphasis> en este apartado se determinan el número de ocurrencias del evento (Count) y el intervalo de tiempo (Seconds).</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Comment:</emphasis> el usuario puede añadir comentarios que le ayuden a identificar los límites/filtros establecidos para la regla seleccionada.</para>
+					</listitem>
+				</itemizedlist>
+				<para>Para guardar la configuración del filtro hacer clic en <literal>Update Event Filter.</literal></para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img014.png"/>
+					</imageobject>
+					<caption>
+						<para>Editar detalles de filtrado de eventos para cada regla</para>
+					</caption>
+				</mediaobject>
+				</section>		
+				<section>
+					<title>Options</title>
+					<para>Estas son las acciones que se pueden realizar desde el menú <literal>Options:</literal></para>
+					<itemizedlist mark="circle">
+						<listitem>
+							<para><emphasis role="bold">Export to CSV:</emphasis> exporta las reglas de la política a formato CSV.</para>
+						</listitem>
+						<listitem>
+							 <para><emphasis role="bold">Import to CSV:</emphasis> permite cargar un archivo CSV con reglas para asignar a la política.</para>
+						</listitem>
+						<listitem>
+							 <para><emphasis role="bold">Create Snapshots:</emphasis> permite realizar una copia o captura (versión) del estado actual de las reglas para su aplicación en diferentes políticas. </para>
+						</listitem>
+						<listitem>
+							 <para><emphasis role="bold">Apply Conf:</emphasis> crea la política incluyendo las reglas y las acciones seleccionadas.</para>
+						</listitem>
+					</itemizedlist>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img012.png"/>
+						</imageobject>
+						<caption>
+							<para>Crear una nueva snapshot</para>
+						</caption>
+                   </mediaobject>
+				</section>
+			</section>	
+        </section> 
+        <section>
+			<title>Asignación de la política de firmas a un sensor</title>
+			<para>Ya tenemos creada nuestra "Signature policy". Esta se encuentra disponible para asignarla a un sensor IPS/IDS. Existen dos modos de asignar la Signature Policy a un sensor: </para>
+			<orderedlist numeration="arabic">
+				<listitem>
+					<para>Si acabamos de crear la política y nos encontramos en la interfaz de Signature Policies de un sensor, hacer clic en la opción <literal>Assign</literal> 
+			para asignar la política y a continuación, <literal>Apply Conf</literal> para aplicar la nueva configuración al sensor.</para>
+				</listitem>
+				<listitem>
+					<para>Esta operación puede realizarse también desde la sección <emphasis role="bold">Sensors</emphasis> hacer clic en el icono "Editar" del sensor y seleccionar la opción <literal>Signature Policies</literal>
+			en la que repetiremos la operación antes descrita.</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img004.png"/>
+				</imageobject>
+				<caption>
+					<para>Signature Policies: políticas disponibles para un sensor</para>
+				</caption>
+			</mediaobject>	
+			<para>En ambos casos al hacer clic en <emphasis role="bold">Assign</emphasis> el sistema abrirá una ventana emergente avisando de 
+			que la asignación de la política a ese sensor afectará a todos los "hijos" que tenga por debajo. <footnote><para>En el apartado de 
+			<emphasis role="bold">Herencias de las políticas</emphasis> se explican con detalle </para></footnote></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img017.png"/>
+				</imageobject>
+				<caption>
+					<para>Advertencia sobre la herencia de las políticas</para>
+				</caption>
+			</mediaobject>
+			<para>La política asignada quedará sombreada en verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img004.png"/>
+				</imageobject>
+				<caption>
+					<para>Signature Policy aplicada a un sensor</para>
+	 			</caption>
+			</mediaobject>	
+			<note>
+				<title>Nota</title>
+				<para>Un sensor, grupo o binding puede ser propietario (Owner) de múltiples políticas, pero <emphasis role="bold">solo es posible aplicar una política para cada sensor, grupo o binding.</emphasis></para>
+			</note>
+			<para>Este proceso puede durar varios minutos, dependiendo del número de reglas a aplicar. Todo el proceso se realizará con un trabajo 
+			en segundo plano que podremos consultar en <literal>Tools->Worker &amp; Job Queue.</literal></para>
+			<para>Una vez haya terminado el proceso de asignación, dicho sensor contará con la política aplicada.</para>
+			<section>
+				<title>Acciones disponibles para la gestión de las políticas</title>
+				<para>El icono "Editar" que acompaña a cada política encontramos un menú con las siguientes opciones:</para>
+				<itemizedlist>
+					<listitem>
+						<para><emphasis role="bold">Edit:</emphasis> permite editar la configuración de la política.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Rules:</emphasis>  esta opción nos dirige al panel de reglas.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Clone:</emphasis>  crea una copia de la política seleccionada.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Snapshots:</emphasis> permite realizar una copia o captura (versión) del estado actual de las políticas.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Event rules:</emphasis> permite establecer límites (máximos y mínimos) del número de ocurrencias de un evento para que se envíe una alarma.</para>
+					</listitem>
+				</itemizedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img017b.png"/>
+					</imageobject>
+					<caption>
+						<para>Acciones disponibles para la gestión de políticas</para>
+					</caption>
+				</mediaobject>	
+			</section>
+			<section>
+				<title>Snapshots</title>
+				<para>Las snapshots son "capturas" o copias de las reglas o de las políticas. De este modo, el usuario puede crear una especie de repositorio de "versiones" de una política y sus reglas que tendrá disponible para 
+				su uso posterior. Se trata de un recurso muy útil en caso de querer recuperar la configuración que una política (o conjunto de reglas) ha tenido en un momento determinado.</para>
+				<para>Esta opción es accesible desde las siguientes rutas:</para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para>Panel Signature Policies: Icono editar-><literal>Snapshots</literal></para>
+					</listitem>
+					<listitem>
+						<para>Panel rules: Icono editar-><literal>Rules->Options-> Create Snapshots</literal></para>
+						<para>Panel rules: Icono editar-><literal>Rules->Options->Snapshots</literal> </para>
+					</listitem>
+				</itemizedlist>	
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img018b.png"/>
+					</imageobject>
+					<caption>
+						<para>Signature Policy: panel de Snapshots</para>
+					</caption>
+				</mediaobject>
+				<para>En esta pantalla encontramos un listado con las Snapshots que se encuentran disponibles y la información asociada a ellas: Nombre (Tag), Usuario que las ha creado, Timestamp (fecha y hora de la captura), nº reglas (Rules).</para>
+				<para>Tanto desde el panel de políticas como el de reglas accederemos al listado de Snapshots disponibles. En él, podremos realizar las siguientes acciones sobre las Snapshots:</para>
+				<itemizedlist mark="circle">
+					<listitem>
+						<para><emphasis role="bold">Editar (Edit):</emphasis> permite la edición del nombre o tag.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Cargar (Load):</emphasis> carga esa versión o snapshot; dicha política será la que se aplique al sensor correspondiente.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Descargar (Download):</emphasis> permite la descarga de la snapshot en formato CSV.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Eliminar</emphasis></para>
+					</listitem>
+				</itemizedlist>	
+			</section>	
+        </section>
+    </section>
+    <section>
+		<title>Herencias de las políticas</title>
+		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo 5: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
+		creados en redBorder es jerárquica y por tanto, establece dependencias entre niveles y otros.</para>
+		<para>Estas dependencias establecen un sistema de herencias que afecta tanto en la configuración como en las políticas aplicadas en cada uno de los niveles (de mayor a menor jerarquía):</para>
+		<itemizedlist>
+			<listitem>
+				<para>Root</para>
+			</listitem>
+			<listitem>
+				<para>Dominio</para>
+			</listitem>
+			<listitem>
+				<para>Sensores</para>
+			</listitem>
+			<listitem>
+				<para>Grupo</para>
+			</listitem>
+			<listitem>
+				<para>Binding</para>
+			</listitem>
+		</itemizedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img003.png"/>
+			</imageobject>
+			<caption>
+				<para>Sensors->Tree: jerarquías y dependencias entre niveles</para>
+	 		</caption>
+		</mediaobject>	
+		<note>
+			<title>Nota</title>
+			<para>El sistema de herencias establece que la configuración de los niveles superiores afecta a la de aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
+			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre". 
+			<emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
+		</note>
+		<para><emphasis role="bold">General Settings</emphasis></para>
+		<para>En la sección <literal>Tools</literal> encontramos la opción de <literal>General Settings</literal> desde la cual el usuario puede establecer la configuración de los parámetros generales del Manager. </para>
+		<para>Este es el máximo nivel de configuración (es como si se tratara del dominio <emphasis role="bold">root</emphasis>) por lo que las propiedades que aquí se definan serán heredadas 
+		por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
+			</imageobject>
+			<caption>
+				<para>General Settings: Configuración General del Manager o "root"</para>
+	 		</caption>
+		</mediaobject>
+		<para><emphasis role="bold">Configuración heredada: "Inherited"</emphasis></para>	
+		<para>Cuando se crea un dominio o sensor o se edita por primera vez, obervaremos que algunos parámetros vienen acompañados de la etiqueta 
+		<emphasis role="bold">"Inherited"</emphasis>, esto quiere decir que han heredado los valores heredados de la configuración general del Manager
+		 o de los dominios o sensores que se encuentren por encima del elemento recién creado. 
+		Para cambiar esta configuración, el usuario deberá sobreescribir esa información.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
+			</imageobject>
+			<caption>
+				<para>Inherited: Configuración heredada de sensores IPS/IDS</para>
+	 		</caption>
+		</mediaobject>
+		<section>
+			<title>Creación de diferentes políticas en cada uno de los niveles existentes</title>
+			<para>Una de las nuevas funcionalidades de redBorder es la posibilidad de crear para los sensores IPS/IDS <emphasis role="bold">grupos de segmentos y bindings.</emphasis></para>
+			<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor, en redborder v.3 es posible
+			crear políticas independientes a nivel de grupo de segmentos o bindings.</para>	
+			<para><emphasis role="bold">Creación de Signature Policies en diferentes niveles</emphasis></para>
+			<para>Para crear una Signature Policy en diferentes niveles es necesario dirigirse a la vista <literal>Sensors</literal> (vista árbol). En ella, situarse en el nivel en el que se desee crear una política.</para>
+			<para>En el caso de los sensores estos están disponibles nada más visualizar el árbol. Para la creación a nivel de grupo o binding, el usuario deberá desplegar tantos niveles como sea necesario. 
+			Esa política se aplicará en ese nivel y en los "hijos" que dependan de él.</para>
+			<para>Una vez que se encuentre situado en el nivel deseado, hacer clic en el icono "Editar" y seleccionar la opción <literal>Signature Policies.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img028.png"/>
+				</imageobject>
+				<caption>
+					<para>Creación de políticas diferentes en cada uno de los niveles existentes</para>
+				</caption>
+			</mediaobject>
+			<para>Al crear una nueva política se puede elegir quién será el "owner" o propietario de la misma. 
+			En este caso, nos encontraremos un desplegable en el que seleccionar el nivel desde el cual se va a aplicar.</para>
+			<para><emphasis role="bold">Owner:</emphasis> establece a partir de qué nivel deben aplicarse las políticas.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img019.png"/>
+				</imageobject>
+				<caption>
+					<para>New Policy: determinar Owner o propietario de la política</para>
+				</caption>
+			</mediaobject>
+			<para>Para gestionar la <emphasis role="bold">jerarquía de los sensores y los dominios</emphasis> solo es necesario dirigirse a la sección <literal>Sensors</literal> (vista árbol)
+			y mediante la acción de "selección y arrastre" situar el dominio o sensor en nivel que se desee.</para>	
+			<note>
+				<title>Nota</title>
+				<para>Gracias a los grupos de sensores y bindings, con una sola máquina, el usuario puede crear numerosos entornos para aplicar diferentes reglas.</para>
+			</note>
+		</section>		
+    </section>
+</chapter>

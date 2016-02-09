@@ -126,7 +126,7 @@
 		<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, deberá aparecer una pantalla emergente en la que se solicita el reinicio del sistema para finalizar la primera parte de la instalación. Hacer clic en <literal>Reboot</literal>.</para>		
 	</section>
     <section>
-		<title>Finalización de la instalación del Manager de redBorder: <literal>redBorder Configuration menu</literal></title>
+		<title>Finalización de la instalación del Manager de redBorder: redBorder Configuration menu</title>
 		<para>Tras el reinicio automático del sistema, visualizaremos la siguiente pantalla en la que ingresaremos con el usuario <literal>root</literal>:</para>	
 		<mediaobject>
 			<imageobject>

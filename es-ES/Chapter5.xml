@@ -48,7 +48,7 @@
 		</note>
 	</section>
 	<section>
-		<title>Vistas: <literal>View</literal></title>
+		<title>Vistas: View</title>
 		<para>En la sección <literal>Sensors</literal> el usuario encuentra seleccionada una vista por defecto: <literal>Tree.</literal> Existen varias vistas disponibles para acceder a los sensores:</para>
 		<mediaobject>
 			<imageobject>
