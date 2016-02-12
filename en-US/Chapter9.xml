@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2015">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Reputation Policies</title>
+	<para>La plataforma redBorder permite la creación y aplicación de dos tipos de políticas:</para>
+	<itemizedlist mark="bullet">
+		<listitem>
+			<para><emphasis role="bold">Signature Policies:</emphasis> políticas basadas en reglas de detección.</para>
+		</listitem>
+		<listitem>
+			<para><emphasis role="bold">Reputation Policies:</emphasis> políticas basadas en reputación de IPs, países o continentes.</para>
+		</listitem>
+	</itemizedlist>
+	<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img001.png"/>
+			</imageobject>
+			<caption>
+				<para>Creación de Signature/Reputation Policies</para>
+			</caption>
+		</mediaobject>
+	<para>Este capítulo se centra en la creación de Reputation Policies y su aplicación a un sensor IPS/IDS.</para>
+    <section>
+		<title>¿Qué son las Reputation Policies?</title>
+		<para>Las políticas de reputación permiten realizar acciones de bloqueo o acceso de paquetes en nuestra red por continente, país y/o IP.</para>
+		<para>Para crear una Reputation Policy nos dirigimos a la sección <literal>Sensors</literal> hacemos clic en el icono de Edición
+		del nivel para el que deseamos crear dicha política y seleccionamos la opción <literal>Reputation Policies.</literal></para> 
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img022.png"/>
+			</imageobject>
+			<caption>
+				<para>Sensors-> Reputation Policies</para>
+			</caption>
+		</mediaobject>
+		<para>En el panel Reputation Policies se muestran todas las políticas creadas y asignadas a ese dominio, sensor o grupo de segmentos. La información que se muestra es la siguiente: Nombre y propietario de la política.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img023.png"/>
+			</imageobject>
+			<caption>
+				<para>Panel de Reputation Policies</para>
+			</caption>
+        </mediaobject>
+        <section>
+			<title>Creación de una nueva Reputation Policy</title>
+			<para>La creación de una nueva política de reputación se realiza desde el panel de Reputation Policies accesible desde <emphasis role="bold">Sensors->icono edición->Reputation Policies.</emphasis></para> 
+			<para>En esta pantalla, hacer clic en <literal>+New Rep Policy</literal>
+			y completar la información que solicita el sistema: Nombre y comentarios.</para> 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img024.png"/>
+				</imageobject>
+				<caption>
+					<para>Creación de una política de reputación</para>
+				</caption>
+			</mediaobject>
+			<para>Para finalizar el proceso de creación de la política de reputación, hacer clic en el botón <literal>Create Reputation Policy.</literal></para>
+			<para>El siguiente paso consiste en añadir reglas a la política de reputación recién creada.</para>
+			<section>
+				<title>Crear y añadir una nueva regla de reputación a la política</title>
+				<para>Una vez que se ha creado la política de reputación accedemos a la interfaz de reglas desde la que se pueden añadir, editar y eliminar las reglas de reputación de dicha política.</para> 
+				<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img030.png"/>
+					</imageobject>
+					<caption>
+						<para>Panel de reglas de reputación</para>
+					</caption>
+				</mediaobject>
+				<para>Para crear una regla, seleccionar la opción <literal>+Add.</literal></para>
+				<para>Indicar al ámbito en el que va a actuar la política de reputación (IP, País o continente) y las acciones:</para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><emphasis role="bold">Action</emphasis></para>
+						<para>-<emphasis>Analize:</emphasis> permite excluir del bloqueo (drop) una red, continente o país. Sirve para definir excepciones.</para>
+						<para><emphasis>-Drop:</emphasis> bloquea el paso del paquete procedente de esa red, continente o país. Actúa como lista negra.</para>
+						<para><emphasis>-Bypass:</emphasis> permite el paso del paquete procedente de esa red, continente o país. Actúa como lista blanca: las IPs no llegan a ser analizadas por el motor de detección, 
+						por lo que no se obtendrán eventos derivados de esas IPs.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Value/Continent/Country:</emphasis> insertar el valor de la IP o seleccionar en el desplegable el continente o país sobre el que se desea aplicar la acción indicada.</para>
+						<para>El continente o país que se haya seleccionado aparecerá coloreado en el mapa con el color que representa la acción correspondiente.</para>
+					</listitem>
+				</itemizedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img029.png"/>
+					</imageobject>
+					<caption>
+						<para>Crear nueva regla de reputación</para>
+					</caption>
+				</mediaobject>
+				<para>Hacer clic en <literal>Create Reputation</literal> para finalizar el proceso de creación de esa regla.</para>
+				<para>Para aplicar las reglas a la política de reputación hacer clic en <literal>Options->Apply Conf.</literal></para>
+				<section>
+					<title>Opciones disponibles en el panel de reglas (Options)</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="150" fileref="images/ch08_img031.png"/>
+						</imageobject>
+						<caption>
+							<para>Opciones disponibles en el panel de reglas</para>
+						</caption>
+					</mediaobject>
+					<itemizedlist mark="bullet">
+						<listitem>
+							<para><emphasis role="bold">Apply conf:</emphasis> incluye las reglas recién creadas en la política correspondiente.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Import CSV:</emphasis> Importar reglas de reputación para añadir a la política desde un archivo CSV <literal>(Options->Import from CSV).</literal></para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Export CSV:</emphasis> Exporta las reglas incluidas en la política a un archivo CSV que el usuario tendrá disponible para su uso en otras aplicaciones. <literal>(Options->Import from CSV).</literal></para>
+						</listitem>
+					</itemizedlist>
+				</section>
+			</section>
+		</section>		
+		<section>
+			<title>Asignación de la política de reputación a un sensor</title>
+			<para>Ya tenemos creada nuestra "Reputation policy". Esta se encuentra disponible para asignarla a un sensor IPS/IDS. Existen dos modos de asignar la Reputation Policy a un sensor: </para>
+			<orderedlist numeration="arabic">
+				<listitem>
+					<para>Si acabamos de crear la política y nos encontramos en la interfaz de Reputation Policies de un sensor, hacer clic en la opción <literal>Assign</literal> 
+			para asignar la política y a continuación, <literal>Apply Conf</literal> para aplicar la nueva configuración al sensor.</para>
+				</listitem>
+				<listitem>
+					<para>Esta operación puede realizarse también desde la sección <emphasis role="bold">Sensors</emphasis> hacer clic en el icono "Editar" del sensor y seleccionar la opción <literal>Reputation Policies</literal>
+			en la que repetiremos la operación antes descrita.</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img033.png"/>
+				</imageobject>
+				<caption>
+					<para>Reputation Policies: políticas disponibles para un sensor</para>
+				</caption>
+			</mediaobject>	
+			<para>Para asignar esta política al sensor  basta con pulsar el icono en el que figura la leyenda <emphasis role="bold">Assign</emphasis>. El sistema abrirá una ventana emergente avisando de 
+			que la asignación de la política a ese sensor afectará a todos los "hijos" que tenga por debajo. <footnote><para>En el apartado de <emphasis role="bold">Herencias de las políticas</emphasis> se explican con detalle </para></footnote></para>
+			<note>
+				<title>Nota</title>
+				<para>Un sensor o grupo puede ser propietario (Owner) de múltiples políticas, pero <emphasis role="bold">solo es posible aplicar una política para cada sensor o grupo.</emphasis> 
+				La política asignada quedará sombreada en verde.</para>
+			</note>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img032.png"/>
+				</imageobject>
+				<caption>
+					<para>Aplicar una política a un sensor y a todos los "hijos" que haya por debajo</para>
+				</caption>
+			</mediaobject>
+			<para>La política seleccionada quedará sombreada en color verde. A continuación, pulsamos sobre el botón <literal>Apply Conf</literal> del menú superior para aplicar la política asignada al sensor.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch08_img029.png"/>
+				</imageobject>
+				<caption>
+					<para>Reputation Policy aplicada a un sensor</para>
+	 			</caption>
+			</mediaobject>	
+			<para>Una vez haya terminado el proceso de asignación, dicho sensor contará con la política aplicada.</para>			
+		</section>
+		<section>
+			<title>Acciones disponibles para la gestión de las políticas de reputación</title>
+			<para>En el icono de Edición que encontramos para las políticas que se muestran en el panel de Reputation Policies encontramos las siguientes opciones:</para>
+			<itemizedlist>
+				<listitem>
+					<para><emphasis role="bold">Edit:</emphasis> permite editar la configuración de la política.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Rules:</emphasis> esta opción nos dirige al panel de reglas.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Clone:</emphasis> crea una copia de la política seleccionada.</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>		
+	<section>
+		<title>Herencias de las políticas</title>
+		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo 5: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
+		creados en redBorder es jerárquica y por tanto, establece dependencias entre niveles y otros.</para>
+		<warning>
+			<title>Advertencia</title>
+			<para>En el caso de las Reputation Policies <emphasis role="bold">no es posible crear políticas a nivel de binding</emphasis> solo se pueden crear a nivel de dominio, sensor y grupo.</para>
+		</warning>
+		<para>Estas dependencias establecen un sistema de herencias que afecta tanto en la configuración como en las políticas aplicadas en cada uno de los niveles (de mayor a menor jerarquía):</para>
+		<itemizedlist>
+			<listitem>
+				<para>Root</para>
+			</listitem>
+			<listitem>
+				<para>Dominio</para>
+			</listitem>
+			<listitem>
+				<para>Sensores</para>
+			</listitem>
+			<listitem>
+				<para>Grupo</para>
+			</listitem>
+			<listitem>
+				<para>Binding</para>
+			</listitem>
+		</itemizedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img003.png"/>
+			</imageobject>
+			<caption>
+				<para>Sensors->Tree: jerarquías y dependencias entre niveles</para>
+	 		</caption>
+		</mediaobject>	
+		<note>
+			<title>Nota</title>
+			<para>El sistema de herencias establece que la configuración de los niveles superiores afecta a la de aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
+			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre". </para>
+			<para><emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
+		</note>
+		<para><emphasis role="bold">General Settings</emphasis></para>
+		<para>En la sección <literal>Tools</literal> encontramos la opción de <literal>General Settings</literal> desde la cual el usuario puede establecer la configuración de los parámetros generales del Manager. </para>
+		<para>Este es el máximo nivel de configuración (es como si se tratara del dominio <emphasis role="bold">root</emphasis>) por lo que las propiedades que aquí se definan serán heredadas 
+		por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img026.png"/>
+			</imageobject>
+			<caption>
+				<para>General Settings: Configuración General del Manager o "root"</para>
+	 		</caption>
+		</mediaobject>
+		<para><emphasis role="bold">Configuración heredada: "Inherited"</emphasis></para>	
+		<para>Cuando se crea un dominio o sensor o se edita por primera vez, obervaremos que algunos parámetros vienen acompañados de la etiqueta 
+		<emphasis role="bold">"Inherited"</emphasis>, esto quiere decir que han heredado los valores heredados de la configuración general del Manager
+		 o de los dominios o sensores que se encuentren por encima del elemento recién creado. 
+		Para cambiar esta configuración, el usuario deberá sobreescribir esa información.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img027.png"/>
+			</imageobject>
+			<caption>
+				<para>Inherited: Configuración heredada de sensores IPS/IDS</para>
+	 		</caption>
+		</mediaobject>
+			<section>
+				<title>Creación de diferentes políticas en cada uno de los niveles existentes</title>
+				<para><emphasis role="bold">Creación de Reputation Policies en diferentes niveles</emphasis></para>
+				<para>Para crear una Reputation Policy en diferentes niveles es necesario dirigirse a la vista <literal>Sensors</literal> (vista árbol). En ella, situarse en el nivel en el que se desee crear una política.</para>
+				<para>En el caso de los sensores estos están disponibles nada más visualizar el árbol. Para la creación a nivel de grupo, el usuario deberá desplegar un nivel más. 
+				Esa política se aplicará en ese nivel y en los "hijos" que dependan de él.</para>
+				<para>Una vez que se encuentre situado en el nivel deseado, hacer clic en el icono "Editar" y seleccionar la opción <literal>Reputation Policies.</literal></para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch08_img028.png"/>
+					</imageobject>
+					<caption>
+						<para>Creación de políticas diferentes en cada uno de los niveles existentes</para>
+					</caption>
+				</mediaobject>
+				<para>Para gestionar la <emphasis role="bold">jerarquía de los sensores y los dominios</emphasis> solo es necesario dirigirse a la sección <literal>Sensors</literal> (vista árbol)
+				y mediante la acción de "selección y arrastre" situar el dominio o sensor en nivel que se desee.</para>	
+		</section>	
+	</section>
+</chapter>
