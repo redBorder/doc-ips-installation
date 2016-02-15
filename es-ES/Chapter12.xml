@@ -8,7 +8,7 @@
 ]>
 <chapter>
 	<title>Reputation y Filter Policies</title>
-	<para>La plataforma redBorder permite la creación y aplicación de dos tipos de políticas:</para>
+	<para>La plataforma redBorder permite la creación y aplicación de tres tipos de políticas:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
 			<para><emphasis role="bold">Signature Policies:</emphasis> políticas basadas en reglas de detección.</para>
