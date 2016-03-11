@@ -462,7 +462,7 @@
     </section>
     <section>
 		<title>Herencias de las políticas</title>
-		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo 5: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
+		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo: "Sensores" para más información sobre dependencias y organización jerárquica en redBorder.</para></footnote> la organización de los elementos de red 
 		creados en redBorder es jerárquica y por tanto, establece dependencias entre niveles y otros.</para>
 		<para>Estas dependencias establecen un sistema de herencias que afecta tanto en la configuración como en las políticas aplicadas en cada uno de los niveles (de mayor a menor jerarquía):</para>
 		<itemizedlist>
