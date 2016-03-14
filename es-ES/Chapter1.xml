@@ -7,11 +7,11 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>What is redborder?</title>
-	<para><emphasis role="bold">redBorder</emphasis> is a real-time network visibility and active cybersecurity platform based on Big Data and Open Source.</para>
-	<para>This platform is composed of a series of Apps which collect data (through sensors placed in the network) for analysis or active security management of the network through the redborder web platform.</para>
-	<para>As will be shown, depending on the applications in the platoform, the user will visualize different options in the menu bar.</para>
-	<para>The Apps available in this new redborder version are the following:</para>
+	<title>¿Qué es redBorder?</title>
+	<para><emphasis role="bold">redBorder</emphasis> es una plataforma abierta de inteligencia activa de seguridad y visibilidad absoluta.</para>
+	<para>Esta plataforma se encuentra integrada por una serie de Apps que recogen los datos (a través de sensores interpuestos en la red) para su análisis o gestión activa de seguridad de la red a través de la plataforma web redBorder.</para>
+	<para>Como se verá más adelante, dependiendo de las aplicaciones que se encuentren integradas en la plataforma, el usuario visualizará una u otras opciones en la barra de menú.</para>
+	<para>Las Apps que se encuentran disponibles en esta nueva versión de redBorder son las siguientes:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
 			<para>Flow</para>
@@ -27,27 +27,26 @@
 		</listitem>
 	</itemizedlist>
 	<section>
-		<title>What is an IDS?</title>
-		<para>An <emphasis role="bold">IDS</emphasis> is an Intrusion Detection System in the network(s) to protect an organization.</para> 
-		<para>It tends to be a specific software that runs in the user space and that inspects the traffic reflected (Mirror/ SPAN port) in a system interface or circulates between two interfaces joined by a bridge (software switch).</para>
-		<para>The said traffic is analyzed by searching for anomalies, specific signatures or suspicious behavior.</para> 
-		<para>The objective of the IDS is <emphasis role="bold">to detect intrusions and issue alerts without interfering with the organization's traffic.</emphasis></para>
+		<title>¿Qué es un IDS?</title>
+		<para>Un <emphasis role="bold">IDS</emphasis> (de sus siglas en inglés Intrusion Detection System) es un Sistema de Detección de Intrusiones en la red o redes a proteger en una organización.</para> 
+		<para>Suele ser un software específico que se ejecuta en el espacio de usuario y que sondea el tráfico que se refleja 
+		(puerto mirror o SPAN) en una interfaz del sistema o el que circula entre dos interfaces unidas en un bridge (switch por software).</para>
+		<para>Dicho tráfico es analizado buscando anomalías, firmas específicas o comportamientos sospechosos.</para> 
+		<para>El objetivo del IDS es <emphasis role="bold">detectar intrusiones y lanzar alertas sin interferir en el tráfico de la organización.</emphasis></para>
     </section>
     <section>
-		<title>What is an IPS?</title>
-		<para>An <emphasis role="bold">IPS</emphasis> is an Intrusion Prevention System in the organization's network(s).</para> 
-		<para>Its operation is identical to that of the IDS (in fact it is usually the same software with an adapted behavior), except in this case it does interfere with the organization's traffic, 
-		such that when a communication related to a system attack is detected, you can choose not only to <emphasis role="bold">launch alerts but also to discard the said communication's packets, creating the same effect as a firewall.</emphasis></para>
+		<title>¿Qué es un IPS?</title>
+		<para>Un <emphasis role="bold">IPS</emphasis> es un sistema de Prevención de Intrusiones en la red o redes de la organización.</para> 
+		<para>Su operativa es idéntica a la del IDS (de hecho suele ser el mismo software con un comportamiento adaptado), excepto que en este caso sí interfiere en el tráfico de la organización, de manera que cuando se detecta una comunicación correspondiente a un ataque el sistema puede optar no sólo por <emphasis role="bold">lanzar alertas sino incluso por descartar los paquetes de dicha comunicación, creando el mismo efecto que un cortafuegos.</emphasis></para>
 		<section>
-			<title>Basic scenario for the installation of redborder</title>
-			<para>A typical basic scenario proposed for the solution consists of a group of sensors arranged at different sensitive points in the organization's network 
-			that will connect to a Manager or cluster of Managers to be managed and monitored.</para>
-			<para>The said points consist of network links, called segments, through which the sensitive traffic will circulate and which the sensor will analyze more or less transparently, 
-			according to the operating mode configured (IPS/IDS).</para>
-			<para>Some fundamental aspects should be kept in mind in planning the installation of sensor equipment:</para> 
+			<title>Escenario básico para la instalación de redBorder</title>
+			<para>Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización.</para>
+			<para>Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible 
+			y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS).</para>
+			<para>Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales:</para> 
 			<itemizedlist mark="circle">
 				<listitem>
-					<para><emphasis role="bold">The bypass segments</emphasis> (specific paired network interfaces, normally with bypass support) se interpondrán en medio del tráfico a analizar.</para>
+					<para><emphasis role="bold">Los segmentos bypass</emphasis> (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán en medio del tráfico a analizar.</para>
 				</listitem>
 				<listitem>
 					<para><emphasis role="bold">Las interfaces de gestión </emphasis> (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.</para>
