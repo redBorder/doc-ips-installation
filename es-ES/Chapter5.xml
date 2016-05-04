@@ -520,7 +520,8 @@
 				</listitem>
 				<listitem>
 					<para><emphasis role="bold">IPS/IDS Settings:</emphasis> permite configurar los parámetros generales de los sensores IPS/IDS que cuelgan del dominio.
-					Esta será la configuración que hereden todos los sensores que se encuentren debajo de este dominio. Para realizar una configuración específica <emphasis role="bold">consultar el capitulo 6: "Sensores: Configuración de parámetros generales de los sensores IDS/IPS".</emphasis></para><!--Preguntar-->
+					Esta será la configuración que hereden todos los sensores que se encuentren debajo de este dominio. Para realizar una configuración específica 
+					<emphasis role="bold">consultar el capitulo 6: "Sensores: Configuración de parámetros generales de los sensores IDS/IPS".</emphasis></para><!--Preguntar-->
 					<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" align="center" width="450" fileref="images/ch05_img024.png"/>

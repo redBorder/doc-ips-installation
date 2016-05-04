@@ -29,17 +29,21 @@
 	<section>
 		<title>¿Qué es un IDS?</title>
 		<para>Un <emphasis role="bold">IDS</emphasis> (de sus siglas en inglés Intrusion Detection System) es un Sistema de Detección de Intrusiones en la red o redes a proteger en una organización.</para> 
-		<para>Suele ser un software específico que se ejecuta en el espacio de usuario y que sondea el tráfico que se refleja (puerto mirror o SPAN) en una interfaz del sistema o el que circula entre dos interfaces unidas en un bridge (switch por software).</para>
+		<para>Suele ser un software específico que se ejecuta en el espacio de usuario y que sondea el tráfico que se refleja (puerto mirror o SPAN) en una interfaz 
+		del sistema o el que circula entre dos interfaces unidas en un bridge (switch por software).</para>
 		<para>Dicho tráfico es analizado buscando anomalías, firmas específicas o comportamientos sospechosos.</para> 
 		<para>El objetivo del IDS es <emphasis role="bold">detectar intrusiones y lanzar alertas sin interferir en el tráfico de la organización.</emphasis></para>
     </section>
     <section>
 		<title>¿Qué es un IPS?</title>
 		<para>Un <emphasis role="bold">IPS</emphasis> es un sistema de Prevención de Intrusiones en la red o redes de la organización.</para> 
-		<para>Su operativa es idéntica a la del IDS (de hecho suele ser el mismo software con un comportamiento adaptado), excepto que en este caso sí interfiere en el tráfico de la organización, de manera que cuando se detecta una comunicación correspondiente a un ataque el sistema puede optar no sólo por <emphasis role="bold">lanzar alertas sino incluso por descartar los paquetes de dicha comunicación, creando el mismo efecto que un cortafuegos.</emphasis></para>
+		<para>Su operativa es idéntica a la del IDS (de hecho suele ser el mismo software con un comportamiento adaptado), excepto que en este caso
+		 sí interfiere en el tráfico de la organización, de manera que cuando se detecta una comunicación correspondiente a un ataque el sistema puede optar no sólo por
+		  <emphasis role="bold">lanzar alertas sino incluso por descartar los paquetes de dicha comunicación, creando el mismo efecto que un cortafuegos.</emphasis></para>
 		<section>
 			<title>Escenario básico para la instalación de redBorder</title>
-			<para>Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización.</para>
+			<para>Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la 
+			red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización.</para>
 			<para>Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible 
 			y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS).</para>
 			<para>Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales:</para> 

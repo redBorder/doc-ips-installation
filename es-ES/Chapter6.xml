@@ -15,7 +15,7 @@
 			Para acceder a su edición hacer clic sobre el nombre del sensor o bien, en el icono "Editar"-><literal>Edit".</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img001.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img001.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista árbol: editar sensor IPS/IDS</para>
@@ -27,7 +27,7 @@
 			Haciendo clic sobre un Access Point se accede a la interfaz de configuración de los parámetros generales del sensor. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img002.png"/>
+					<imagedata scalefit="1" align="center" width="150" fileref="images/ch06_img002.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista Access Points: editar sensor IPS/IDS</para>
