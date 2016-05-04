@@ -7,423 +7,436 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Instalación del Manager de redBorder Enterprise Version</title>
-	<para>Gracias al asistente de instalación podrá dejar configurado y preparado el Manager de una forma rápida y sencilla sin necesidad de tener conocimientos específicos de programación en Linux.</para> 
-	<para>Para la instalación del Manager, el usuario dispondrá de una <emphasis role="bold">imagen ISO</emphasis> obtenida mediante descarga, o bien, a través del <emphasis role="bold">DVD</emphasis> facilitado por redBorder. Si obtuvo la imagen mediante descarga, puede guardarla en su disco local o bien, grabarla en un DVD o USB para su instalación en máquina física. En cualquier caso, una vez realizada la primera fase de la instalación, el sistema se reiniciará y arrancará desde la opción definida por defecto: <literal>Select from local disk.</literal></para>
-	<para>Al arrancar el asistente de instalación tendrá acceso a un menú en el que encontrará las siguientes opciones:</para>
+	<title>Installation of the Enterprise Version redborder Manager</title>
+	<para>Thanks to the installation wizard, the Manager can be configured and prepared quickly and easily without the need for specific Linux programming knowledge.</para> 
+	<para>For the Manager installation, the user will have an <emphasis role="bold">ISO image</emphasis> obtained via download or through <emphasis role="bold">DVD</emphasis> facilitated by redborder. 
+	If the image was obtained via download, you can download it to your local disk or save it to a DVD or USB to be installed on a physical machine. In any case, once the first phase of installation is done, 
+	the system will restart and will boot up from the default option: <literal>Select from local disk.</literal></para>
+	<para>Upon booting up, the installation wizard will have access to a menu with the following options:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
-			<para><literal>Install Manager:</literal> lanza el menú de instalación del Manager.</para>
+			<para><literal>Install Manager:</literal> launches the Managr installation menu.</para>
 		</listitem>
 		<listitem>
-			<para><literal>Install Sensor:</literal> esta opción le permite realizar la instalación del sensor que corresponda para su posterior registro en el Manager de redBorder. <footnote><para>Dependiendo de la solución que haya adquirido aparecerán en el menú las diferentes opciones para la instalación y registro de los sensores de las diferentes Apps en el Manager: IPS (App IPS), Instagram or Twitter (App Social), MailGateway, Endpoint or ProxyHTTP (Malware App).</para></footnote></para>
+			<para><literal>Install Sensor:</literal> this option allows you to install the appropriate sensor for its subsequent registration in the redborder Manager.
+			 <footnote><para>Depending on the solution acquired, the menu will show the different options for the installation and registration of the sensors of the different Apps in the Manager:
+			 IPS (App IPS), Instagram or Twitter (App Social), MailGateway, Endpoint or ProxyHTTP (Malware App).</para></footnote></para>
 		</listitem>
 		<listitem>
-			<para><literal>Rescue installed system:</literal> modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado). Además, permite iniciar el procedimiento de resolución del problema o cambiar la contraseña del usuario en caso de pérdida.</para>
+			<para><literal>Rescue installed system:</literal> rescue start mode for cases where your machine has problems starting (advanzed mode). 
+			It also allows you to start the process of resolving the problem or changing the user password if it has been lost.</para>
 		</listitem>
 		<listitem>
-			<para><literal>Boot from Local Drive:</literal> arranque desde disco local (por defecto).</para>
+			<para><literal>Boot from Local Drive:</literal> boot up from the local disk (by default).</para>
 		</listitem>
 	    <listitem>
-			<para><literal>Memory Test:</literal> testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
+			<para><literal>Memory Test:</literal> memory test available for the system installation. If a memory module is defective, this test will detect it and will advise the user.</para>
 		</listitem>
 	</itemizedlist>
 	<note>
-		<title>Nota</title>
-		<para>Creación de Cluster: es aconsejable revisar el estado de la memoria de la máquina antes de comenzar la instalación el segundo Manager.</para>
+		<title>Note</title>
+		<para>Cluster Creation: it is advisable to revise the machine's memory before starting the installation of the second Manager.</para>
 	</note>
 	<mediaobject>
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img001.png"/>
 		</imageobject>
 		<textobject>
-			<phrase>Pantalla principal del asistente de instalación del Manager de redBorder</phrase>
+			<phrase>Main screen of the redborder Manager installation wizard</phrase>
 		</textobject>
 			<caption>
-				<para>Pantalla principal del asistente de instalación del Manager redBorder</para>
+				<para>Main screen of the redborder Manager installation wizard</para>
 			</caption>
 	</mediaobject>
-    <para>El proceso de instalación del Manager se realiza en dos etapas:</para>
+    <para>The installation process of the Manager will be carried out in two steps:</para>
 	<itemizedlist mark="circle">
 		<listitem>
-			<para>Ajustes básicos e instalación de los paquetes:</para>
-			<para>a) Selección del idioma</para>
-			<para>b) Selección de teclado</para>
-			<para>c) Insertar password</para>
+			<para>Basic settings and installation of the packets:</para>
+			<para>a) Lanaguage selection</para>
+			<para>b) Keyboard selection</para>
+			<para>c) Enter password</para>
 		</listitem>
 		<listitem>
-			<para>Finalización de la instalación del Manager:</para>
-			<para>a) Configuración de red </para>
-			<para>b) Configuración del sistema</para>
+			<para>Completion of the Manager installation:</para>
+			<para>a) Network configuration</para>
+			<para>b) System configuration</para>
 		</listitem>
 	</itemizedlist>   
-    <para>Seleccione <literal>Install Manager</literal> para comenzar el proceso de instalación del Manager. A continuación se procederá a la realización de una serie de ajustes básicos.</para>
+    <para>Select <literal>Install Manager</literal> to begin the installation process of the Manager. Below, a series of basic configurations is explained.</para>
     <section>
-		<title>Proceso de instalación del Manager: ajustes básicos</title>
-		<para><emphasis role="bold">a) Selección de idioma</emphasis></para>
-		<para>Seleccione el idioma con el que desea operar a partir de este momento.</para> 
+		<title>Manager installation process: basic settings</title>
+		<para><emphasis role="bold">a) Language selection</emphasis></para>
+		<para>Select the language in which you would like to operate from now on.</para> 
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002a.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Ajustes básicos: selección de idioma</phrase>
+					<phrase>Basic settings: language selection</phrase>
 				</textobject>
 				<caption>
-					<para>Ajustes básicos: selección de idioma</para>
+					<para>Basic settings: language selection</para>
 				</caption>
 		</mediaobject>
-		<para><emphasis role="bold">b) Selección tipo de teclado</emphasis></para>
-		<para>Elija el tipo de teclado que quiere utilizar durante el proceso. Debido a su amplia compatibilidad aparecerá seleccionada por defecto la opción de teclado americano [US].</para>
+		<para><emphasis role="bold">b) Keyboard selection</emphasis></para>
+		<para>Choose the type of keyboard you would like to use during the process. Due to its broad compatibility, the American [US] keyboard option is selected by default.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002b.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Ajustes básicos: selección de tipo de teclado</phrase>
+					<phrase>Basic settings: Keyboard selection</phrase>
 				</textobject>
 				<caption>
-					<para>Ajustes basicos: selección de tipo de teclado</para>
+					<para>Basic settings: Keyboard selection</para>
 				</caption>
         </mediaobject>
-        <para><emphasis role="bold">c) Insertar password</emphasis></para>
-        <para><emphasis>1) Elegir e insertar una password:</emphasis> Esta será la clave con la que opere a partir de ahora. Puede ser modificada en cualquier otro momento.</para>
-        <para><emphasis>2) Confirmar password:</emphasis> Volver a introducir la clave para verificar que la conoce y que no ha cometido ningún error tipográfico. 
-        En caso de que la clave sea débil o con poca fortaleza, el programa le avisará mediante una ventana emergente.</para>
-        <para> Si lo desea, puede insertar una contraseña más fuerte o bien, guardar la contraseña actual y cambiarla en otro momento seleccionando la opción <keycap>3)</keycap> <literal>Password</literal>, 
-        accesible desde el menú de Configuración del Manager (<literal>redBorder Configuration Menu)</literal>.</para>    
+        <para><emphasis role="bold">c) Enter password</emphasis></para>
+        <para><emphasis>1) Choose and enter a password:</emphasis> This will be the key that you will use from now on. It can be changed at any time.</para>
+        <para><emphasis>2) Confirm password:</emphasis> Enter the password again to verify that you have entered it correctly without any typographical errors. 
+        If the password strength is low, the program will notify you in a pop-up window.</para>
+        <para> You can choose to enter a stronger password or save the current password and change it at a later time by selecting option <keycap>3)</keycap> <literal>Password</literal>, 
+        accesible from the Mangaer Configuration menu (<literal>redBorder Configuration Menu)</literal>.</para>    
         <note>
 			<title>Nota</title>
-			<para>Recuerde que la contraseña que haya seleccionado en este paso, será la que utilice para acceder a la plataforma web redBorder.</para>
+			<para>Remember that the password selected in this step will be the password used to access the redborder web platform.</para>
         </note>
-        <para>Una vez que haya introducido su Password y haya pulsado la opción <literal>OK</literal>, el sistema procederá a crear las particiones y a realizar la instalación de los paquetes del asistente en su disco duro.</para>
+        <para>Once you have entered your Password selected the <literal>OK</literal> option, the system will create the 
+        partitions and install the wizard packets in your hard drive.</para>
         <mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002c.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Ajustes básicos: password</phrase>
+					<phrase>Basic settings: password</phrase>
 			</textobject>
 				<caption>
-					<para>Ajustes básicos: password</para>
+					<para>Basic settings: password</para>
 				</caption>
 		</mediaobject>
-        <para><emphasis role= "bold">Instalación de los paquetes y reinicio del sistema</emphasis></para>
-		<para>Una vez que haya insertado el password, se procederá a la instalación de los paquetes de instalación del asistente en el disco duro.</para>
-		<para>Espere hasta que la barra de progreso le indique que la instalación se ha completado al 100%. Este proceso puede durar unos minutos.</para>
-		<para>No pulse ninguna tecla ni realice ninguna acción hasta que finalice el proceso:</para>
+        <para><emphasis role= "bold">Installation of the packets and restarting the system</emphasis></para>
+		<para>Once you have entered the password, the wizard will install the packets in the hard drive.</para>
+		<para>Wait until the progress bar indicates that the installation has finished 100%. This process may take a few minutes.</para>
+		<para>Do not press any keys or perform any actions until the process has finished completely:</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002d.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Instalación de los paquetes del asistente</phrase>
+					<phrase>Installation of the wizard packets</phrase>
 				</textobject>
 				<caption>
-					<para>Instalación de los paquetes del asistente</para>
+					<para>Installation of the wizard packets</para>
 				</caption>
 		</mediaobject>
-		<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, deberá aparecer una pantalla emergente en la que se solicita el reinicio del sistema para finalizar la primera parte de la instalación. Hacer clic en <literal>Reboot</literal>.</para>		
+		<para>Once the packets are installed, the program executes the last scripts to finish the step. Then, a pop-up window will appear which requests that the system be restarted to finish the first part
+		of the installation. Click on <literal>Reboot</literal>.</para>		
 	</section>
     <section>
-		<title>Finalización de la instalación del Manager de redBorder: redBorder Configuration menu</title>
-		<para>Tras el reinicio automático del sistema, visualizaremos la siguiente pantalla en la que ingresaremos con el usuario <literal>root</literal>:</para>	
+		<title>Complete the redborder Manager installation: redBorder Configuration menu</title>
+		<para>After the automatic system restart, we see the next screen which we will log into using the user <literal>root</literal>:</para>	
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002e.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Finalización del proceso de instalación: login</phrase>
+					<phrase>Completion of the installation process: login</phrase>
 				</textobject>
 				<caption>
-					<para>Finalización del proceso de instalación: login</para>
+					<para>Completion of the installation process: login</para>
 				</caption>
 		</mediaobject>
 		<para><emphasis role="bold">Login</emphasis></para>
 		<note>
-			<title>Nota</title>
-			<para>Para realizar la instalación del Manager es necesario registrarse con el usuario que tiene mayores permisos: <emphasis>root.</emphasis></para>
+			<title>Note</title>
+			<para>In order to install the Manager, it is necessary to log in with the user that has the most permissions: <emphasis>root.</emphasis></para>
 		</note>		
-		<para>Para mayor seguridad, le recomendamos que asigne tres niveles de usuarios/permisos entre las personas que se vayan a encargar de la gestión del Manager.</para>
-		<para><emphasis role="bold">Niveles de usuarios para el Manager de redBorder</emphasis></para>
+		<para>For better security, we recommend that you assign three levels of users/ permissions betwen the people that will be in charge of the Manager.</para>
+		<para><emphasis role="bold">Levels of users for the redborder Manager</emphasis></para>
 		<orderedlist numeration="arabic">
 			<listitem>
-				<para><emphasis role="bold">root:</emphasis> posee todos los permisos. Es el superadministrador del sistema.</para>
+				<para><emphasis role="bold">root:</emphasis> has all permissions. It is the super-administrador of the system.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">admin:</emphasis> usuario que solo tiene acceso al menú de configuración del sistema, pero que no posee permisos para modificar ficheros.</para> 
+				<para><emphasis role="bold">admin:</emphasis> user that only has access to the system configuration menu, but does not have permissions ot modify files.</para> 
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">redborder:</emphasis> este usuario tiene un significado distinto para el Manager que para los sensores.</para>
-				<para>-<literal>manager</literal>: usuario utilizado para registrar los sensores.</para>
-				<para>-<literal>sensor</literal>: usuario utilizado cuando el Manager quiere comunicarse con los sensores.</para>
+				<para><emphasis role="bold">redborder:</emphasis> this user has a different meaning for the Manager than for the sensors.</para>
+				<para>-<literal>manager</literal>: user used for the registration of sensors.</para>
+				<para>-<literal>sensor</literal>: user used when the Manager wants to communicate with the sensors.</para>
 			</listitem>	
 		</orderedlist>    
-		<para>A continuación se realizarán las siguientes acciones:</para>
+		<para>Next the following actions will be taken:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
 				<para>Password</para>
 			</listitem>
 			<listitem>
-				<para>Comando rb_sysconf</para>
+				<para>rb_sysconf Command</para>
 			</listitem>
 		</itemizedlist>	
         <para><emphasis role="bold">Password</emphasis></para>
-		<para>Introducir Contraseña. Esta coincide con la contraseña que haya introducido durante la primera fase de ajustes básicos.</para>    
+		<para>Enter password. This is the password that you entered in the first stage of basic settings.</para>    
 	    <mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002c.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Finalización del proceso de instalación: password</phrase>
+					<phrase>Complete installation process: password</phrase>
 				</textobject>
 				<caption>
-					<para>Finalización del proceso de instalación: password</para>
+					<para>Complete installation process: password</para>
 				</caption>
 		</mediaobject>	
-		<para><emphasis role="bold">Instertar comando <literal>rb_sysconf</literal></emphasis></para>
-		<para>Ejecutar el comando <literal>rb_sysconf</literal> para lanzar el <literal>redBorder Configuration menu.</literal> (En adelante: menú de configuración redBorder).</para>
+		<para><emphasis role="bold">Enter <literal>rb_sysconf</literal></emphasis> command</para>
+		<para>Execute the command <literal>rb_sysconf</literal> to launch the <literal>redBorder Configuration menu.</literal></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img002f.png"/>
 			</imageobject>
 			<textobject>
-				<phrase>Finalización del proceso de instalación: insertar comando rb_sysconf</phrase>
+				<phrase>Completion of the installation process: enter rb_sysconf command</phrase>
 			</textobject>
 			<caption>
-				<para>Finalización del proceso de instalación: insertar comando <literal>rb_sysconf</literal></para>
+				<para>Completion of the intallation process: enter <literal>rb_sysconf</literal> command</para>
 			</caption>
 		</mediaobject>
-		<para>Estas son las opciones que encontrará en la pantalla principal de este menú: </para>
+		<para>These are the options that you will find on the main screen of this menu: </para>
 		<orderedlist numeration="arabic">
 		 	<listitem>
-				<para><literal>System Configuration:</literal> configuración del hostname, IP del Manager, hora y estado del Manager.</para>
+				<para><literal>System Configuration:</literal> configuration of the hostname, Manager IP, time and state of the Manager.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Network Configuration:</literal> creación de bondings, segmentos, DNS, rutas e IPMI. Recuerde que, para poner en funcionamiento el Manager, se necesitan por lo menos dos conexiones de red.</para>
+				<para><literal>Network Configuration:</literal> creation of bondings, segments, DNS, routes and IPMI. Remember that in order put the Manager in operation, 
+				at least two network connections are required.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Passwords:</literal> acceda a esta opción si desea modificar las contraseñas que haya definido por cada rol de usuario.</para>
+				<para><literal>Passwords:</literal> access this option if you want to change the passwords defined for each user role.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Backup System:</literal> permite la creación de un fichero de recuperación, la posibilidad de restaurar la máquina a través de la copia de seguridad y la visualización de un listado de las copias de seguridad disponibles, así como la posibilidad de subir dichos ficheros a un servidor FTP.	</para>
+				<para><literal>Backup System:</literal> allows for the creation of a recovery file, the possibility to restore the machine with a backup copy and a view of a list of the available backup copies and
+				 the possibility of uploading the said files to an FTP server.	</para>
 			</listitem>			
 		</orderedlist>
-		<para><literal>w) start simple wizard:</literal> inicia un asistente que le permitirá de forma sencilla y rápida realizar la instalación y configuración del Manager.</para>
-		<para><literal>q) quit:</literal> Salir. Nos devuelve a la pantalla principal de configuración del sistema.</para>
+		<para><literal>w) start simple wizard:</literal> starts a wizard that will allow you to easily and quickly install and configure the Manager.</para>
+		<para><literal>q) quit:</literal> Salir. Returns us to the main system configuration screen.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img003.png"/>
 		    </imageobject>
 		    <textobject>
-					<phrase>Pantalla principal del asistente de instalación del menú de configuración redBorder</phrase>
+					<phrase>Main screen of redborder configuration menu installtion wizard</phrase>
 				</textobject>
 				<caption>
-					<para>Pantalla principal del asistente de instalación del menú de configuración redBorder</para>
+					<para>Main screen of redborder configuration menu installtion wizard</para>
 				</caption>
 		</mediaobject>
 	</section>
 	<section>
-		<title>Instalación del Manager de redBorder mediante Simple wizard</title>
-		<para>Para realizar la instalación automática del Manager existe la opción <keycap>w)</keycap><literal>start simple wizard</literal>.
-		 Esta opción facilita el proceso de instalación de un Manager y la creación de un cluster para la unión de dos o más managers.</para>
+		<title>Installation of the redborder Manager with Simple wizard</title>
+		<para>To perform the automatic installation of the Manager, there is an option to: <keycap>w)</keycap><literal>start simple wizard</literal>.
+		 This option facilitates the installation process of a Manager and the creation of a cluster for the union or two or more managers.</para>
 		<important>
-			<title>Importante</title>
-			<para>Los pasos que aquí se van a seguir son los que corresponden a la instalación de un Manager desde cero al que se le va a unir otro Manager en cluster.</para>
-			<para>En caso de que ya haya instalado un Manager, no será necesario repetir la puesta en red del mismo. Tan solo tendrá que realizar la puesta en red del nuevo Manager que se va a unir al cluster. </para>
-			<para>>El usuario podrá realizar de manera manual la configuración del resto de parámetros del sistema mediante la selección de la opción <keycap>1)</keycap><literal>System configuration</literal> en el menú de configuración redBorder.</para>
+			<title>Important</title>
+			<para>The steps that will be followed here are those corresponding to the installation of the Manager from the beginning, with additional instructions for adding another Manager to a cluster.</para>
+			<para>If the Manager has already been installed, it will not be necessary to repeat the network connection. You will only have to connect the new Manager being added to the cluster. </para>
+			<para>>The user will be able to manually configure the rest of the system parameters with the selection option <keycap>1)</keycap><literal>System configuration</literal> in the redBorder configuration menu.</para>
 		</important>
-		<para>Como podrá comprobar, existen una serie de opciones definidas por defecto. Para aceptarlas tan solo tiene que pulsar <keycap>Enter.</keycap> 
-		No obstante, puede modificarlas manualmente en cualquier momento del proceso de instalación.</para>
-		<para><emphasis role="bold">Mode, Hostname y DNS</emphasis></para>
+		<para>As you will see, there are different options defined by default. To accept them, you only need to press <keycap>Enter.</keycap> 
+		However, you can change them naually at any time during the installation process.</para>
+		<para><emphasis role="bold">Mode, Hostname and DNS</emphasis></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img004.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Instalación mediante simple wizard</phrase>
+				<phrase>Installation with simple wizard</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación mediante simple wizard: insertar Hostname, dominio, DNS primaria, DNS secundaria y NTP del servidor</para>
+				<para>Installation with simple wizard: enter Hostname, domain, primary DNS, secondary DNS and server NTP</para>
 			</caption>
 		</mediaobject>
 		<orderedlist numeration="arabic">
 				<listitem>
-					<para><literal>Selected Mode: cluster.</literal> Seleccionar el modo cluster para unir más de un Manager.</para>
+					<para><literal>Selected Mode: cluster.</literal> Select the cluster mode to join more than one Manager.</para>
 				</listitem>
 				<listitem>
-					<para><literal>Insert Hostname [rbmanager].</literal> La opción que viene definida por defecto es la de <literal>rbmanager.</literal> Este es un nombre que identifica de manera clara y sencilla al Manager y su posición dentro del cluster.</para>
+					<para><literal>Insert Hostname [rbmanager].</literal> The option defined by default is <literal>rbmanager.</literal> This is the name that clearly and simply identifies the Manager its position within the cluster.</para>
 				</listitem>
 				<listitem>
-					<para><literal>Insert domain: [redborder.cluster].</literal> Dominio definido por defecto.</para>
+					<para><literal>Insert domain: [redborder.cluster].</literal> Domain defined by default.</para>
 				</listitem>
 				<listitem>
-					<para><literal>Insert DNS Primary.</literal> Valor definido por defecto. El usuario podrá cambiarlo para indicar el servidor que provee DNS a su red y al que estará asociado el Manager.</para>
+					<para><literal>Insert Primary DNS.</literal> Value defined by default. The user can change it to indicate the server that provides the DNS to its network and to which the Manager will be associated.</para>
 				</listitem>
 				<listitem>
-					<para><literal>Insert DNS Secondary (optional).</literal>  Indicar DNS secundario de manera opcional. Se aconseja introducir un DNS alternativo que sustituya al DNS primario en caso de fallo del servidor</para>
+					<para><literal>Insert Secondary DNS (optional).</literal>  Indicate secondary DNS (optional). It is recommended that an alternative DNS be entered to substitute the primary DNS in case of server error.</para>
 				</listitem>
 		</orderedlist>
 		<note>
-			<title>Nota</title>
-			<para>Se recomienda la utilización de <emphasis role="bold">diferentes nombres para cada uno de los Managers que se van a unir al cluster.</emphasis>
-			 Lo más adecuado es seguir una numeración consecutiva (ej.:rbmanager01, rbmanager02) o bien, algún nombre que identifique su rol (ej.: rbmanagermaster, rbmanagerslave01, rbmanagerslave02).</para>
+			<title>Note</title>
+			<para>It is recommended that <emphasis role="bold">different names be used for each one of the Managers being added to the cluster.</emphasis>
+			 Consecutive numbering is the most appropriate (e.g.:rbmanager01, rbmanager02), or a name which identifies the role (e.g.: rbmanagermaster, rbmanagerslave01, rbmanagerslave02).</para>
 		</note>
-		<para>Una vez introducidos estos valores, el sistema le avisará de que los cambios han sido aplicados con éxito mediante el siguiente mensaje rotulado en verde: <literal>DNS and domain settings applied successfully.</literal></para>
-		<para><emphasis role="bold">Creación de bonding</emphasis></para>
-		<para> El siguiente paso para iniciar el proceso de creación de un bonding es indicar el servidor de hora: <literal> NTP server [pool.ntp.org]:</literal> 
-		Si existe algún NTP server en su red, se debe indicar. En caso contrario, se asignará uno por defecto.</para>
-		<para>A continuación, el sistema le pedirá que introduzca la IP de gestión: <literal>Insert management IP address:</literal></para>
+		<para>Once these values have been entered, the system will notify that the changes have been applied successfully with the following message marked in green: <literal>DNS and domain settings applied successfully.</literal></para>
+		<para><emphasis role="bold">Bonding creation</emphasis></para>
+		<para> The next step to beging the bonding creation process is the indicate the NTP server: <literal> NTP server [pool.ntp.org]:</literal> 
+		If there are any NTP servers in your network, this must be indicated. Otherwise, one will be assigned by default.</para>
+		<para>Hereafter, the system will ask you to enter the management IP: <literal>Insert management IP address:</literal></para>
 		<warning>
-			<title>Advertencia</title>
-			<para>Para la creación de un cluster es necesario que el usuario reserve dos bondings: uno para la red de gestión <emphasis role="bold">(Management IP address)</emphasis> 
-			y otro para la red de sincronismo <emphasis role="bold">(Sync IP address).</emphasis></para>
+			<title>Warning</title>
+			<para>For the creation of a cluster the user must reserve two bondings: one for the network managemet <emphasis role="bold">(Management IP address)</emphasis> 
+			and another for the synchronism network <emphasis role="bold">(Sync IP address).</emphasis></para>
 		</warning>
 		<mediaobject>
 			<imageobject>
 				 <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img005.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Configuración del Manager mediante Simple Wizard</phrase>
+				<phrase>Configuring the Manager with Simple Wizard</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación del Manager mediante Simple Wizard: insertar la IP de gestión del Manager</para>
+				<para>Installation of the Manager with Simple Wizard: enter the management IP of the Manager</para>
 			</caption>
 		</mediaobject>
-		<para>Para la creación de un bonding deberán especificarse los elementos que se indican a continuación. Para aceptar los valores definidos por defecto basta con pulsar la tecla <keycap>Enter.</keycap> En caso contrario, introducir manualmente los nuevos valores.</para>
+		<para>To create a bonding, the elements indicated hereafter must be specified. To accept the defined values, simply press the <keycap>Enter</keycap> key. Otherwise, manually enter the new values.</para>
 		<itemizedlist mark="bullet">
 			<listitem>
 				<para><literal>Insert management Netmask</literal></para>
 			</listitem>
 			<listitem>
 				<para><literal>Insert default gateway for this management interface (Y/n):</literal></para>
-				<para>La opción que viene predeterminada aparece en mayúscula. Recuerde que si desea añadir esta pasarela tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
-				<para>En caso de que desee insertar una nueva pasarlela para esta interfaz de gestión, teclee <keycap>n</keycap>.</para>
+				<para>The predetermined option appears in capital letters. Remember that if you want to add this gateway just press the <keycap>Enter</keycap> key.</para>
+				<para>If you want to enter a new gateway for this management interface, type <keycap>n</keycap>.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Insert default gateway</literal></para>
 			</listitem>
 			<listitem>
 				<para><literal>Insert a route for this bonding (y/N)?:</literal></para>
-				<para>Pulsar <keycap>y</keycap> para insertar una nueva ruta para el bonding.</para>
+				<para>Type <keycap>y</keycap> to enter a new route for the bonding.</para>
 			</listitem>		
 		</itemizedlist>
-		<para>Una vez introducidos estos valores, el sistema le avisará de que el bonding ha sido creado con éxito mediante el siguiente mensaje rotulado en verde: <literal>Bonding 0 created successfully.</literal></para>
+		<para>Once these values have been entered, the system will notify that the bonding has been created successfully with the following message marked in green: <literal>Bonding 0 created successfully.</literal></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img006.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Creación de bonding: insertar IP de sincronismo</phrase>
+				<phrase>Bonding creation: insert the synchronism IP</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de Manager mediante Simple Wizard: Creación de bonding e inserción IP de sincronismo</para>
+				<para>Manager Installation with Simple Wizard: Bonding creation and insertion of synchronism IP</para>
 			</caption>
 		</mediaobject>
-		<para><emphasis role="bold">Creación de un nuevo bonding de sincronismo para la unión de un nuevo Manager al cluster</emphasis></para>
-		<para>Para la creación de un nuevo bonding deberemos indicar la IP y la máscara de sincronismo e indicar una ruta para el nuevo bonding.</para>
-		<para> Una vez que haya introducido estos valores, el sistema le avisará de que el nuevo bonding ha sido creado con éxito: <literal>Bonding 1 created successfully.</literal></para>
-		<para>A continuación le aparecerá la siguiente pregunta: <literal>Would you like to join to other cluster (y/N)?</literal>, insertar <keycap>y</keycap> para continuar con el proceso de unión de un nuevo Manager al cluster.</para>
+		<para><emphasis role="bold">Creating a new synchronism bonding for adding a new Manager to the cluster</emphasis></para>
+		<para>To create a new bonding we must indicate the IP and the synchronism network mask as well as a route for the new bonding.</para>
+		<para> Once these values have been entered, the system will notify that the bonding has been created successfully: <literal>Bonding 1 created successfully.</literal></para>
+		<para>The following question will then appear: <literal>Would you like to join to another cluster (y/N)?</literal>, type <keycap>y</keycap><!--pendiente cambio en mensaje-->
+		 to continue with the process of joining a new Manager to the cluster.</para>
 		<warning>
-			<title>Advertencia</title>
-			<para>Durante la instalación del primer Manager, la pregunta <literal>Would you like to join to other cluster (y/N)?</literal> no aplica, por lo que aparecerá la opción <keycap>N</keycap> definida por defecto.</para>
+			<title>Warning</title>
+			<para>During the installation of the first Manager, the question <literal>Would you like to join to another cluster (Y/N)?</literal> does not apply, and so the option <keycap>N</keycap> will be defined by default.</para>
 		</warning>
 		<mediaobject>
 			<imageobject>
 				 <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img007.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Creación de bonding de sincronismo para la unión de un Manager al cluster</phrase>
+				<phrase>Creation of synchronism bonding to add a Manager to the cluster</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de Manager mediante Simple Wizard: creación de bonding de sincronismo para la unión de un Manager al cluster</para>
+				<para>Installing Manager with Simple Wizard: creating synchronism bonding to add a Manager to the cluster</para>
 			</caption>
 		</mediaobject>
-		<para><emphasis role="bold">Sincronización con bases de datos y almacenamiento</emphasis></para>
-		<para>En este punto deberemos indicarle al sistema cómo se van a gestionar las bases de datos y el almacenamiento de datos en el Manager. Como se observa en la captura de pantalla, en todos los casos la opción <keycap>N</keycap> aparece definida por defecto. Se aconseja, por tanto que sea el Manager quien realice esta gestión. En caso contrario, seleccionar la opción <keycap>y</keycap> para los siguientes casos:</para>
-		<para><literal>Would you like to use remote S3 storage? (y/N).</literal> Indicar en caso de que se use el protocolo de Amazon Web Services (AWS) para transferencia de ficheros.</para>
-		<para><literal>Would you like to use remote memcached? (y/N).</literal> Seleccionar en caso de que se desee realizar el cacheo de las peticiones a bases de datos. </para>
-		<para><literal>Would you like to use remote postgresql database? (y/N).</literal> Gestión mediante base de datos postgresql.</para>
-		<para>Una vez que se haya indicado la opción elegida, deberemos confirmar que deseamos aplicar la configuración que hemos realizado: <literal>Are you sure you want to apply this configuration? (y/N)</literal></para>
-		<para>Seleccionar la opción <keycap>y</keycap>.</para>
+		<para><emphasis role="bold">Synchronization with databases and storage</emphasis></para>
+		<para>At this point we must tell the system how the databases and data storage will be managed in the Manager. As can be seen in the screenshot,in all cases the option <keycap>N</keycap> 
+		is selected by default. It is thus recommended that the Manager perform this operation. Otherwise, select the option <keycap>y</keycap> for the following cases:</para>
+		<para><literal>Would you like to use remote S3 storage? (y/N).</literal> Indicate if the Amazon Web Services (AWS) protocol is being used to transfer file.</para>
+		<para><literal>Would you like to use remote memcached? (y/N).</literal> Select if you would like to perform chaching requests to databases. </para>
+		<para><literal>Would you like to use remote postgresql database? (y/N).</literal> Managing with postgresql database.</para>
+		<para>Once the selected option has been indicated, we must confirm that we want to apply this configuration: <literal>Are you sure you want to apply this configuration? (y/N)</literal></para>
+		<para>Select the option <keycap>y</keycap>.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img008.png"/>
 		     </imageobject>
 		     <textobject>
-				<phrase>Opciones de bases de datos</phrase>
+				<phrase>Database options</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de Manager mediante Simple Wizard: opciones de bases de datos</para>
+				<para>Installing Manager with Simple Wizard: database options</para>
 			</caption>
 		</mediaobject>
-		<para>A partir de este momento, se efectuará la instalación de los servicios seleccionados. 
-		Este proceso puede llevar unos minutos. Una vez se haya realizado esta instalación, el asistente le devolverá a la pantalla principal del menú de configuración redBorder.</para>
-		<para>Para salir del asistente, seleccionar la opción <keycap>q)</keycap> <literal>quit.</literal></para>
-		<para>Para la instalación de un nuevo Manager y su unión a un cluster, seleccionar la opción <keycap>w)</keycap> para lanzar de nuevo el asistente de instalación.</para>	
+		<para>From now on, the installation of the selected services will be carried out. 
+		This process may take a few minutes. Once the instalation has been completed, the wizard will take you back to the main screen of the redborder configuration menu.</para>
+		<para>To exit the wizard, select the option <keycap>q)</keycap> <literal>quit.</literal></para>
+		<para>To install a new Manager and add it to a cluster, select the option <keycap>w)</keycap> to launch the new installation wizard.</para>	
 	</section>
 	<section>
-		<title>Instalación y unión de un nuevo Manager al cluster</title>
-		<para>Para la instalación de un segundo Manager (en el caso de que se realice en un momento diferente a la instalación del Manager maestro) 
-		es necesario volver a lanzar la imagen ISO para comenzar el proceso; los primeros pasos son idénticos a los descritos anteriormente para la instalación del Manager.</para>
+		<title>Installing and adding a new Manager to the cluster</title>
+		<para>To install a second Manager (if it is being installed at a different time than the master Manager)
+		it is necessary to launch the ISO image again to iniciate the process; the first steps are identical to those described previously fot the installation of the Manager.</para>
 		<note>
-			<title>Nota</title>
-			<para>En la pantalla principal del asistente de instalación del Manager encontrará la opción <literal>Memory Test</literal> 
-			aconsejable para revisar el estado de la memoria de la máquina antes de comenzar la instalación el segundo Manager.</para>
+			<title>Note</title>
+			<para>In the main screen of the Manager installation wizard you will find the option <literal>Memory Test</literal> 
+			to be advisable to review the memory status of the machine before before starting the installation of the second Manager.</para>
 		</note>
-		<para>Seleccionar <literal>Install Manager</literal> para comenzar con el proceso de instalación.</para>
+		<para>Select <literal>Install Manager</literal> to initiate the installation process.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img001.png"/>
 			</imageobject>
 			<textobject>
-				<phrase>Pantalla principal del asistente de instalación del Manager redBorder</phrase>
+				<phrase>Main screen of the redborder Manager installation wizard</phrase>
 			</textobject>
 			<caption>
-				<para>Pantalla principal del asistente de instalación del Manager redBorder</para>
+				<para>Main screen of the redborder Manager installation wizard</para>
 			</caption>
 		</mediaobject>
-		<para>Tras realizar los ajustes básicos e instalación de los paquetes, el sistema se reiniciará de manera automática. A continuación, hacer Login, insertar Password e introducir el comando <literal>rb_sysconf</literal> para acceder a la pantalla principal del menú de configuración redBorder.</para>		
+		<para>After configuring the basic settings and installing the packets, the system will restart automatically. 
+		Then Log in, enter Password and enter the command in <literal>rb_sysconf</literal> 
+		to access the main screen of the redborder configuration menu.</para>		
 		<note>
-			<title>Nota</title>
-			<para>La password que seleccione en este caso puede ser diferente de la indicada para el primer Manager. <emphasis role="bold">Se aconseja unificar las contraseñas para evitar confusiones.</emphasis></para>
+			<title>Note</title>
+			<para>The password that you select here can be different from that indicated for the first Manager. <emphasis role="bold">Using a single password is recommended to avoid confusion.</emphasis></para>
 		</note>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img009.png"/>
 			</imageobject>
 			<textobject>
-				<phrase>Instalación de nuevo Manager y unión al cluster</phrase>
+				<phrase>Installing a new Manager and adding it to the cluster</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de nuevo Manager y unión al cluster</para>
+				<para>Installing a new Manager and adding it to the cluster</para>
 			</caption>
 		</mediaobject>
-		<para>Seleccione la opción <keycap>w)</keycap><literal>start simple wizard</literal> para comenzar el proceso de instalación de un segundo Manager. Se recomienda dejar seleccionada la opción por defecto <literal>Selected Mode: cluster.</literal></para>
-		<para>El proceso de instalación de este segundo Manager es idéntico al empleado para la instalación del Manager maestro. En las siguientes pantallas observará que se configuran los mismos elementos:</para>
+		<para>Select the option <keycap>w)</keycap><literal>start simple wizard</literal> to start the installation process of the second Manager. It is recommended that the default option be <literal>Selected Mode: cluster.</literal></para>
+		<para>The installation process of this second Manager is identical to that employed for the installation of the master Manager. The configuration of the same elements can be observed on the following screens n the following screens:</para>
 		<itemizedlist mark="circle">
 			<listitem>
 				<para>Hostname</para>
 			</listitem>
 			<listitem>
-				<para>Dominio</para>
+				<para>Domain</para>
 			</listitem>
 			<listitem>
-				<para>DNS primario (puede ser diferente al del primer Manager)</para>
+				<para>Primary DNS (may differ from the primary Manager)</para>
 			</listitem>
 			<listitem>
-				<para>DNS secundario</para>
+				<para>Secondary DNS</para>
 			</listitem>
 			<listitem>
 				<para>NTP server</para>
 			</listitem>		
 		</itemizedlist>
 		<important>
-			<title>Importante</title>
-			<para>Es importante que se utilicen <emphasis role="bold">diferentes nombres para cada uno de los Managers que se van a unir al cluster.</emphasis> 
-			Lo más aconsejable es seguir una numeración consecutiva (ej.:rbmanager01, rbmanager02) o bien, algún nombre que identifique su rol (ej.: rbmanagermaster, rbmanagerslave01, rbmanagerslave02).</para> 
+			<title>Important</title>
+			<para>It is important that <emphasis role="bold">different names for each of the Managers being added to the cluster</emphasis> be used.
+			It is advisable to follow consecutive numbering (e.g.:rbmanager01, rbmanager02) or a name which identifies its role (e.g.: rbmanagermaster, rbmanagerslave01, rbmanagerslave02).</para> 
 		</important>
-		<para>El siguiente paso es la creación de dos bonding: de gestión (bonding 0) y de sincronismo (bonding 1). Indicar (o seleccionar el valor dado por defecto) los siguientes valores:</para>
+		<para>The next step is the creation of two bondings: management (bonding 0) and sychronism (bonding 1). Indicate (or select the value given by defualt) the following values:</para>
 		<itemizedlist mark="circle">
 			<listitem>
 				<para>(Management/sync) IP address</para>
@@ -432,65 +445,65 @@
 				<para>(Management/sync) Netmask</para>
 			</listitem>
 			<listitem>
-				<para>Pasarela para la interfaz de gestión (<literal>Default gateway for this management interface (Y/n)?:</literal>)</para>
+				<para>Gateway for the management interface (<literal>Default gateway for this management interface (Y/n)?:</literal>)</para>
 			</listitem>
 			<listitem>
-				<para>Ruta para el bonding (<literal>Insert a route for this bonding (y/N)?:</literal>)</para>
+				<para>Route for the bonding (<literal>Insert a route for this bonding (y/N)?:</literal>)</para>
 			</listitem>
 		</itemizedlist>
-		<para>Una vez que se hayan introducido estos valores, el asistente confirmará que los bonding 0 y 1 han sido creados con éxito: <literal>Bonding created successfully.</literal></para>
+		<para>Once theses values have been entered, the wizard will confirm that the bondings 0 and 1 have been created successfully: <literal>Bonding created successfully.</literal></para>
 		<warning>
-			<title>Advertencia</title>
-			<para>Las redes de gestión del primer y segundo Manager así como las de sincronismo deben tener conectividad entre sí para poder funcionar como cluster. </para>
-			<para><literal>Cluster SYNC IP Adress (bond1):</literal> Insertar como IP de sincronismo la misma IP que la del Manager Maestro.</para>
+			<title>Warning</title>
+			<para>The management networks of the first and second Manager as well as the that of the synchronism must have connectivity amongst them in order to be able to function as a cluster. </para>
+			<para><literal>Cluster SYNC IP Adress (bond1):</literal> Enter as synchronism IP the same IP as the Master Manager.</para>
 		</warning>
 		<mediaobject>
 			<imageobject>
 				 <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img010.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Instalación de nuevo Manager y unión al cluster: bondings</phrase>
+				<phrase>Installing a new Manager and adding it to the cluster: bondings</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de nuevo Manager y unión al cluster: bondings</para>
+				<para>Installing a new Manager and adding it to the cluster: bondings</para>
 			</caption>
 		</mediaobject>
-		<para>En este caso ante la pregunta <literal>Would you like to join other cluster? (y/N);</literal> seleccionar la opción <keycap>y</keycap>.</para>
-		<para>El siguiente dato que tiene que ingresar es la IP de sincronismo del cluster: <literal>Cluster SYNC IP Adress (bond1):</literal> 
-		La cual corresponde a la IP de sincronismo (o del bonding 1) del primer Manager o Maestro. </para>
+		<para>In this case, when asked: <literal>Would you like to join another cluster? (y/N);</literal> select the option <keycap>y</keycap>.</para>
+		<para>Next, the cluster synchronism IP must be entered: <literal>Cluster SYNC IP Adress (bond1):</literal> 
+		This corresponds to the synchronism IP (or bonding 1) of the first Manager or Master. </para>
 		<mediaobject>
 			<imageobject>
 				 <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img011.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Introducir la IP de sincronismo para unión al cluster</phrase>
+				<phrase>Enter the synchronism IP to add to the cluster</phrase>
 			</textobject>
 			<caption>
-				<para>Instalación de nuevo Manager y unión al cluster: introducir la IP de sincronismo para unión al cluster</para>
+				<para>Installing a new Manager and adding it to the cluster: enter the synchronism IP to add it to the cluster</para>
 			</caption>
 		</mediaobject>
 		<note>
-			<title>Nota</title>
-			<para>En caso de que su equipo utilice DHCP, estas configuraciones se realizarán de manera automática.</para>
+			<title>Note</title>
+			<para>If the machine uses DHCP, these configurations will be performed automatically.</para>
 		</note>
-		<para>Antes de aplicar esta configuración, seleccionar el modo en el que va a funcionar cada Manager. En la siguiente pantalla podrá visualizar todas las opciones disponibles: </para>
+		<para>Before applying this configuration, select the mode in which the Manager will operate. On the following screen all available options can be seen: </para>
 		<mediaobject>
 			<imageobject>
 				 <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img012.png"/>
 		    </imageobject>
 		    <textobject>
-				<phrase>Seleccionar servicios para cada uno de los Managers</phrase>
+				<phrase>Select services for each of the Managers</phrase>
 			</textobject>
 			<caption>
-					<para>Instalación de nuevo Manager y unión al cluster: seleccionar modo para el nuevo Manager</para> <!--Revisar conceptos manager/esclavo-->
+					<para>Installing a new Manager and adding it to the cluster: select the mode of the new Manager</para> <!--Revisar conceptos manager/esclavo-->
 			</caption>
 		</mediaobject>
 		<note>
-			<title>Nota</title>
-			<para>En caso de no seleccionar ninguna opción, el sistema atribuirá al nuevo Manager la opción <literal>1) slave</literal> por defecto.</para>
-			<para>Se recomienda seleccionar el modo esclavo (<literal>1) slave</literal>) al nuevo Manager ya que, de este modo, ambos Managers se reparten los servicios.</para>
+			<title>Note</title>
+			<para>If no option has been selected, the system will attribute the option <literal>1) slave</literal> to the new Manager by default.</para>
+			<para>It is recommended that slave mode be selected (<literal>1) slave</literal>) to the new Manager since, this way, both Managers share services.</para>
 		</note>	
-		<para>¡Enhorabuena! Ha instalado correctamente el Manager redBorder Enterprise Version. A partir de este momento, puede realizar la configuración y gestión del Manager desde la plataforma web redBorder.</para>
-		<para>Consultar el capítulo 3 "Instalación y registro de los sensores IPS/IDS" para finalizar el proceso de instalación del Manager y registro de los sensores.</para>
+		<para>Congratulations! You have correctly installed the Enterprise Version of redborder Manager. From now on, you can configure and manage the Manager from the redborder web platform.</para>
+		<para>Read Chapter 3 "Installing and registering IPS/IDS sensors" to complete the installation process of the Manager and registration of the sensors.</para>
 	</section>
 </chapter>
