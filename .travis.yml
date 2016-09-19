@@ -1,0 +1,29 @@
+language: generic
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends publican libxml2-utils
+
+notifications:
+  email: false
+
+matrix:
+  include:
+  - env: LANG="es-ES" MAKE_TARGET="pdf-es" OUTPUT_PDF_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES.pdf"
+  - env: LANG="es-ES" MAKE_TARGET="pdf-malware-es" OUTPUT_PDF_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES.pdf"
+
+script:
+  - xmllint --postvalid --noout ${LANG}/Chapter*.xml
+  - make ${MAKE_TARGET}
+  - mv tmp/${LANG}/pdf/redBorder_IPS-3-Guia_de_instalacion-${LANG}.pdf ${OUTPUT_PDF_NAME}
+
+deploy:
+  provider: releases
+  draft: True
+  api_key:
+    secure: q9WTek8aRD5oGdD+Ve69OEfyaJ/y1w6A3zAWyFF9AKweg3fybV0P+CmqTAudQHSGk0TV0ejhOenYkIjTnzZ0kXjpDi+y6JN8+hVrEjnUGRczdBEmssTW9nw/U/ZixjoBSc3yxXrbmBHoxfAWllCGGc52mBgfXWi8cXfqX94K6SlhYpvdNg8Tz6zbn/Z6bQcsGsSJI3+1s+y9CzafKnzHDiU1tUpKPoT2wZpNMXkss7DTxeiwAzco+vt7nVYUfkt05k3N6ckffzvkI/hW4bsSsgkD2ui6uaA9zQfRHEA6mZnIvPD3eganzV2FHNSSYhvBKLvSCpvWGfFgfqzBsJotempmyutPBKiITqFlez9jVXUMBayUbsAtiSGuHl45nqDqK1lmG9eoKZzy4RZARDnkF7ZaA90+1ln2qCXiw0lZjt88ID1+IYi5IGpFK+Q+ef+s/y+t8zRRE9lkuUs7QE2sr7SjJCuXLROBxIb4NiNkTs6/FfLazyZuTGziUBDyNHNsM07xak/qiYbAcTiNsFHtIB/OgQ46h5Y4gOhTUyQN+QJGyTjol4AHVaSt390ljbPbQDPVFWjAgW0u4Rx5qLDp6GZc32U5lzlt7V9gD0NFjAbSoY2uBoqbBJHw8+Si3Dd9DCsH3sE4esIc4ElXclR/CItA/SCfFzbR0m3jdcOi/cY=
+  file:
+  - ${OUTPUT_PDF_NAME}
+  skip_cleanup: true
+  on:
+    tags: True
