@@ -46,7 +46,23 @@
 				<revdescription>
 					<simplelist>
 						<member>Revisión total
-							IPS Enterprise Guide
+							IPS Enterprise Guide.
+						</member>
+					</simplelist>
+				</revdescription>
+			</revision>
+			<revision>
+				<revnumber>1.1-0</revnumber>
+				<date>Septiembre 2016</date>
+				<author>
+					<firstname>Eneo Tecnología</firstname>
+					<email>info@redborder.net</email>
+				</author>
+				<revdescription>
+					<simplelist>
+						<member>Adición capítulos
+							políticas específicas
+							para la app malware.
 						</member>
 					</simplelist>
 				</revdescription>
