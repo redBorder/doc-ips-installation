@@ -16,7 +16,7 @@ script:
   - xmllint --postvalid --noout ${LANG}/Chapter*.xml
   - make pdf-${MAKE_TARGET_SUFFIX}
   - mv tmp/${LANG}/pdf/redBorder_IPS-3-Guia_de_instalacion-${LANG}.pdf ${OUTPUT_NAME}.pdf;
-  - make html-${MAKE_TARGET}
+  - make html-${MAKE_TARGET_SUFFIX}
   - (cd tmp/${LANG}; zip ${OUTPUT_NAME} -r html)
   - (cd tmp/${LANG}; tar cvzpf ${OUTPUT_NAME}.tgz html/)
   - mv tmp/${LANG}/${OUTPUT_NAME}.{zip,tgz} .
