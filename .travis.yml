@@ -9,13 +9,29 @@ notifications:
 
 matrix:
   include:
-  - env: LANG="es-ES" MAKE_TARGET="pdf-es" OUTPUT_PDF_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES.pdf"
-  - env: LANG="es-ES" MAKE_TARGET="pdf-malware-es" OUTPUT_PDF_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES.pdf"
+  - env: >
+          LANG="es-ES" MAKE_TARGET="pdf-es"
+          OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES.pdf"
+  - env: >
+          LANG="es-ES" MAKE_TARGET="html-es"
+          OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES.html"
+  - env: >
+          LANG="es-ES" MAKE_TARGET="pdf-malware-es"
+          OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES.pdf"
+  - env: >
+          LANG="es-ES" MAKE_TARGET="html-malware-es"
+          OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES.html"
 
 script:
   - xmllint --postvalid --noout ${LANG}/Chapter*.xml
   - make ${MAKE_TARGET}
-  - mv tmp/${LANG}/pdf/redBorder_IPS-3-Guia_de_instalacion-${LANG}.pdf ${OUTPUT_PDF_NAME}
+  - >
+    if [[ "$MAKE_TARGET" == pdf-* ]]; then
+      mv tmp/${LANG}/pdf/redBorder_IPS-3-Guia_de_instalacion-${LANG}.pdf
+                                                            ${OUTPUT_PDF_NAME};
+    elif [[ "$MAKE_TARGET" == html-* ]]; then
+      find tmp/;
+    fi
 
 deploy:
   provider: releases

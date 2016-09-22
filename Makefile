@@ -26,5 +26,8 @@ pdf-malware-es:
 html-es:
 	$(call publican_build,html,"es-ES",publican-es-ES.cfg)
 
+html-malware-es:
+	$(call publican_build,html,"es-ES",publican-malware-es-ES.cfg)
+
 txt-es:
 	$(call publican_build,txt,"es-ES",publican-es-ES.cfg)
