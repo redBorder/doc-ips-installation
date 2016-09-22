@@ -12,8 +12,8 @@ matrix:
   - env: LANG="es-ES" MAKE_TARGET_SUFFIX="-malware-es" OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES"
 
 script:
-  - xmllint --postvalid --noout ${LANG}/Chapter*.xml
-  - make pdf-${MAKE_TARGET_SUFFIX}
+  - 'xmllint --postvalid --noout ${LANG}/Chapter*.xml'
+  - 'make pdf-${MAKE_TARGET_SUFFIX}'
   - mv tmp/${LANG}/pdf/redBorder_IPS-3-Guia_de_instalacion-${LANG}.pdf ${OUTPUT_NAME}.pdf;
   - make html-${MAKE_TARGET}
   - (cd tmp/${LANG}; zip ${OUTPUT_NAME} -r html)
