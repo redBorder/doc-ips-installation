@@ -9,12 +9,8 @@ notifications:
 
 matrix:
   include:
-  - env: >
-    LANG="es-ES" MAKE_TARGET_SUFFIX="-es"
-    OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES"
-  - env: >
-    LANG="es-ES" MAKE_TARGET_SUFFIX="-malware-es"
-    OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES"
+  - env: LANG="es-ES" MAKE_TARGET_SUFFIX="-es" OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-es-ES"
+  - env: LANG="es-ES" MAKE_TARGET_SUFFIX="-malware-es" OUTPUT_NAME="redBorder_IPS-3-Guia_de_instalacion-malware-es-ES"
 
 script:
   - xmllint --postvalid --noout ${LANG}/Chapter*.xml
