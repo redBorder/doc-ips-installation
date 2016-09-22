@@ -3,6 +3,7 @@
 [![Download IPS enterprise version](https://img.shields.io/badge/PDF-IPS--v1.1-0--red.svg)](https://github.com/redBorder/doc-ips-installation/releases/download/1.1-0/redBorder_IPS-3-Guia_de_instalacion-es-ES.pdf)
 [![Download IPS enterprise version](https://img.shields.io/badge/PDF-Malware--v1.1-0--red.svg)](https://github.com/redBorder/doc-ips-installation/releases/download/1.1-0/redBorder_IPS-3-Guia_de_instalacion-malware-es-ES.pdf)
 
+![logo](https://redborder.com/media/download/553 "Logo")
 
 ## Descripción del proyecto
 Este es un manual de usuario que corresponde a la última versión de la app redborder IPS, edición Enterprise.
