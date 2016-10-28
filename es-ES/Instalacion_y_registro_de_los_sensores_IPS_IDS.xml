@@ -8,65 +8,71 @@
 ]>
 <chapter>
 	<title>Instalación y registro de los sensores IPS/IDS</title>
-	<para>El proceso de instalación, registro y configuración de los sensores IDS/IPS consta fundamentalmente de dos pasos:</para>
+	<para>Para la instalación de redborder IPS, el usuario dispone de una <emphasis role="bold">imagen ISO</emphasis> obtenida mediante descarga de la web de redborder. En caso de instalación en máquina física, es posible grabar la imagen en un DVD o dispositivo de almacenamiento USB para proceder a su instalación. En caso de instalación en máquina virtual, será suficiente montar la imagen en un dispositivo de disco óptico.</para>
+	<para>En cualquiera de los dos tipos de escenarios, ya sea instalación sobre máquina física o virtual, tras arrancar el equipo desde la unidad en la que se encuentre montada la imagen ISO de redborder IPS se mostrará en pantalla el asistente de instalación, que cuenta con un menú con las siguientes opciones:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
-			<para>Instalación y registro de los sensores IPS/IDS en el Manager (asistente de instalación o ISO).</para>							
+			<para><literal>Install Sensor IPS</literal>: lanza el menú de instalación de redborder IPS.</para>
 		</listitem>	
 		<listitem>
-			<para>Configuración de parámetros basicos de los sensores IPS/IDS (plataforma web redBorder).</para>
+			<para><literal>Rescue installed system</literal>: modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado). Además, permite iniciar el procedimiento de resolución del problema o cambiar la contraseña del usuario en caso de pérdida.</para>
+		</listitem>
+		<listitem>
+			<para><literal>Boot from Local Drive</literal>: arranque desde disco local (por defecto).</para>
+		</listitem>
+		<listitem>
+			<para><literal>Memory Test</literal>: testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
 		</listitem>
 	</itemizedlist>
-	<para>Al poner en funcionamiento el asistente de instalación, visualizaremos el menú principal en el que encontrará la opción <literal>Install Sensor IPS</literal>:</para>
-	<mediaobject>
-		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img000.png"/>
-		</imageobject>
-		<caption>
-			<para>Asistente de instalación redBorder: Instalar sensor IPS</para>
-		</caption>
-	</mediaobject>
-	<para>A continuación el usuario deberá introducir su nombre de usuario y contraseña 
-	<footnote><para>El nombre de usuario y contraseña que se deben introducir en este paso corresponden con los que se han indicado en el proceso de instalación del Manager y serán los que le sirvan para acceder a la plataforma web redBorder.</para></footnote>, 
-	así como ejecutar el comando <literal>rb_sysconf:</literal></para>
-    <itemizedlist mark="bullet">
+	<para>(imagen: Pantalla principal del asistente de instalación de redborder IPS)</para>
+	<para>El proceso de instalación de redborder IPS se realiza en dos etapas:</para>
+	<itemizedlist mark="circle">
 		<listitem>
-			<para>Login</para>
+			<para>Ajustes básicos e instalación de los paquetes:</para>
+			<para>a) Selección de disco</para>
+			<para>b) Introducción de contraseña</para>
+			<para>c) Instalación de los paquetes del sistema</para>
 		</listitem>
 		<listitem>
-			<para>Password</para>
+			<para>Configuración de redborder IPS:</para>
+			<para>a) Configuración de red </para>
+			<para>b) Configuración del sistema y registro contra redborder Manager</para>
 		</listitem>
-		<listitem>
-			<para>Comando <literal>rb_sysconf</literal></para>
-		</listitem>
-	</itemizedlist>	
-	<note>
-		<title>Nota</title>
-		<para>Para realizar la instalación y registro de los sensores es necesario ingresar con el usuario que tiene mayores permisos: <emphasis>root.</emphasis></para>
-	</note>	
-	<para>Este proceso es idéntico al expuesto en la <emphasis role="bold">Finalización del proceso de instalación del asistente para la configuración del Manager.</emphasis></para>
-	<mediaobject>
-		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img001.png"/>
-	    </imageobject>
-		<caption>
-			<para>Login</para>
-		</caption>
-	</mediaobject>
-	<mediaobject>
-		<imageobject>
-			<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img002.png"/>
-	    </imageobject>
-	    <textobject>
-			<phrase>rb_sysconf: lanzar el menú de configuración de los sensores IPS</phrase>
-		</textobject>
-		<caption>
-			<para>rb_sysconf: lanzar el menú de configuración de los sensores IPS</para>
-		</caption>
-	</mediaobject>
+	</itemizedlist>   
+	<para>Seleccione <literal>Install Sensor IPS</literal> para comenzar el proceso de instalación de redBorder IPS. A continuación se procederá a la realización de una serie de ajustes básicos.</para>
+
+	<section>
+		<title>Proceso de instalación de redBorder IPS</title>
+		<para>Una vez seleccionada la opción de instalar redborder IPS, el asistente de configuración arranca el instalador del sistema, que solicita las siguientes opciones antes de continuar:</para>
+		
+		<para><emphasis role="bold">a) Selección de disco</emphasis></para>
+		<para>En esta opción se muestra un listado de los discos disponibles en la máquina y se solicita al usuario que indique el <emphasis role="bold">disco en el que desea realizar la instalación de redborder IPS</emphasis>.</para>
+		<para>En este listado aparece indicado entre paréntesis el disco que se usará por defecto si se presiona la tecla <literal>Enter</literal> sin seleccionar ningún disco del listado. También, al transcurrir un tiempo determinado sin que el usuario realice ninguna acción, se elegirá el disco por defecto automáticamente.</para>
+		<para>(imagen: Ajustes básicos: selección de disco)</para>
+
+		<para><emphasis role="bold">b) Introducción de contraseña</emphasis></para>
+		<para>En la siguiente opción se ofrece al usuario la posibilidad de introducir una contraseña para el usuario <literal>root</literal> del sistema. Una vez introducida, el asistente solicitará que se teclee de nuevo la misma contraseña para comprobar que ambas coinciden y que no ha habido ningún error de escritura por parte del usuario.</para>
+		<para>Si se presiona la tecla <literal>Enter</literal> sin escribir ninguna contraseña, o si se deja pasar un tiempo determinado, se usará la contraseña por defecto.</para>
+		<para>(imagen: Ajustes básicos: introducción de contraseña)</para>
+
+		<para><emphasis role="bold">c) Instalación de los paquetes del sistema</emphasis></para>
+		<para>Una vez elegido el disco de instalación y la contraseña del usuario <literal>root</literal> del sistema, se inicia automáticamente la instalación de los paquetes empleados por redborder IPS.</para>
+		<para>(imagen: Ajustes básicos: instalación de los paquetes del sistema)</para>
+		<para>Al completar la instalación de todos los paquetes, el sistema arranca los scripts de post-instalación y se reinicia automáticamente.</para>
+		<para>(imagen: Reinicio del sistema tras instalación de los paquetes del sistema)</para>
+
+	</section>
+
 	<section>
 		<title>Menú de configuración de los sensores IPS</title>
-		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold"> Menú de Configuración redBorder.</emphasis></para>
+		<para>Una vez que el sistema se ha reiniciado completamente, el usuario debe introducir su usuario y contraseña para continuar con la configuración de redborder IPS.</para>
+		<para>(imagen: Solicitud de credenciales para acceder al sistema)</para>
+		<para>Para comenzar con la configuración del sistema, el usuario deberá ejecutar el comando <literal>rb_sysconf</literal>.</para>
+		<para>(imagen: Ejecución del comando <literal>rb_sysconf</literal>)</para>
+		<para></para>
+		<para></para>
+
+		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold">Menú de Configuración redBorder.</emphasis></para>
 		<para>Este menú consta de 5 opciones:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
@@ -131,9 +137,9 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img004.png"/>
 			</imageobject>
-		<caption>
-			<para>Asignación automática de segmentos con bypass</para>
-		</caption>
+			<caption>
+				<para>Asignación automática de segmentos con bypass</para>
+			</caption>
 		</mediaobject>
 		<note>
 			<title>Nota</title>
@@ -208,12 +214,12 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img008.png"/>
 				</imageobject>
-			<textobject>
-				<phrase>Añadir segundo puerto al bonding</phrase>
-			</textobject>
-			<caption>
-				<para>Añadir segundo puerto al bonding</para>
-			</caption>
+				<textobject>
+					<phrase>Añadir segundo puerto al bonding</phrase>
+				</textobject>
+				<caption>
+					<para>Añadir segundo puerto al bonding</para>
+				</caption>
 			</mediaobject>
 			<para>Introduzca el número de puerto en la línea <literal>Insert bonding second port [1]:</literal></para>
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>			
@@ -242,8 +248,8 @@
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img009.png"/>
 				</imageobject>
 				<caption>
-				<para>Añadir manualmente una ruta al bonding</para>
-			</caption>
+					<para>Añadir manualmente una ruta al bonding</para>
+				</caption>
 			</mediaobject>
 			<para>Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el Bonding se ha creado con éxito: <literal>Bonding 0 created successfully.</literal></para>
 			<mediaobject>
@@ -281,9 +287,9 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img011.png"/>
 			</imageobject>
-		<caption>
-			<para>Configuración DNS y dominio</para>
-		</caption>
+			<caption>
+				<para>Configuración DNS y dominio</para>
+			</caption>
 		</mediaobject>
 		<para>Para finalizar el proceso, no es necesario aplicar cambios, seleccionar la opción <literal>quit</literal> insertando la letra <keycap>q</keycap> para volver al menú principal de configuración de red.</para>
 	</section>
@@ -336,9 +342,9 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img012.png"/>
 				</imageobject>
-			<caption>
-				<para>Asignar puertos al segmento</para>
-		    </caption>
+				<caption>
+					<para>Asignar puertos al segmento</para>
+				</caption>
 			</mediaobject>
 		</section>
 		<section>
@@ -348,11 +354,11 @@
 			<para>Seleccione el puerto que desea asignar al segmento aquel al que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
 			<para>Introduzca el número que le va a dar al segmento en la línea <literal>Insert segment number (0-15) [0]:</literal></para>
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>
-		    <para>El puerto asignado anteriormente al segmento desaparecerá del listado de puertos disponibles.</para>
-		    <note>
+			<para>El puerto asignado anteriormente al segmento desaparecerá del listado de puertos disponibles.</para>
+			<note>
 				<title>Nota</title>
 				<para>El sistema solo permite la creación de un máximo de 16 segmentos (0-15).</para>
-		    </note>
+			</note>
 		</section>
 		<section>
 			<title>Añadir un segundo puerto al segmento</title>
@@ -364,18 +370,18 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img013.png"/>
 				</imageobject>
-			<caption>
-				<para>Asignar un nuevo puerto al segmento</para>
-			</caption>
-		    </mediaobject>
+				<caption>
+					<para>Asignar un nuevo puerto al segmento</para>
+				</caption>
+			</mediaobject>
 			<para>Una vez que se han asignado los dos puertos a un segmento, el sistema le avisará de que el segmento ha sido creado correctamente: <literal>Segment 0 created successfully.</literal></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img014.png"/>
 				</imageobject>
-			<caption>
-				<para>Confirmación de creación de segmento</para>
-			</caption>
+				<caption>
+					<para>Confirmación de creación de segmento</para>
+				</caption>
 			</mediaobject>
 		</section>
 		<section>
@@ -396,9 +402,9 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img015.png"/>
 				</imageobject>
-			<caption>
-				<para>Resumen de segmentos y puertos asignados</para>
-			</caption>
+				<caption>
+					<para>Resumen de segmentos y puertos asignados</para>
+				</caption>
 			</mediaobject>		
 			<para><emphasis role="bold">Aplicar cambios</emphasis></para>
 			<para>Para que las modificaciones realizadas queden guardadas, debe realizar la acción de aplicar cambios, seleccionando la opción <keycap>a.</keycap></para>
@@ -408,17 +414,17 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img017.png"/>
 				</imageobject>
-			<caption>
-				<para>Resumen de segmentos y puertos con bypass</para>
-			</caption>
+				<caption>
+					<para>Resumen de segmentos y puertos con bypass</para>
+				</caption>
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img019.png"/>
 				</imageobject>
-			<caption>
-				<para>Aplicar cambios para la finalización de creación de segmentos</para>
-			</caption>
+				<caption>
+					<para>Aplicar cambios para la finalización de creación de segmentos</para>
+				</caption>
 			</mediaobject>		
 		</section>
 	</section>
@@ -430,9 +436,9 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img021.png"/>
 			</imageobject>
-		<caption>
-			<para>Equipos gestionados con IPMI</para>
-		</caption>
+			<caption>
+				<para>Equipos gestionados con IPMI</para>
+			</caption>
 		</mediaobject>	
 		<para><emphasis role="bold">Aplicar cambios</emphasis></para>
 		<para>Para finalizar el proceso de configuración de red  debe realizar la acción de aplicar cambios <literal>apply</literal>, seleccionando la opción <keycap>a.</keycap></para>
@@ -442,9 +448,9 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img020.png"/>
 			</imageobject>
-		<caption>
+			<caption>
 				<para>Finalización de la configuración de los sensores previa al registro en el Manager</para>
-		</caption>
+			</caption>
 		</mediaobject>	
 	</section>
 	<section>
@@ -458,7 +464,7 @@
 			<caption>
 				<para>Inicio del regsitro de los sensores en el Manager</para>
 			</caption>
-	    </mediaobject>	
+		</mediaobject>	
 		<para>En el menú de registro de los sensores en el Manager encontramos las siguientes opciones:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
@@ -483,114 +489,114 @@
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img023.png"/>
 				</imageobject>
-			<caption>
-				<para>Asignar nombre al sensor</para>
-			</caption>
+				<caption>
+					<para>Asignar nombre al sensor</para>
+				</caption>
 			</mediaobject>
 			<note>
 				<title>Nota</title>
 				<para>Recuerde introducir un nombre coherente para el sensor. <emphasis role="bold">Evite utilizar el nombre “Sensor”,</emphasis> ya que ese es el nombre genérico que utiliza el Manager
-				 y que, a la larga, podría causar confusión.</para>
+				y que, a la larga, podría causar confusión.</para>
 			</note>
 			<warning>
 				<title>Advertencia</title>
 				<para>El sistema le pedirá que verifique que el nombre elegido es el correcto, en ese caso, pulse <keycap>Enter</keycap></para>
 				<para>Si desea modificarlo inserte la letra <keycap>n</keycap></para>
 				<para>El sistema procederá a cambiar el nombre del sensor. 
-				Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
-			</warning>	
-		</section>		
-		<section>
-			<title>Configurar hora local</title>
-			<para>Seleccionar la opción <literal>2) Set local time.</literal></para>
-			<para>Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre. Esta debería coincidir con la seleccionada en la fase de ajustes básicos durante el proceso de configuración de los sensores IPS. </para>
-			<para> El sistema le indica dos formatos posibles para la inserción de la fecha y la hora:</para>
-			<itemizedlist mark="bullet">
-				<listitem>
-					<para><literal>[HH:mm]</literal> ó <literal>[YYYY/MM/DD]</literal></para>
-				</listitem>
-				<listitem>
-					<para><literal> [YYYY/MM/DD HH:mm]</literal></para>
-				</listitem>
-			</itemizedlist>
-			<para>Pulsar <keycap>Enter</keycap> para continuar con el proceso de registro.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img024.png"/>
-			    </imageobject>
-			   <caption>
-				<para>Registro de los sensores en el Manager: Selección hora local</para>
-			</caption>
-		    </mediaobject>
-		</section>
-		<section>
-			<title>Introducir la IP del Master Manager</title>
-			<para>Seleccionar la opción <literal>3) IP adress for rB Master Manager [127.0.0.1].</literal></para>
-			<para>Insertar la dirección IP o nombre de dominio del equipo utilizado por el usuario. El sistema realizará una serie de comprobaciones para verificar si es alcanzable. Este proceso puede llevar unos segundos.</para>
-			<para>El sistema sincronizará la hora de los equipos y a continuación, reiniciará un par de servicios con el objetivo de finalizar la sincronía horaria.</para>
-			<para> ¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img025.png"/>
-			    </imageobject>
-			   <caption>
-				<para>Insertar IP master Manager</para>
-			</caption>
-		    </mediaobject>
-		    <para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
-		</section>
-		<section>
-			<title>Registro de los sensores en el Manager</title>
-			<para>Este es el último paso que da por finalizado el proceso de instalación de la plataforma redborder y la activación de la App IPS.</para>
-			<para><emphasis role="bold">Finalización del proceso del registro de los sensores en el Manager</emphasis></para>
-			<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
-			<orderedlist numeration="arabic">
-				<listitem>
-					<para> Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal> Seleccionar la opción predeterminada (No) insertando la letra <keycap>N</keycap>.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Insertar password:</emphasis> indicar la clave que se ha introducido en la fase de ajustes básicos para la configuración del Manager.</para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold"> Sincronización temporal (automático) entre el Manager y los sensores:</emphasis> este proceso puede llevar unos segundos en completarse.</para>
-		        </listitem>
-		     </orderedlist>
-		     <mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img026.png"/>
-				</imageobject>
-			<caption>
-				<para>Finalización del registro de los sensores en el Manager</para>
-			</caption>
-			</mediaobject>
+					Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
+				</warning>	
+			</section>		
+			<section>
+				<title>Configurar hora local</title>
+				<para>Seleccionar la opción <literal>2) Set local time.</literal></para>
+				<para>Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre. Esta debería coincidir con la seleccionada en la fase de ajustes básicos durante el proceso de configuración de los sensores IPS. </para>
+				<para> El sistema le indica dos formatos posibles para la inserción de la fecha y la hora:</para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><literal>[HH:mm]</literal> ó <literal>[YYYY/MM/DD]</literal></para>
+					</listitem>
+					<listitem>
+						<para><literal> [YYYY/MM/DD HH:mm]</literal></para>
+					</listitem>
+				</itemizedlist>
+				<para>Pulsar <keycap>Enter</keycap> para continuar con el proceso de registro.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img024.png"/>
+					</imageobject>
+					<caption>
+						<para>Registro de los sensores en el Manager: Selección hora local</para>
+					</caption>
+				</mediaobject>
+			</section>
+			<section>
+				<title>Introducir la IP del Master Manager</title>
+				<para>Seleccionar la opción <literal>3) IP adress for rB Master Manager [127.0.0.1].</literal></para>
+				<para>Insertar la dirección IP o nombre de dominio del equipo utilizado por el usuario. El sistema realizará una serie de comprobaciones para verificar si es alcanzable. Este proceso puede llevar unos segundos.</para>
+				<para>El sistema sincronizará la hora de los equipos y a continuación, reiniciará un par de servicios con el objetivo de finalizar la sincronía horaria.</para>
+				<para> ¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img025.png"/>
+					</imageobject>
+					<caption>
+						<para>Insertar IP master Manager</para>
+					</caption>
+				</mediaobject>
+				<para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
+			</section>
+			<section>
+				<title>Registro de los sensores en el Manager</title>
+				<para>Este es el último paso que da por finalizado el proceso de instalación de la plataforma redborder y la activación de la App IPS.</para>
+				<para><emphasis role="bold">Finalización del proceso del registro de los sensores en el Manager</emphasis></para>
+				<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
+				<orderedlist numeration="arabic">
+					<listitem>
+						<para> Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal> Seleccionar la opción predeterminada (No) insertando la letra <keycap>N</keycap>.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Insertar password:</emphasis> indicar la clave que se ha introducido en la fase de ajustes básicos para la configuración del Manager.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold"> Sincronización temporal (automático) entre el Manager y los sensores:</emphasis> este proceso puede llevar unos segundos en completarse.</para>
+					</listitem>
+				</orderedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img026.png"/>
+					</imageobject>
+					<caption>
+						<para>Finalización del registro de los sensores en el Manager</para>
+					</caption>
+				</mediaobject>
 				<para>Tras la realización de estos pasos, el sistema le avisará con un mensaje de que el sensor ha sido registrado con éxito.</para>
 				<para><literal> Sensor registered succesfully with chef server</literal></para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img028.png"/>
-			        </imageobject>
-			    <caption>
-					<para>Registro del sensor en el servidor</para>
-				</caption>
-		    </mediaobject>
-			<warning>
-				<title>Advertencia</title>
-				<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
-			</warning>
-			<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
-			<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito:<literal>(Registered).</literal></para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img029.png"/>
-			    </imageobject>
-			    <caption>
-					<para>Registro del sensor realizado con éxito</para>
-				</caption>
-		    </mediaobject>
-		    <para> Para salir del asistente seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>
-		    <para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web redBorder. 
-		    El usuario puede acceder a la plataforma web redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
-			<para><screen>https://direccion-IP-manager</screen></para>				
-		</section>
-	</section>
-</chapter>
+					</imageobject>
+					<caption>
+						<para>Registro del sensor en el servidor</para>
+					</caption>
+				</mediaobject>
+				<warning>
+					<title>Advertencia</title>
+					<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
+				</warning>
+				<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal></para>
+				<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito:<literal>(Registered).</literal></para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img029.png"/>
+					</imageobject>
+					<caption>
+						<para>Registro del sensor realizado con éxito</para>
+					</caption>
+				</mediaobject>
+				<para> Para salir del asistente seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>
+				<para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web redBorder. 
+					El usuario puede acceder a la plataforma web redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
+					<para><screen>https://direccion-IP-manager</screen></para>				
+				</section>
+			</section>
+		</chapter>
