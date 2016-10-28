@@ -76,7 +76,7 @@
 		</itemizedlist>
 		<important>
 			<title>Importante</title>
-			<para>Requisitos de instalación de redBorder IPS en un equipo físico o virtual para un entorno de poco tráfico (en torno a 1 Gbps) y no crítico:</para>
+			<para>Requisitos de instalación de redBorder IPS en un equipo físico o virtual para un entorno de poco tráfico (en torno a 1 Gbps) y no crítico:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>Memoria: 4 GB de RAM.</para>
