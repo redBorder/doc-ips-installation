@@ -51,9 +51,9 @@
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="450" fileref="images/asistente_de_instalacion_install_sensor_ips.png"/>
 		</imageobject>
-		<textobject>
+		<caption>
 			<phrase>Asistente de instalación: Install Sensor IPS</phrase>
-		</textobject>
+		</caption>
 	</mediaobject>
 
 	<section>
@@ -63,17 +63,62 @@
 		<para><emphasis role="bold">a) Selección de disco</emphasis></para>
 		<para>En esta opción se muestra un listado de los discos disponibles en la máquina y se solicita al usuario que indique el <emphasis role="bold">disco en el que desea realizar la instalación de redborder IPS</emphasis>.</para>
 		<para>En este listado aparece indicado entre paréntesis el disco que se usará por defecto si se presiona la tecla <literal>Enter</literal> sin seleccionar ningún disco del listado. También, al transcurrir un tiempo determinado sin que el usuario realice ninguna acción, se elegirá el disco por defecto automáticamente.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_seleccion_de_disco.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Ajustes básicos: selección de disco</phrase>
+			</textobject>
+			<caption>
+				<para>Ajustes básicos: selección de disco</para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Ajustes básicos: selección de disco)</para>
 
 		<para><emphasis role="bold">b) Introducción de contraseña</emphasis></para>
 		<para>En la siguiente opción se ofrece al usuario la posibilidad de introducir una contraseña para el usuario <literal>root</literal> del sistema. Una vez introducida, el asistente solicitará que se teclee de nuevo la misma contraseña para comprobar que ambas coinciden y que no ha habido ningún error de escritura por parte del usuario.</para>
 		<para>Si se presiona la tecla <literal>Enter</literal> sin escribir ninguna contraseña, o si se deja pasar un tiempo determinado, se usará la contraseña por defecto.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_introduccion_de_contrasena.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Ajustes básicos: introducción de contraseña</phrase>
+			</textobject>
+			<caption>
+				<para>Ajustes básicos: introducción de contraseña</para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Ajustes básicos: introducción de contraseña)</para>
 
 		<para><emphasis role="bold">c) Instalación de los paquetes del sistema</emphasis></para>
 		<para>Una vez elegido el disco de instalación y la contraseña del usuario <literal>root</literal> del sistema, se inicia automáticamente la instalación de los paquetes empleados por redborder IPS.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_instalacion_de_los_paquetes_del_sistema.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Ajustes básicos: instalación de los paquetes del sistema</phrase>
+			</textobject>
+			<caption>
+				<para>Ajustes básicos: instalación de los paquetes del sistema</para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Ajustes básicos: instalación de los paquetes del sistema)</para>
+
 		<para>Al completar la instalación de todos los paquetes, el sistema arranca los scripts de post-instalación y se reinicia automáticamente.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/reinicio_del_sistema_tras_instalacion_de_los_paquetes_del_sistema.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Reinicio del sistema tras instalación de los paquetes del sistema</phrase>
+			</textobject>
+			<caption>
+				<para>Reinicio del sistema tras instalación de los paquetes del sistema</para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Reinicio del sistema tras instalación de los paquetes del sistema)</para>
 
 	</section>
@@ -81,8 +126,30 @@
 	<section>
 		<title>Menú de configuración de los sensores IPS</title>
 		<para>Una vez que el sistema se ha reiniciado completamente, el usuario debe introducir su usuario y contraseña para continuar con la configuración de redborder IPS.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/solicitud_de_credenciales_para_acceder_al_sistema.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Solicitud de credenciales para acceder al sistema</phrase>
+			</textobject>
+			<caption>
+				<para>Solicitud de credenciales para acceder al sistema</para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Solicitud de credenciales para acceder al sistema)</para>
 		<para>Para comenzar con la configuración del sistema, el usuario deberá ejecutar el comando <literal>rb_sysconf</literal>.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ejecucion_del_comando_rb_sysconf.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Ejecución del comando <literal>rb_sysconf</literal></phrase>
+			</textobject>
+			<caption>
+				<para>Ejecución del comando <literal>rb_sysconf</literal></para>
+			</caption>
+		</mediaobject>
 		<para>(imagen: Ejecución del comando <literal>rb_sysconf</literal>)</para>
 
 		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold">Menú de Configuración redBorder.</emphasis></para>
