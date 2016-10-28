@@ -15,13 +15,13 @@
 			<para><literal>Install Sensor IPS</literal>: lanza el menú de instalación de redborder IPS.</para>
 		</listitem>	
 		<listitem>
-			<para><literal>Rescue installed system</literal>: modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado). Además, permite iniciar el procedimiento de resolución del problema o cambiar la contraseña del usuario en caso de pérdida.</para>
+			<para><literal>Rescue installed system</literal>: modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado). Además, permite iniciar el procedimiento de resolución del problema o cambiar la contraseña del usuario en caso de pé́rdida.</para>
 		</listitem>
 		<listitem>
 			<para><literal>Boot from Local Drive</literal>: arranque desde disco local (por defecto).</para>
 		</listitem>
 		<listitem>
-			<para><literal>Memory Test</literal>: testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
+			<para><literal>Memory Test</literal>: testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectaraá y avisaraá de ello al usuario.</para>
 		</listitem>
 	</itemizedlist>
 	<para>(imagen: Pantalla principal del asistente de instalación de redborder IPS)</para>
@@ -39,7 +39,7 @@
 			<para>b) Configuración del sistema y registro contra redborder Manager</para>
 		</listitem>
 	</itemizedlist>   
-	<para>Seleccione <literal>Install Sensor IPS</literal> para comenzar el proceso de instalación de redBorder IPS. A continuación se procederá a la realización de una serie de ajustes básicos.</para>
+	<para>Seleccione <literal>Install Sensor IPS</literal> para comenzar el proceso de instalació́n de redBorder IPS. A continuación se procederá a la realización de una serie de ajustes básicos.</para>
 
 	<section>
 		<title>Proceso de instalación de redBorder IPS</title>
@@ -69,8 +69,6 @@
 		<para>(imagen: Solicitud de credenciales para acceder al sistema)</para>
 		<para>Para comenzar con la configuración del sistema, el usuario deberá ejecutar el comando <literal>rb_sysconf</literal>.</para>
 		<para>(imagen: Ejecución del comando <literal>rb_sysconf</literal>)</para>
-		<para></para>
-		<para></para>
 
 		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold">Menú de Configuración redBorder.</emphasis></para>
 		<para>Este menú consta de 5 opciones:</para>
