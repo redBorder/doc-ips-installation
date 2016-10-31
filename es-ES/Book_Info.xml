@@ -20,12 +20,10 @@
   <abstract>
   <para>ISBN: No disponible</para>
   
-  <para>Este material se distribuye tan sólo bajo los términos y las condiciones establecidas en la GNU Free Documentation License v1.3 (la última versión está disponible en 
-  <emphasis role="bold">http://fsf.org/</emphasis>).</para>
+  <para>Este material se distribuye tan sólo bajo los términos y las condiciones establecidas en la GNU Free Documentation License v1.3 (la última versión está disponible en <ulink url="http://fsf.org/"><emphasis role="bold">http://fsf.org/</emphasis></ulink>).</para>
   
   <para>Todas las marcas registradas y los derechos de autor a los que se hace referencia son propiedad de sus respectivos propietarios.</para>
-    <para>Consulte la GNU Free Documentation License para más detalles. Si lo desea, puede recibir una copia de la misma a través de redBorder o bien, 
-    consultarla directamente en <emphasis role="bold">https://www.gnu.org/licenses/fdl.html</emphasis></para>
+    <para>Consulte la GNU Free Documentation License para más detalles. Si lo desea, puede recibir una copia de la misma a través de redBorder o bien, consultarla directamente en <ulink url="https://www.gnu.org/licenses/fdl.html"><emphasis role="bold">https://www.gnu.org/licenses/fdl.html</emphasis></ulink></para>
    
     <para>
       <important>
@@ -35,7 +33,7 @@
           <city>Mairena del Aljarafe</city>
           <state>Sevilla</state>
           <postcode>41927</postcode>
-          <phone> +34 955 60 11 60</phone>
+          <phone>+34 955 60 11 60</phone>
           <country>Spain</country>
           <email>info@redborder.com</email> 
         </address>
