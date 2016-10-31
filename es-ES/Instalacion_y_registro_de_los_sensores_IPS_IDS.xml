@@ -290,7 +290,7 @@
 		</section>
 		<section>
 			<title>Añadir un segundo puerto al bonding</title>
-			<para>El sistema le hará la siguiente pregunta: <literal>Insert second port (y/N)</literal></para>
+			<para>El sistema le hará la siguiente pregunta: <literal>Insert second port (y/N)</literal>.</para>
 			<para>La opción por defecto (N) aparece en mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
 			<para>En caso de que desee insertar un nuevo puerto, teclee <keycap>y</keycap>.</para>
 			<mediaobject>
@@ -352,7 +352,7 @@
 	</section>
 	<section>
 		<title>Configuración DNS y dominio</title>
-		<para>En el menú de configuración de red encontramos la opción de <literal>DNS and domain settings.</literal> Para comenzar el proceso, seleccionar la opción <keycap>2</keycap>.</para>
+		<para>En el menú de configuración de red encontramos la opción de <literal>DNS and domain settings</literal>. Para comenzar el proceso, seleccionar la opción <keycap>2</keycap>.</para>
 		<para>Para realizar la configuración correctamente, el usuario deberá introducir:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
@@ -559,7 +559,7 @@
 				<para><literal>IP address for rB Master Manager [127.0.0.1]</literal>: introducir la IP del Manager.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Register rB Sensor/Manager</literal>: registro de los sensores en el manager.</para>
+				<para><literal>Register rB Sensor/Manager</literal>: registro de los sensores en el Manager.</para>
 			</listitem>
 		</orderedlist>
 		<section>
@@ -589,12 +589,11 @@
 				<title>Configurar hora local</title>
 				<note>
 					<title>Configuración automática por NTP</title>
-					<para>No es necesario configurar la hora local del sistema siempre y cuando se tenga acceso al servidor NTP configurado en el sistema.</para>
+					<para>No es necesario configurar la hora local del sensor IPS siempre y cuando se tenga acceso al servidor NTP configurado en el propio sistema.</para>
 					<para>Antes de registrar el sensor IPS contra redBorder Manager, el sensor toma por defecto los servidores NTP del proyecto pool.ntp.org.</para>
 					<para>Una vez que el sensor IPS se registra contra redBorder Manager, el sensor toma al Manager como servidor NTP.</para>
 				</note>
-				<para>Para una configuración manual de la hora del sistema, seleccionar la opción <literal>2) Set local time</literal>.</para>
-				<para>Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre.</para>
+				<para>Para una configuración manual de la hora del sistema, seleccionar la opción <literal>2) Set local time</literal>. A continuación, insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre.</para>
 				<para>El sistema le indica tres formatos posibles para la inserción de la fecha y la hora:</para>
 				<itemizedlist mark="bullet">
 					<listitem>
@@ -631,7 +630,7 @@
 						<para>Insertar IP master Manager</para>
 					</caption>
 				</mediaobject>
-				<para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal>.</para>
+				<para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
 			</section>
 			<section>
 				<title>Registro de los sensores en el Manager</title>
@@ -643,7 +642,7 @@
 						<para>Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal>. Para seleccionar la opción predeterminada (No), insertar la letra <keycap>N</keycap> o presionar directamente la tecla <keycap>Enter</keycap>. Para indicar que sí se desea tener una salida de depuración, insertar la letra <keycap>y</keycap>.</para>
 					</listitem>
 					<listitem>
-						<para><emphasis role="bold">Insertar usuario y contraseña:</emphasis> indicar la clave que se ha introducido en la fase de ajustes básicos para la configuración del Manager.</para>
+						<para><emphasis role="bold">Insertar nombre de usuario y contraseña:</emphasis> indicar las credenciales de un usuario administrador de la consola web del Manager cuyo Top Domain sea <literal>root</literal>.</para>
 					</listitem>
 					<listitem>
 						<para><emphasis role="bold">Sincronización de tiempo entre el Manager y el sensor y configuración del sensor:</emphasis> este proceso es automático y puede llevar unos segundos en completarse.</para>
@@ -671,7 +670,7 @@
 					<title>Advertencia</title>
 					<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
 				</warning>
-				<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla: <literal>Press a key to continue...</literal>.</para>
+				<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
 				<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito: <literal>(Registered)</literal>.</para>
 				<mediaobject>
 					<imageobject>
