@@ -24,6 +24,7 @@
 			<para><literal>Memory Test</literal>: testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
 		</listitem>
 	</itemizedlist>
+<!--
 	<mediaobject>
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="450" fileref="images/pantalla_principal_del_asistente_de_instalacion_de_redborder_ips.png"/>
@@ -32,6 +33,7 @@
 			<para>Pantalla principal del asistente de instalación de redborder IPS</para>
 		</caption>
 	</mediaobject>
+-->
 	<para>El proceso de instalación de redborder IPS se realiza en dos etapas:</para>
 	<itemizedlist mark="circle">
 		<listitem>
@@ -47,6 +49,7 @@
 		</listitem>
 	</itemizedlist>   
 	<para>Seleccione <literal>Install Sensor IPS</literal> para comenzar el proceso de instalación de redBorder IPS. A continuación se procederá a la realización de una serie de ajustes básicos.</para>
+<!--
 	<mediaobject>
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="450" fileref="images/asistente_de_instalacion_install_sensor_ips.png"/>
@@ -55,6 +58,7 @@
 			<phrase>Asistente de instalación: Install Sensor IPS</phrase>
 		</caption>
 	</mediaobject>
+-->
 
 	<section>
 		<title>Proceso de instalación de redBorder IPS</title>
@@ -63,6 +67,7 @@
 		<para><emphasis role="bold">a) Selección de disco</emphasis></para>
 		<para>En esta opción se muestra un listado de los discos disponibles en la máquina y se solicita al usuario que indique el <emphasis role="bold">disco en el que desea realizar la instalación de redborder IPS</emphasis>.</para>
 		<para>En este listado aparece indicado entre paréntesis el disco que se usará por defecto si se presiona la tecla <literal>Enter</literal> sin seleccionar ningún disco del listado. También, al transcurrir un tiempo determinado sin que el usuario realice ninguna acción, se elegirá el disco por defecto automáticamente.</para>
+<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_seleccion_de_disco.png"/>
@@ -74,6 +79,7 @@
 				<para>Ajustes básicos: selección de disco</para>
 			</caption>
 		</mediaobject>
+-->
 		<para>(imagen: Ajustes básicos: selección de disco)</para>
 
 		<para><emphasis role="bold">b) Introducción de contraseña</emphasis></para>
@@ -83,6 +89,7 @@
 
 		<para><emphasis role="bold">c) Instalación de los paquetes del sistema</emphasis></para>
 		<para>Una vez elegido el disco de instalación y la contraseña del usuario <literal>root</literal> del sistema, se inicia automáticamente la instalación de los paquetes empleados por redborder IPS.</para>
+<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_instalacion_de_los_paquetes_del_sistema.png"/>
@@ -94,9 +101,11 @@
 				<para>Ajustes básicos: instalación de los paquetes del sistema</para>
 			</caption>
 		</mediaobject>
+-->
 		<para>(imagen: Ajustes básicos: instalación de los paquetes del sistema)</para>
 
 		<para>Al completar la instalación de todos los paquetes, el sistema arranca los scripts de post-instalación y se reinicia automáticamente.</para>
+<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/reinicio_del_sistema_tras_instalacion_de_los_paquetes_del_sistema.png"/>
@@ -108,6 +117,7 @@
 				<para>Reinicio del sistema tras instalación de los paquetes del sistema</para>
 			</caption>
 		</mediaobject>
+-->
 		<para>(imagen: Reinicio del sistema tras instalación de los paquetes del sistema)</para>
 
 	</section>
@@ -115,6 +125,7 @@
 	<section>
 		<title>Menú de configuración de los sensores IPS</title>
 		<para>Una vez que el sistema se ha reiniciado completamente, el usuario debe introducir su usuario y contraseña para continuar con la configuración de redborder IPS.</para>
+<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/solicitud_de_credenciales_para_acceder_al_sistema.png"/>
@@ -126,8 +137,10 @@
 				<para>Solicitud de credenciales para acceder al sistema</para>
 			</caption>
 		</mediaobject>
+-->
 		<para>(imagen: Solicitud de credenciales para acceder al sistema)</para>
 		<para>Para comenzar con la configuración del sistema, el usuario deberá ejecutar el comando <literal>rb_sysconf</literal>.</para>
+<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ejecucion_del_comando_rb_sysconf.png"/>
@@ -139,6 +152,7 @@
 				<para>Ejecución del comando <literal>rb_sysconf</literal></para>
 			</caption>
 		</mediaobject>
+-->
 		<para>(imagen: Ejecución del comando <literal>rb_sysconf</literal>)</para>
 
 		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold">Menú de Configuración redBorder.</emphasis></para>
