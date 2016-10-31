@@ -71,16 +71,21 @@
 				<para>Ajustes básicos: selección de disco</para>
 			</caption>
 		</mediaobject>
-		<para>(imagen: Ajustes básicos: selección de disco)</para>
 
 		<para><emphasis role="bold">b) Introducción de contraseña</emphasis></para>
 		<para>En la siguiente opción se ofrece al usuario la posibilidad de introducir una contraseña para el usuario <literal>root</literal> del sistema. Una vez introducida, el asistente solicitará que se teclee de nuevo la misma contraseña para comprobar que ambas coinciden y que no ha habido ningún error de escritura por parte del usuario.</para>
 		<para>Si se presiona la tecla <literal>Enter</literal> sin escribir ninguna contraseña, o si se deja pasar un tiempo determinado, se usará la contraseña por defecto.</para>
-		<para>(imagen: Ajustes básicos: introducción de contraseña)</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_introduccion_de_contrasena.png"/>
+			</imageobject>
+			<caption>
+				<para>Ajustes básicos: introducción de contraseña</para>
+			</caption>
+		</mediaobject>
 
 		<para><emphasis role="bold">c) Instalación de los paquetes del sistema</emphasis></para>
 		<para>Una vez elegido el disco de instalación y la contraseña del usuario <literal>root</literal> del sistema, se inicia automáticamente la instalación de los paquetes empleados por redborder IPS.</para>
-<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_instalacion_de_los_paquetes_del_sistema.png"/>
@@ -89,8 +94,6 @@
 				<para>Ajustes básicos: instalación de los paquetes del sistema</para>
 			</caption>
 		</mediaobject>
--->
-		<para>(imagen: Ajustes básicos: instalación de los paquetes del sistema)</para>
 
 		<para>Al completar la instalación de todos los paquetes, el sistema arranca los scripts de post-instalación y se reinicia automáticamente.</para>
 		<mediaobject>
@@ -101,7 +104,6 @@
 				<para>Reinicio del sistema tras instalación de los paquetes del sistema</para>
 			</caption>
 		</mediaobject>
-		<para>(imagen: Reinicio del sistema tras instalación de los paquetes del sistema)</para>
 
 	</section>
 
@@ -116,7 +118,6 @@
 				<para>Solicitud de credenciales para acceder al sistema</para>
 			</caption>
 		</mediaobject>
-		<para>(imagen: Solicitud de credenciales para acceder al sistema)</para>
 		<para>Para comenzar con la configuración del sistema, el usuario deberá ejecutar el comando <literal>rb_sysconf</literal>.</para>
 		<mediaobject>
 			<imageobject>
@@ -126,7 +127,6 @@
 				<para>Ejecución del comando <literal>rb_sysconf</literal></para>
 			</caption>
 		</mediaobject>
-		<para>(imagen: Ejecución del comando <literal>rb_sysconf</literal>)</para>
 
 		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold">Menú de Configuración redBorder.</emphasis></para>
 		<para>Este menú consta de 5 opciones:</para>
