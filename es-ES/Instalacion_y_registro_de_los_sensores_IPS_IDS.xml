@@ -67,9 +67,9 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_seleccion_de_disco.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Ajustes básicos: selección de disco</phrase>
-			</textobject>
+			<caption>
+				<para>Ajustes básicos: selección de disco</para>
+			</caption>
 		</mediaobject>
 		<para>(imagen: Ajustes básicos: selección de disco)</para>
 
@@ -80,19 +80,14 @@
 
 		<para><emphasis role="bold">c) Instalación de los paquetes del sistema</emphasis></para>
 		<para>Una vez elegido el disco de instalación y la contraseña del usuario <literal>root</literal> del sistema, se inicia automáticamente la instalación de los paquetes empleados por redborder IPS.</para>
-<!--
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ajustes_basicos_instalacion_de_los_paquetes_del_sistema.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Ajustes básicos: instalación de los paquetes del sistema</phrase>
-			</textobject>
 			<caption>
 				<para>Ajustes básicos: instalación de los paquetes del sistema</para>
 			</caption>
 		</mediaobject>
--->
 		<para>(imagen: Ajustes básicos: instalación de los paquetes del sistema)</para>
 
 		<para>Al completar la instalación de todos los paquetes, el sistema arranca los scripts de post-instalación y se reinicia automáticamente.</para>
@@ -100,9 +95,6 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/reinicio_del_sistema_tras_instalacion_de_los_paquetes_del_sistema.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Reinicio del sistema tras instalación de los paquetes del sistema</phrase>
-			</textobject>
 			<caption>
 				<para>Reinicio del sistema tras instalación de los paquetes del sistema</para>
 			</caption>
@@ -118,9 +110,6 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/solicitud_de_credenciales_para_acceder_al_sistema.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Solicitud de credenciales para acceder al sistema</phrase>
-			</textobject>
 			<caption>
 				<para>Solicitud de credenciales para acceder al sistema</para>
 			</caption>
@@ -131,9 +120,6 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ejecucion_del_comando_rb_sysconf.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Ejecución del comando <literal>rb_sysconf</literal></phrase>
-			</textobject>
 			<caption>
 				<para>Ejecución del comando <literal>rb_sysconf</literal></para>
 			</caption>
@@ -166,9 +152,6 @@
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img003.png"/>
 			</imageobject>
-			<textobject>
-				<phrase>Menú de configuración de los sensores IPS</phrase>
-			</textobject>
 			<caption>
 				<para>Menú de configuración de los sensores IPS</para>
 			</caption>
@@ -568,106 +551,106 @@
 				<para>El sistema le pedirá que verifique que el nombre elegido es el correcto, en ese caso, pulse <keycap>Enter</keycap>.</para>
 				<para>Si desea modificarlo inserte la letra <keycap>n</keycap>.</para>
 				<para>El sistema procederá a cambiar el nombre del sensor. Para continuar, y regeresar al menú de configuración del sistema redBorder, pulse cualquier tecla tal y como se indica (<literal>Press a key to continue...</literal>).</para>
-				</warning>	
-			</section>		
-			<section>
-				<title>Configurar hora local</title>
-				<note>
-					<title>Configuración automática por NTP</title>
-					<para>No es necesario configurar la hora local del sensor IPS siempre y cuando se tenga acceso al servidor NTP configurado en el propio sistema.</para>
-					<para>Antes de registrar el sensor IPS contra redBorder Manager, el sensor toma por defecto los servidores NTP del proyecto pool.ntp.org.</para>
-					<para>Una vez que el sensor IPS se registra contra redBorder Manager, el sensor toma al Manager como servidor NTP.</para>
-				</note>
-				<para>Para una configuración manual de la hora del sistema, seleccionar la opción <literal>2) Set local time</literal>. A continuación, insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre.</para>
-				<para>El sistema le indica tres formatos posibles para la inserción de la fecha y la hora:</para>
-				<itemizedlist mark="bullet">
-					<listitem>
-						<para><literal>[HH:mm]</literal>: para cambiar únicamente la hora y los minutos.</para>
-					</listitem>
-					<listitem>
-						<para><literal>[YYYY/MM/DD]</literal>: para cambiar únicamente la fecha (día, mes y año).</para>
-					</listitem>
-					<listitem>
-						<para><literal> [YYYY/MM/DD HH:mm]</literal>: para cambiar tanto la fecha como la hora.</para>
-					</listitem>
-				</itemizedlist>
-				<para>Pulsar <keycap>Enter</keycap> para confirmar la nueva fecha del sistema.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img024.png"/>
-					</imageobject>
-					<caption>
-						<para>Registro de los sensores en el Manager: Selección hora local</para>
-					</caption>
-				</mediaobject>
-			</section>
-			<section>
-				<title>Introducir la IP del Master Manager</title>
-				<para>Seleccionar la opción <literal>3) IP adress for rB Master Manager [127.0.0.1]</literal>.</para>
-				<para>Insertar la dirección IP o nombre de dominio del equipo utilizado por el usuario. El sistema realizará una serie de comprobaciones para verificar si es alcanzable. Este proceso puede llevar unos segundos.</para>
-				<para>El sistema sincronizará la hora de los equipos y a continuación, reiniciará un par de servicios con el objetivo de finalizar la sincronía horaria.</para>
-				<para>¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img025.png"/>
-					</imageobject>
-					<caption>
-						<para>Insertar IP master Manager</para>
-					</caption>
-				</mediaobject>
-				<para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
-			</section>
-			<section>
-				<title>Registro de los sensores en el Manager</title>
-				<para>Este es el último paso que da por finalizado el proceso de instalación de la plataforma redborder y la activación de la App IPS.</para>
-				<para><emphasis role="bold">Finalización del proceso de registro de los sensores en el Manager</emphasis></para>
-				<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
-				<orderedlist numeration="arabic">
-					<listitem>
-						<para>Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal>. Para seleccionar la opción predeterminada (No), insertar la letra <keycap>N</keycap> o presionar directamente la tecla <keycap>Enter</keycap>. Para indicar que sí se desea tener una salida de depuración, insertar la letra <keycap>y</keycap>.</para>
-					</listitem>
-					<listitem>
-						<para><emphasis role="bold">Insertar nombre de usuario y contraseña:</emphasis> indicar las credenciales de un usuario administrador de la consola web del Manager cuyo Top Domain sea <literal>root</literal>.</para>
-					</listitem>
-					<listitem>
-						<para><emphasis role="bold">Sincronización de tiempo entre el Manager y el sensor y configuración del sensor:</emphasis> este proceso es automático y puede llevar unos segundos en completarse.</para>
-					</listitem>
-				</orderedlist>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img026.png"/>
-					</imageobject>
-					<caption>
-						<para>Finalización del registro del sensor IPS en el Manager</para>
-					</caption>
-				</mediaobject>
-				<para>Tras la realización de estos pasos, el sistema le avisará con un mensaje indicando que el sensor ha sido registrado con éxito.</para>
-				<para><literal> Sensor registered succesfully with chef server</literal></para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img028.png"/>
-					</imageobject>
-					<caption>
-						<para>Registro del sensor en el servidor</para>
-					</caption>
-				</mediaobject>
-				<warning>
-					<title>Advertencia</title>
-					<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
-				</warning>
-				<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
-				<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito: <literal>(Registered)</literal>.</para>
-				<mediaobject>
-					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img029.png"/>
-					</imageobject>
-					<caption>
-						<para>Registro del sensor realizado con éxito</para>
-					</caption>
-				</mediaobject>
-				<para>Para salir del asistente seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q</keycap>.</para>
-				<para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web de redBorder. El usuario puede acceder a la plataforma web de redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
-					<para><screen>https://direccion-IP-manager</screen></para>				
-				</section>
-			</section>
-		</chapter>
+			</warning>	
+		</section>		
+		<section>
+			<title>Configurar hora local</title>
+			<note>
+				<title>Configuración automática por NTP</title>
+				<para>No es necesario configurar la hora local del sensor IPS siempre y cuando se tenga acceso al servidor NTP configurado en el propio sistema.</para>
+				<para>Antes de registrar el sensor IPS contra redBorder Manager, el sensor toma por defecto los servidores NTP del proyecto pool.ntp.org.</para>
+				<para>Una vez que el sensor IPS se registra contra redBorder Manager, el sensor toma al Manager como servidor NTP.</para>
+			</note>
+			<para>Para una configuración manual de la hora del sistema, seleccionar la opción <literal>2) Set local time</literal>. A continuación, insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre.</para>
+			<para>El sistema le indica tres formatos posibles para la inserción de la fecha y la hora:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><literal>[HH:mm]</literal>: para cambiar únicamente la hora y los minutos.</para>
+				</listitem>
+				<listitem>
+					<para><literal>[YYYY/MM/DD]</literal>: para cambiar únicamente la fecha (día, mes y año).</para>
+				</listitem>
+				<listitem>
+					<para><literal> [YYYY/MM/DD HH:mm]</literal>: para cambiar tanto la fecha como la hora.</para>
+				</listitem>
+			</itemizedlist>
+			<para>Pulsar <keycap>Enter</keycap> para confirmar la nueva fecha del sistema.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img024.png"/>
+				</imageobject>
+				<caption>
+					<para>Registro de los sensores en el Manager: Selección hora local</para>
+				</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Introducir la IP del Master Manager</title>
+			<para>Seleccionar la opción <literal>3) IP adress for rB Master Manager [127.0.0.1]</literal>.</para>
+			<para>Insertar la dirección IP o nombre de dominio del equipo utilizado por el usuario. El sistema realizará una serie de comprobaciones para verificar si es alcanzable. Este proceso puede llevar unos segundos.</para>
+			<para>El sistema sincronizará la hora de los equipos y a continuación, reiniciará un par de servicios con el objetivo de finalizar la sincronía horaria.</para>
+			<para>¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img025.png"/>
+				</imageobject>
+				<caption>
+					<para>Insertar IP master Manager</para>
+				</caption>
+			</mediaobject>
+			<para>Para continuar, y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
+		</section>
+		<section>
+			<title>Registro de los sensores en el Manager</title>
+			<para>Este es el último paso que da por finalizado el proceso de instalación de la plataforma redborder y la activación de la App IPS.</para>
+			<para><emphasis role="bold">Finalización del proceso de registro de los sensores en el Manager</emphasis></para>
+			<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
+			<orderedlist numeration="arabic">
+				<listitem>
+					<para>Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal>. Para seleccionar la opción predeterminada (No), insertar la letra <keycap>N</keycap> o presionar directamente la tecla <keycap>Enter</keycap>. Para indicar que sí se desea tener una salida de depuración, insertar la letra <keycap>y</keycap>.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Insertar nombre de usuario y contraseña:</emphasis> indicar las credenciales de un usuario administrador de la consola web del Manager cuyo Top Domain sea <literal>root</literal>.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Sincronización de tiempo entre el Manager y el sensor y configuración del sensor:</emphasis> este proceso es automático y puede llevar unos segundos en completarse.</para>
+				</listitem>
+			</orderedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img026.png"/>
+				</imageobject>
+				<caption>
+					<para>Finalización del registro del sensor IPS en el Manager</para>
+				</caption>
+			</mediaobject>
+			<para>Tras la realización de estos pasos, el sistema le avisará con un mensaje indicando que el sensor ha sido registrado con éxito.</para>
+			<para><literal> Sensor registered succesfully with chef server</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img028.png"/>
+				</imageobject>
+				<caption>
+					<para>Registro del sensor en el servidor</para>
+				</caption>
+			</mediaobject>
+			<warning>
+				<title>Advertencia</title>
+				<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
+			</warning>
+			<para>Para continuar y regresar al menú de configuración del sistema redBorder, pulse cualquier tecla (<literal>Press a key to continue...</literal>).</para>
+			<para>En él menú de registro de los sensores en el Manager redBorder puede comprobar que el sensor ha sido registrado con éxito: <literal>(Registered)</literal>.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img029.png"/>
+				</imageobject>
+				<caption>
+					<para>Registro del sensor realizado con éxito</para>
+				</caption>
+			</mediaobject>
+			<para>Para salir del asistente seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q</keycap>.</para>
+			<para>A partir de este momento puede realizar la configuración de los sensores IDS/IPS desde la plataforma web de redBorder. El usuario puede acceder a la plataforma web de redBorder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.</para>
+			<para><screen>https://direccion-IP-manager</screen></para>				
+		</section>
+	</section>
+</chapter>
