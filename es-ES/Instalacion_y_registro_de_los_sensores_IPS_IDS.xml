@@ -592,6 +592,7 @@
 					<para>No es necesario configurar la hora local del sistema siempre y cuando se tenga acceso al servidor NTP configurado en el sistema.</para>
 					<para>Antes de registrar el sensor IPS contra redBorder Manager, el sensor toma por defecto los servidores NTP del proyecto pool.ntp.org.</para>
 					<para>Una vez que el sensor IPS se registra contra redBorder Manager, el sensor toma al Manager como servidor NTP.</para>
+				</note>
 				<para>Para una configuración manual de la hora del sistema, seleccionar la opción <literal>2) Set local time</literal>.</para>
 				<para>Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre.</para>
 				<para>El sistema le indica tres formatos posibles para la inserción de la fecha y la hora:</para>
