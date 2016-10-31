@@ -24,7 +24,7 @@
 			<para><literal>Memory Test</literal>: testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
 		</listitem>
 	</itemizedlist>
-<!--
+
 	<mediaobject>
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="450" fileref="images/pantalla_principal_del_asistente_de_instalacion_de_redborder_ips.png"/>
@@ -33,7 +33,7 @@
 			<para>Pantalla principal del asistente de instalación de redborder IPS</para>
 		</caption>
 	</mediaobject>
--->
+
 	<para>El proceso de instalación de redborder IPS se realiza en dos etapas:</para>
 	<itemizedlist mark="circle">
 		<listitem>
