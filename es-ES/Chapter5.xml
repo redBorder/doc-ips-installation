@@ -324,7 +324,7 @@
 			en el que se muestra un mapa en el que puede buscar la localización deseada o indicarla haciendo clic sobre el mapa. A continuación, seleccionar la pestaña <literal>+Add Location.</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="400" fileref="images/ch05_img014.png"/><!--Cambiar captura por una de redborder 11, 13, 14, 17, 18, 18b, 18c-->
+					<imagedata scalefit="1" align="center" width="400" fileref="images/ch05_img014.png"/>
 				</imageobject>
 				<caption>
 					<para>Vista Map: Location</para>
