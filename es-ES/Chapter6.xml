@@ -142,7 +142,7 @@
 				<para><emphasis role="bold">IPS test mode</emphasis>: el tráfico es analizado y, posteriormente, desviado. Este modo es el recomendado para realizar simulaciones de bloqueo de tráfico atacante.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">IPS:</emphasis> esta es la opción más común en entornos de producción. El sensor analiza el tráfico y deja pasar o bloquea el tráfico dependiendo de las acciones establecidas para las reglas incluidas en la política activa del sensor.</para>
+				<para><emphasis role="bold">IPS</emphasis>: esta es la opción más común en entornos de producción. El sensor analiza el tráfico y deja pasar o bloquea el tráfico dependiendo de las acciones establecidas para las reglas incluidas en la política activa del sensor.</para>
 			</listitem>			
 		</orderedlist>
 		<para>A continuación, el usuario puede editar una serie de parámetros relacionados con el comportamiento de PF_RING<footnote><para>Módulo de captura de paquetes a alta velocidad.</para></footnote> y Snort<footnote><para>IPS de código abierto utilizado como núcleo de redBorder IPS.</para></footnote>:</para>
