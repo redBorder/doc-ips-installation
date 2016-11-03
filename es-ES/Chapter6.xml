@@ -316,28 +316,28 @@
 	</section>
 	<section>
 		<title>Segmentos</title>
-		<para>En este apartado se muestra un listado con los segmentos que se han creado durante el proceso de registro de sensores en el Manager. 
-		Se muestra la siguiente información:</para>
+		<para>En este apartado se muestra un listado con los segmentos de inspección que se han creado durante el proceso de configuración del sensor. Por estos segmentos pasa el tráfico que redBorder IPS debe analizar. En el apartado "Grupos" se explica cómo se puede editar el sensor para que, por cada segmento, se analice el tráfico en función de distintas políticas de seguridad.
+		<para>En el listado de segmentos aparece la siguiente información:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para>Segmento</para>
+				<para><emphasis role="bold">Segment</emphasis>: nombre del segmento.</para>
 			</listitem>
 			<listitem>
-				<para>Interfaces</para>
+				<para><emphasis role="bold">Interfaces</emphasis>: interfaces de red que conforman el segmento.</para>
 			</listitem>
 			<listitem>
-				<para>Bypass: activar o desactivar la función bypass.</para>
+				<para><emphasis role="bold">Bypass</emphasis>: casilla de activación o desactivación del bypass por hardware.</para>
 			</listitem>
 			<listitem>
-				<para>Tipo de segmento</para>
+				<para><emphasis role="bold">Type</emphasis>: tipo de segmento (fibra o cobre)</para>
 			</listitem>
 			<listitem>
-				<para>Velocidad</para>
+				<para><emphasis role="bold">Speed</emphasis>: velocidad en bits por segundo.</para>
 			</listitem>
 		</itemizedlist> 
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img012.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/informacion_sobre_los_segmentos_de_red_del_sensor.png"/>
 			</imageobject>
 			<caption>
 				<para>Información sobre los segmentos de red del sensor</para>
@@ -488,11 +488,10 @@
 		</mediaobject>
 	</section>
 	<section>
-		<title>Groups</title>
-		<para><emphasis role="bold">Grupo:</emphasis> es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
-		<para><emphasis role="bold">Instancia:</emphasis> es una asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, 
-		es necesario tener configurados el mismo número de bindings que de instancias.</para>
-		<para><emphasis role="bold">Binding</emphasis> es una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
+		<title>Grupos</title>
+		<para><emphasis role="bold">Grupo</emphasis>: es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
+		<para><emphasis role="bold">Instancia</emphasis>: es una asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, es necesario tener configurados el mismo número de bindings que de instancias.</para>
+		<para><emphasis role="bold">Binding</emphasis>: es una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
 		<para>El usuario puede asignar una política a tres niveles: sensor, grupo de segmentos o bindings.</para>
 		<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor (independientemente de los segmentos creados), 
 		permite la formación de grupos de segmentos independientes y bindings.</para>
