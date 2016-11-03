@@ -285,7 +285,7 @@
 				<para>Syslog protocol: UDP/TCP</para>
 			</listitem>
 			<listitem>
-				<para>syslog mode: Basic/Extended</para>
+				<para>Syslog mode: Basic/Extended</para>
 			</listitem>
 			<listitem>						
 				<para>Enable proxy: Yes/No</para>
@@ -294,7 +294,7 @@
 	</section>
 	<section>
 		<title>Trap Servers</title>
-		<para>En este apartado se realiza la configuración del SNMP de los <literal>Trap Servers</literal> .</para> 
+		<para>En este apartado se realiza la configuración del SNMP de los <literal>Trap Servers</literal>.</para> 
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img010.png"/>
@@ -303,9 +303,8 @@
 				<para>Listado de Trap Servers</para>
 			</caption>
 		</mediaobject>
-		<para><emphasis role="bold">Añadir Trap Server:</emphasis> Es posible añadir un nuevo <literal>Trap Server</literal> haciendo clic en <literal>+Add.</literal>
-		 A continuación, introducir la IP y la Comunidad SNMP a la que pertenece. <literal>Update</literal> para guardar los cambios introducidos.</para>		
-		<para><emphasis role="bold">Eliminar Trap Server:</emphasis> Pulsar en el icono "Eliminar" para descartar el Trap Server seleccionado.</para>
+		<para><emphasis role="bold">Añadir Trap Server</emphasis>: es posible añadir un nuevo <literal>Trap Server</literal> haciendo clic en <literal>+Add</literal>. A continuación, introducir la IP y la Comunidad SNMP a la que pertenece. <literal>Update</literal> para guardar los cambios introducidos.</para>		
+		<para><emphasis role="bold">Eliminar Trap Server</emphasis>: pulsar en el icono de eliminación para descartar el Trap Server.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img011.png"/>
@@ -369,8 +368,7 @@
 	<section>
 		<title>Location</title>
 		<para>Localiza el sensor o el dominio en un mapamundi.</para>
-		<para><emphasis role="bold">Añadir localización:</emphasis> es posible agregar una localización desde la opción <literal>+Add Location</literal> 
-		e introducir las coordenadas, o bien, mediante el menú desplegado por el botón derecho del ratón.</para>
+		<para><emphasis role="bold">Añadir localización</emphasis>: es posible agregar una localización desde la opción <literal>+Add Location</literal> e introducir las coordenadas, o bien, mediante el menú desplegado por el botón derecho del ratón.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img015.png"/>
@@ -394,11 +392,10 @@
 	</section>
 	<section>
 		<title>IP Variables</title> 
-		<para>En este apartado se muestran los valores para las variables IP de Snort. </para>
-		<para>Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
-		Por ejemplo, en el caso de que se hayan configurado redes locales con IPs públicas. </para>
-		<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la casilla <literal> Inherited.</literal></para>
-		<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables IP. </para>
+		<para>En este apartado se muestran los valores de la configuración de Snort para las variables de tipo IP.</para>
+		<para>Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Por ejemplo, en el caso de que se hayan configurado redes locales con IPs públicas. </para>
+		<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+		<para><emphasis role="bold">Acciones disponibles</emphasis>: exportar, importar, editar y eliminar las variables IP. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img016.png"/>
@@ -409,7 +406,7 @@
 		</mediaobject>
 		<note>
 			<title>Nota</title>
-			<para>Para más información acerca de los valores de las variables IP consultar el siguiente enlace: http://manual.snort.org/node53.html</para>
+			<para>Para obtener más información acerca de los valores de las variables IP se recomienda consultar el Manual de Usuario de Snort.</para>
 		</note>
 		<mediaobject>
 			<imageobject>
@@ -419,12 +416,11 @@
 				<para>Editar valores de las Variables IP</para>
 			</caption>
 		</mediaobject>
-		<para>Es posible Exportar e importar variables IP desde las pestañas <literal>Export</literal> e <literal>Import.</literal> El formato de archivo usado en la importación y exportación debe ser .csv</para>
-		<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
+		<para>Es posible exportar e importar variables IP desde las pestañas <literal>Export</literal> e <literal>Import</literal>. El formato de archivo usado en la importación y exportación debe ser CSV.</para>
+		<para>La opción de importación de variables ofrece la posibilidad de añadir variables o reemplazar las existentes.</para>
 		<warning>
 			<title>Advertencia</title>
-			<para>En caso de seleccionar la opción Importar variables-><literal>Replace variables,</literal> 
-			las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y, ésta, no fuera heredada.</para>
+			<para>En caso de seleccionar la opción <literal>Replace variables</literal> al importar variables, las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y, ésta, no fuera heredada.</para>
 		</warning>
 		<mediaobject>
 			<imageobject>
@@ -444,11 +440,10 @@
 		</mediaobject>
 	</section>
 	<section>
-		<title>Port variables</title>
-		<para>En este apartado se muestran los valores para las variables de los puertos Snort.</para>
-		<para> Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-		De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la casilla <literal> Inherited.</literal></para>
-		<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables de puertos. </para>
+		<title>Port Variables</title>
+		<para>En este apartado se muestran los valores de la configuración de Snort para las variables de tipo puerto.</para>
+		<para>Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la casilla <literal>Inherited</literal>.</para>
+		<para><emphasis role="bold">Acciones disponibles</emphasis>: exportar, importar, editar y eliminar las variables de puertos. </para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img019.png"/>
@@ -459,7 +454,7 @@
 		</mediaobject>
 		<note>
 			<title>Nota</title>
-			<para>Para más información acerca de los valores de las variables de puertos Snort consultar el siguiente enlace: http://manual.snort.org/node54.html</para>
+			<para>Para obtener más información acerca de los valores de las variables puerto se recomienda consultar el Manual de Usuario de Snort.</para>
 		</note>
 		<mediaobject>
 			<imageobject>
@@ -469,19 +464,18 @@
 				<para>Editar valores de las Variables de puertos Snort</para>
 			</caption>
 		</mediaobject>
-		<para>Es posible Exportar e importar variables de puertos desde las pestañas <literal>Export</literal> e <literal>Import.</literal> El formato de archivo usado en la importación y exportación debe ser .csv</para>
-		<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
+		<para>Es posible exportar e importar variables de puertos desde las pestañas <literal>Export</literal> e <literal>Import</literal>. El formato de archivo usado en la importación y exportación debe ser CSV.</para>
+		<para>La opción de importación de variables ofrece la posibilidad de añadir variables o reemplazar las existentes.</para>
 		<warning>
 			<title>Advertencia</title>
-			<para>En caso de seleccionar la opción Importar variables-><literal>Replace variables</literal> las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y ésta, 
-			no fuera heredada.</para>
+			<para>En caso de seleccionar la opción <literal>Replace variables</literal> al importar variables, las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y, ésta, no fuera heredada.</para>
 		</warning>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img021.png"/>
 			</imageobject>
 			<caption>
-				<para>Importar variables de puertos Snort</para>
+				<para>Importar variables de tipo puerto</para>
 			</caption>
 		</mediaobject>
 		<mediaobject>
@@ -489,7 +483,7 @@
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img021b.png"/>
 			</imageobject>
 			<caption>
-				<para>Exportar variables de puertos Snort</para>
+				<para>Exportar variables de tipo puerto</para>
 			</caption>
 		</mediaobject>
 	</section>
