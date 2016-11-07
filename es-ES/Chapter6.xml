@@ -316,7 +316,7 @@
 	</section>
 	<section>
 		<title>Segmentos</title>
-		<para>En este apartado se muestra un listado con los segmentos de inspección que se han creado durante el proceso de configuración del sensor. Por estos segmentos pasa el tráfico que redBorder IPS debe analizar. En el apartado "Grupos" se explica cómo se puede editar el sensor para que, por cada segmento, se analice el tráfico en función de distintas políticas de seguridad.
+		<para>En este apartado se muestra un listado con los segmentos de inspección que se han creado durante el proceso de configuración del sensor. Por estos segmentos pasa el tráfico que redBorder IPS debe analizar. En el apartado "Grupos" se explica cómo se puede editar el sensor para que, por cada segmento, se analice el tráfico en función de distintas políticas de seguridad.</para>
 		<para>En el listado de segmentos aparece la siguiente información:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
