@@ -638,19 +638,11 @@
 
 				<para>Después de crear los grupos de segmentos necesarios, el usuario podrá realizar una primera configuración de los mismos desde esta misma interfaz:</para>
 
-				<variablelist>
-					<varlistentry>
-						<term>
-							<para><literal>Name</literal></para>
-							<!--
-								¿ <para><literal>Name</literal></para>
-							-->
-						</term>
-						<listitem>
-							<para>Editar el nombre del grupo de segmentos.</para>
-						</listitem>
-					</varlistentry>
-				</variablelist>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><literal>Name</literal>: editar el nombre del grupo de segmentos.</para>
+					</listitem>
+				</itemizedlist>
 
 				<mediaobject>
 					<imageobject>
@@ -661,16 +653,11 @@
 					</caption>
 				</mediaobject>
 
-				<variablelist>
-					<varlistentry>
-						<term>
-							<literal>Sensor mode</literal>
-						</term>
-						<listitem>
-							<para>Selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor).</para>
-						</listitem>
-					</varlistentry>
-				</variablelist>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><literal>Sensor mode</literal>: selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor).</para>
+					</listitem>
+				</itemizedlist>
 
 				<mediaobject>
 					<imageobject>
@@ -681,25 +668,14 @@
 					</caption>
 				</mediaobject>
 
-				<variablelist>
-					<varlistentry>
-						<term>
-							<literal>Segments</literal>
-						</term>
-						<listitem>
-							<para>Aaparecen marcados los segmentos incluidos en el grupo.</para>
-						</listitem>
-					</varlistentry>
-
-					<varlistentry>
-						<term>
-							<literal>CPUs</literal>
-						</term>
-						<listitem>
-							<para>Aparecen marcadas las CPUs asignadas al grupo de segmentos.</para>
-						</listitem>
-					</varlistentry>
-				</variablelist>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para><literal>Segments</literal>: aparecen marcados los segmentos incluidos en el grupo.</para>
+					</listitem>
+					<listitem>
+						<para><literal>CPUs</literal>: aparecen marcadas las CPUs asignadas al grupo de segmentos.</para>
+					</listitem>
+				</itemizedlist>
 
 				<mediaobject>
 					<imageobject>
