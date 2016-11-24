@@ -667,7 +667,7 @@
 							<literal>Sensor mode</literal>
 						</term>
 						<listitem>
-							<para>Selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor).</para>
+							<para>Selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor).</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -712,7 +712,7 @@
 
 				<important>
 					<title>Asignación de CPUs y balanceo de carga</title>
-					<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen CPUs diferentes a cada grupo para distribuir los procesos y, de este modo, balancear la carga de cada CPU.</para>			
+					<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen CPUs diferentes a cada grupo para distribuir los procesos y, de este modo, balancear la carga de cada CPU.</para>			
 				</important>
 
 				<para>Una vez realizados estos ajustes iniciales, es posible acceder a la siguiente interfaz de configuración al hacer clic en el botón de edición de cada grupo.</para>
@@ -740,7 +740,7 @@
 							<literal>Description</literal>
 						</term>
 						<listitem>
-							<para>Añadir una descripción al grupo de segmentos.</para>
+							<para>Añadir una descripción al grupo de segmentos.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -748,7 +748,7 @@
 							<literal>IPS/IDS Settings</literal>
 						</term>
 						<listitem>
-							<para>Configuración de los parámetros de Snort a nivel de grupo.</para>
+							<para>Configuración de los parámetros de Snort a nivel de grupo.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -756,7 +756,7 @@
 							<literal>IP Variables</literal>
 						</term>
 						<listitem>
-							<para>Listado de valores para las variables IP de Snort a nivel de grupo. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+							<para>Listado de valores para las variables IP de Snort a nivel de grupo. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -764,7 +764,7 @@
 							<literal>Port Variables</literal>
 						</term>
 						<listitem>
-							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -772,14 +772,14 @@
 							<literal>Bindings</literal>
 						</term>
 						<listitem>
-							<para>Los bindings son particiones del tráfico a través de red o VLAN. Actúan como hijos del grupo a nivel de herencias y aplicación de políticas.</para>
+							<para>Los bindings son particiones del tráfico a través de red o VLAN. Actúan como hijos del grupo a nivel de herencias y aplicación de políticas.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
 
 				<note>
 					<title>Herencia en grupos de segmentos</title>
-					<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
+					<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
 				</note>
 
 				<mediaobject>
@@ -796,7 +796,7 @@
 			<section>
 				<title>Eliminación de grupos de segmentos</title>
 
-				<para>En cualquier momento se puede borrar un grupo de segmento mediante el icono de eliminación. El sistema mostrará un mensaje de confirmación.</para>
+				<para>En cualquier momento se puede borrar un grupo de segmento mediante el icono de eliminación. El sistema mostrará un mensaje de confirmación.</para>
 
 				<mediaobject>
 					<imageobject>
@@ -809,7 +809,7 @@
 
 				<important>
 					<title>Grupos eliminados y políticas</title>
-					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. Los segmentos quedarán libres para ser seleccionados en otro grupo.</para>			
+					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. Los segmentos quedarán libres para ser seleccionados en otro grupo.</para>			
 				</important>
 
 			</section>
@@ -967,7 +967,7 @@
 								<literal>Description</literal>
 							</term>
 							<listitem>
-								<para>Añadir una descripción al binding.</para>
+								<para>Añadir una descripción al binding.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -975,7 +975,7 @@
 								<literal>IPS/IDS Settings</literal>
 							</term>
 							<listitem>
-								<para>Configuración de los parámetros de Snort a nivel de binding (sólo para los campos <literal>Threshold Count</literal> y <literal>Threshold Seconds</literal>).</para>
+								<para>Configuración de los parámetros de Snort a nivel de binding (sólo para los campos <literal>Threshold Count</literal> y <literal>Threshold Seconds</literal>).</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -983,7 +983,7 @@
 								<literal>IP Variables</literal>
 							</term>
 							<listitem>
-								<para>Listado de valores para las variables IP de Snort a nivel de binding. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+								<para>Listado de valores para las variables IP de Snort a nivel de binding. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -991,7 +991,7 @@
 								<literal>Port Variables</literal>
 							</term>
 							<listitem>
-								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -1014,7 +1014,7 @@
 
 					<note>
 						<title>Herencia en bindings</title>
-						<para>Recuerde que el binding mostrará la configuración que ha heredado del grupo de segmentos. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de binding.</para>
+						<para>Recuerde que el binding mostrará la configuración que ha heredado del grupo de segmentos. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de binding.</para>
 					</note>
 
 					<mediaobject>
