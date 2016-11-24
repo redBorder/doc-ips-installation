@@ -329,7 +329,7 @@
 				<para><emphasis role="bold">Bypass</emphasis>: casilla de activación o desactivación del bypass por hardware.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Type</emphasis>: tipo de segmento (fibra o cobre)</para>
+				<para><emphasis role="bold">Type</emphasis>: tipo de segmento (fibra o cobre).</para>
 			</listitem>
 			<listitem>
 				<para><emphasis role="bold">Speed</emphasis>: velocidad en bits por segundo.</para>
@@ -488,162 +488,349 @@
 		</mediaobject>
 	</section>
 	<section>
-		<title>Grupos</title>
-		<para><emphasis role="bold">Grupo</emphasis>: es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
-		<para><emphasis role="bold">Instancia</emphasis>: es una asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, es necesario tener configurados el mismo número de bindings que de instancias.</para>
-		<para><emphasis role="bold">Binding</emphasis>: es una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
-		<para>El usuario puede asignar una política a tres niveles: sensor, grupo de segmentos o bindings.</para>
-		<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor (independientemente de los segmentos creados), 
-		permite la formación de grupos de segmentos independientes y bindings.</para>
-		<note>
-			<title>Nota</title>
-			<para><emphasis role="bold">El sistema de herencias se establece desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
-			<para>Los parámetros de configuración y las políticas de los niveles superiores afecta a aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
-			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre".</para> 	
-		</note>
-		<mediaobject>
-			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img022.png"/>
-			</imageobject>
-			<caption>
-				<para>Grupos de segmentos</para>
-			</caption>
-		</mediaobject>
-		<para>En este apartado se puede realizar la configuración de los grupos de segmentos:</para>
+		<title><literal>Groups</literal></title>
+
+		<para>Tal y como se adelantó en el apartado “Segmentos”, en un sensor redBorder IPS es posible analizar el tráfico que pasa por cada <emphasis role="bold">segmento</emphasis> empleando, en cada uno de ellos, distintas <emphasis role="bold">políticas de seguridad</emphasis>. Esto se consigue gracias a los <emphasis role="bold">grupos de segmentos</emphasis>.</para>
+
+		<para>Los grupos están formados por los segmentos del sensor, y sobre estos grupos pueden aplicarse las siguientes configuraciones específicas para el grupo, que sobrescriben a las configuraciones genéricas del sensor:</para>
+
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo</para>
+				<para>Políticas de firmas y de reputación</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Sensor mode:</emphasis> selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor)</para>
+				<para>Modo de operación del sensor</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Segments:</emphasis> indica el/los segmentos incluidos en el grupo</para>
+				<para>IPS/IDS Settings</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">CPUs:</emphasis> asignación del procesador o procesadores de los que va a leer el grupo de segmentos.</para>
+				<para>IP Variables</para>
+			</listitem>
+			<listitem>
+				<para>Port Variables</para>
 			</listitem>
 		</itemizedlist>
-		<important>
-			<title>Importante</title>
-			<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen procesadores o CPUs diferentes a cada grupo para distribuir los procesos y balancear de este modo la carga de cada procesador.</para>
-		</important>
+
 		<section>
-			<title>Condiciones para la creación de grupos de segmentos</title>
+			<title>Premisas para la creación de grupos de segmentos</title>
+
+			<para>Para la creación de grupos de segmentos en un sensor redBorder IPS es importante tener en cuenta las siguientes premisas:</para>
+
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>No es posible que dos grupos compartan los mismos segmentos.</para>
+					<para>Pueden crearse tantos grupos como segmentos tenga el sensor.</para>
 				</listitem>
 				<listitem>
-					<para>Dos instancias del mismo grupo no pueden tener distintos modos <literal>(Sensor mode).</literal></para>
+					<para>Un grupo puede estar formado por uno o varios segmentos, y no necesariamente solo por uno.</para>
 				</listitem>
 				<listitem>
-					<para>Sensores IPS/IDS: solo pueden colgar de ellos sus propios grupos y bindings.</para>
+					<para>No es posible que un segmento pertenezca a más de un grupo.</para>
 				</listitem>
 				<listitem>
-					<para>Los grupos y los bindigs pueden moverse y hacerlos depender de dominios. Sin embargo, estos, tan solo pueden ser devueltos al sensor IPS al que pertenecían antes de moverlos.</para>
+					<para>Si ningún segmento ha sido asignado a un grupo en concreto, este grupo queda deshabilitado.</para>
+				</listitem>
+				<listitem>
+					<para>Del conjunto de CPUs del que dispone el sensor, es posible especificar cuáles serán utilizados en cada grupo, pudiendo incluso asignar un mismo procesador a distintos grupos.</para>
 				</listitem>
 			</itemizedlist>
-		</section>
-		<section>
-			<title>Añadir grupo de segmentos/ Editar grupo de segmentos</title>
-			<para>Para añadir un nuevo grupo basta con seleccionar la opción <literal>+Add Group.</literal></para>
-			<para>Para la edición de un grupo ya existente, hacer clic sobre el icono "Editar".</para>
-			<para>En ambos casos, el usuario accederá a la interfaz de configuración a nivel de grupo. En ella puede modificar la siguiente información:</para>
+
+			<para>Por ejemplo, para un sensor con 4 segmentos de red y 4 CPUs podríamos establecer una configuración de grupos como la de la imagen de abajo, en la que se han creado 4 grupos:</para>
+
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo. </para>
+					<para>group01: Inspecciona 2 segmentos (br0 y br1) y utiliza las 4 CPUs (0, 1, 2 y 3) para ello.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Description:</emphasis> añadir una descripción al grupo de segmentos.</para>
+					<para>group02: Inspecciona 1 segmento (br3) y utiliza 1 CPU (0) para ello.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuración de los parámetros de Snort a nivel de grupo. </para>
+					<para>group03: Inspecciona 1 segmento (br2) y utiliza 2 CPUs (2 y 3) para ello.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">IP Variables:</emphasis> listado de valores para las variables IP de Snort a nivel de grupo. 
-			Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
-			Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Port Variables:</emphasis> En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. 
-					Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-			De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas como <literal> Inherited.</literal></para>
-				</listitem>
-				<listitem>
-					<para><emphasis role="bold">Bindings:</emphasis> los bindings son particiones del tráfico a través de red o VLAN. Actúan como "hijos" del grupo a nivel de herencias y aplicación de políticas. 
-				Para añadir un nuevo binding hacer clic en <literal>+Add binding</literal> e introducir el nombre.</para>
+					<para>group04: Queda deshabilitado al no tener seleccionado ningún segmento ni ninguna CPU.</para>
 				</listitem>
 			</itemizedlist>
-			<note>
-				<title>Nota</title>
-				<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
-			</note>
+
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img023.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ejemplo_de_configuracion_de_grupos_en_redBorder_IPS.png"/>
 				</imageobject>
 				<caption>
-					<para>Añadir/editar grupo de segmentos</para>
+					<para>Ejemplo de configuración de grupos en redBorder IPS</para>
 				</caption>
 			</mediaobject>
-				<para><emphasis role="bold">Eliminar un grupo de segmentos</emphasis></para>
-			<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
-			<important>
-				<title>Importante</title>
-				<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
-			Los segmentos quedarán libres para su integración en otro grupo. </para>
-			</important>
+
+			<para>El sensor redBorder IPS levanta tantas instancias de Snort como casillas de CPU estén marcadas, por lo que, en un escenario como el de este ejemplo habría 7 instancias de Snort corriendo.</para>
+
 		</section>
+
 		<section>
-			<title>Eliminar un grupo de segmentos</title>
-			<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
-			<important>
-				<title>Importante</title>
-				<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
-				Los segmentos quedarán libres para su integración en otro grupo. </para>
-			</important>
+			<title>Gestión de grupos de segmentos</title>
+
+			<para>En esta sección se explica cómo gestionar los grupos de segmentos del sensor redBorder IPS. Para ello, se toma como ejemplo un sensor con 4 segmentos de red y 4 CPUs.</para>
+
+			<section>
+				<title>Situación inicial y configuración mínima necesaria</title>
+
+				<para>Una vez registrado el sensor IPS en redBorder Manager, la configuración por defecto de los grupos dentro de las opciones de edición del sensor es la siguiente:</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_por_defecto_de_grupos_para_un_sensor_con_4_segmentos_y_4_CPUs.png"/>
+					</imageobject>
+					<caption>
+						<para>Configuración por defecto de grupos para un sensor con 4 segmentos y 4 CPUs</para>
+					</caption>
+				</mediaobject>
+
+				<para>Como se puede observar, el sensor cuenta con un grupo creado por defecto que hereda el modo de operación del propio sensor (ver columna <literal>Sensor mode</literal>). Este grupo no tiene ningún segmento seleccionado por defecto, pero sí tiene todas las CPUs asignadas.</para>
+
+				<para>Al no tener ningún segmento seleccionado <emphasis role="bold">el grupo está deshabilitado, por lo que no es posible aplicar ninguna política de seguridad</emphasis> en el mismo. Esto significa que, en el caso de no querer realizar una configuración personalizada de los grupos de segmentos, <emphasis role="bold">al menos hay que realizar una configuración mínima necesaria</emphasis>, que consiste en indicar qué segmentos deben incluirse en el grupo por defecto, para así poder aplicar las políticas de seguridad deseadas.</para>
+
+				<para>Para habilitar el grupo es necesario marcar como mínimo un segmento y asegurarse de que al menos esté asignada una CPU. Para el sensor IPS con 4 segmentos y 4 CPUs de la imagen anterior, sería suficiente con seleccionar un segmento del que se quisiera analizar el tráfico que pasa por él, como por ejemplo el segmento <literal>br0</literal> y, a continuación, hacer clic en el botón <literal>Update</literal>. Este proceso se muestra en la imagen de abajo.</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/seleccion_de_segmento_br0_para_grupo_por_defecto.png"/>
+					</imageobject>
+					<caption>
+						<para>Selección de segmento <literal>br0</literal> para grupo por defecto</para>
+					</caption>
+				</mediaobject>
+
+				<warning>
+					<title>Configuración inicial y necesaria de grupos de segmentos</title>
+					<para>Después de realizar el registro del sensor IPS contra el Manager de redBorder es <emphasis role="bold">necesario realizar la configuración de los grupos antes de aplicar políticas de seguridad</emphasis> en el sensor.</para>
+				</warning>
+
+			</section>
+
+			<section>
+				<title>Creación de grupos de segmentos</title>
+
+				<para>En el caso de querer añadir más grupos de segmentos en el sensor, basta con hacer clic en <literal>+Add Group</literal>. Aparecerá una ventana emergente en la que habrá que incluir el nombre del grupo, como se muestra en la siguiente imagen.</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/creacion_de_nuevo_grupo_de_segmentos_internal_network.png"/>
+					</imageobject>
+					<caption>
+						<para>Creación de nuevo grupo de segmentos: Internal Network</para>
+					</caption>
+				</mediaobject>
+
+				<para>Una vez añadido el nuevo grupo, éste se sitúa en la lista de grupos, sin tener ningún segmento ni CPU asignado, como se muestra en la siguiente imagen.</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/nuevo_grupo_de_segmentos_creado.png"/>
+					</imageobject>
+					<caption>
+						<para>Nuevo grupo de segmentos creado</para>
+					</caption>
+				</mediaobject>
+
+			</section>
+
+			<section>
+				<title>Configuración de grupos de segmentos</title>
+
+				<para>Después de crear los grupos de segmentos necesarios, el usuario podrá realizar una primera configuración de los mismos desde esta misma interfaz:</para>
+
+				<variablelist>
+					<varlistentry>
+						<term>
+							<literal>Name</literal>
+							<!--
+								¿ <para><literal>Name</literal></para>
+							-->
+						</term>
+						<listitem>
+							<para>Editar el nombre del grupo de segmentos.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_de_grupos_cambio_de_nombre.png"/>
+					</imageobject>
+					<caption>
+						<para>Configuración de grupos: cambio de nombre</para>
+					</caption>
+				</mediaobject>
+
+				<variablelist>
+					<varlistentry>
+						<term>
+							<literal>Sensor mode</literal>
+						</term>
+						<listitem>
+							<para>Selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor).</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_de_grupos_cambio_de_modo.png"/>
+					</imageobject>
+					<caption>
+						<para>Configuración de grupos: cambio de modo</para>
+					</caption>
+				</mediaobject>
+
+				<variablelist>
+					<varlistentry>
+						<term>
+							<literal>Segments</literal>
+						</term>
+						<listitem>
+							<para>Aaparecen marcados los segmentos incluidos en el grupo.</para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>
+							<literal>CPUs</literal>
+						</term>
+						<listitem>
+							<para>Aparecen marcadas las CPUs asignadas al grupo de segmentos.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_de_grupos_cambio_de_CPUs_asignadas.png"/>
+					</imageobject>
+					<caption>
+						<para>Configuración de grupos: cambio de CPUs asignadas</para>
+					</caption>
+				</mediaobject>
+
+				<important>
+					<title>Asignación de CPUs y balanceo de carga</title>
+					<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen CPUs diferentes a cada grupo para distribuir los procesos y, de este modo, balancear la carga de cada CPU.</para>			
+				</important>
+
+				<para>Una vez realizados estos ajustes iniciales, es posible acceder a la siguiente interfaz de configuración al hacer clic en el botón de edición de cada grupo.</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_de_grupos_boton_de_edicion.png"/>
+					</imageobject>
+					<caption>
+						<para>Configuración de grupos: botón de edición</para>
+					</caption>
+				</mediaobject>
+
+				<variablelist>
+					<varlistentry>
+						<term>
+							<literal>Name</literal>
+						</term>
+						<listitem>
+							<para>Editar nombre del grupo.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<literal>Description</literal>
+						</term>
+						<listitem>
+							<para>Añadir una descripción al grupo de segmentos.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<literal>IPS/IDS Settings</literal>
+						</term>
+						<listitem>
+							<para>Configuración de los parámetros de Snort a nivel de grupo.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<literal>IP Variables</literal>
+						</term>
+						<listitem>
+							<para>Listado de valores para las variables IP de Snort a nivel de grupo. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<literal>Port Variables</literal>
+						</term>
+						<listitem>
+							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>
+							<literal>Bindings</literal>
+						</term>
+						<listitem>
+							<para>Los bindings son particiones del tráfico a través de red o VLAN. Actúan como hijos del grupo a nivel de herencias y aplicación de políticas.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+
+				<note>
+					<title>Herencia en grupos de segmentos</title>
+					<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</emphasis></para>
+				</note>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/interfaz_de_configuracion_de_grupo_de_segmentos.png"/>
+					</imageobject>
+					<caption>
+						<para>Interfaz de configuración de grupos de segmentos</para>
+					</caption>
+				</mediaobject>
+
+			</section>
+
+			<section>
+				<title>Eliminación de grupos de segmentos</title>
+
+				<para>En cualquier momento se puede borrar un grupo de segmento mediante el icono de eliminación. El sistema mostrará un mensaje de confirmación.</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/eliminacion_de_grupo_de_segmentos.png"/>
+					</imageobject>
+					<caption>
+						<para>Eliminación de grupo de segmentos</para>
+					</caption>
+				</mediaobject>
+
+				<important>
+					<title>Grupos eliminados y políticas</title>
+					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. Los segmentos quedarán libres para ser seleccionados en otro grupo.</para>			
+				</important>
+
+			</section>
+
 		</section>
+
 		<section>
 			<title>Bindings</title>
-			<para><emphasis role="bold">Añadir/editar configuración de bindings</emphasis></para>
-			<para>Existen dos maneras de añadir o editar un binding:</para>
-			<orderedlist numeration="arabic">
+
+			<para>Como se ha visto en apartados anteriores, un sensor IPS puede contar con distintos segmentos por los que transcurre tráfico de diferentes zonas de red. A su vez, gracias a los grupos, a cada segmento se le puede aplicar una configuración y política de seguridad específica. A partir de aquí es donde entra en juego el concepto de bindings.</para>
+
+			<para>En redBorder IPS, <emphasis role="bold">un binding es una diferenciación del tráfico que transcurre por un segmento</emphasis>. Esta diferenciación puede hacerse en base a una VLAN o a una red. De esta forma, al crear un binding dentro de un grupo y asignarle un identificador VLAN, se consigue que el tráfico relativo a esa VLAN cuente con una configuración y políticas de seguridad distintas. Con esto se consigue granular aún más las configuraciones y políticas aplicadas en un sensor redBorder IPS.</para>
+
+			<para>Sobre cada binding pueden aplicarse las siguientes configuraciones específicas para el grupo, que sobrescriben a las configuraciones genéricas del sensor:</para>
+
+			<itemizedlist mark="bullet">
 				<listitem>
-					<para>Pantalla de configuración de sensor IPS/IDS: Groups->Icono edición->Bindings-><literal>+Add binding</literal>/Icono edición</para>
+					<para>Políticas de firmas (no de reputación)</para>
 				</listitem>
 				<listitem>
-					<para>Pantalla de configuración de sensor IPS/IDS: <literal>+Add Group</literal>->Bindings-><literal>+Add binding</literal>/Icono edición</para>
-				</listitem>
-			</orderedlist>
-			<para>Cuando añadimos un nuevo binding el sistema nos solicita un nombre.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="550" fileref="images/ch06_img024.png"/>
-				</imageobject>
-				<caption>
-					<para>Grupos de segmentos->Bindings</para>
-				</caption>
-			</mediaobject>
-			<note>
-				<title>Nota</title>
-				<para>Para que un binding sea tenido en cuenta, hay que asignarle, al menos, una Vlan.</para>
-			</note>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img024b.png"/>
-				</imageobject>
-				<caption>
-					<para>Editar configuración de bindings</para>
-				</caption>
-			</mediaobject>
-			<para>Los campos de edición para la configuración a nivel de binding son los siguientes:</para>
-			<itemizedlist>
-				<listitem>
-					<para>General: Nombre y descripción.</para>
-				</listitem>
-				<listitem>
-					<para>IPS/IDS Settings</para>
+					<para>IPS/IDS Settings (sólo para los campos <literal>Threshold Count</literal> y <literal>Threshold Seconds)</literal></para>
 				</listitem>
 				<listitem>
 					<para>IP Variables</para>
@@ -652,11 +839,282 @@
 					<para>Port Variables</para>
 				</listitem>
 			</itemizedlist>
-			<para>Para asegurarse de que las modificaciones realizadas en un binding ya existentes se van a aplicar correctamente, hacer clic en <literal>Update</literal></para>
-			<warning>
-				<title>Advertencia</title>
-				<para>En caso de que los campos IPS/IDS Settings, IP Variables y Port Variables no sean modificados, el binding heredará la configuración del grupo de segmentos del que depende. </para>
-			</warning>
+
+			<para>Dentro de cada grupo de segmentos siempre hay un binding creado por defecto que contiene la configuración que se aplica a todo el tráfico que pasa por los segmentos de su grupo, salvo el tráfico relativo a algún binding existente. De esta forma, el tráfico no relativo a las redes o VLANs incluidos en el resto de bindings pertenece al binding por defecto.</para>
+
+			<section>
+				<title>Premisas para la creación de bindings</title>
+
+				<para>Para la creación de bindings en un grupo de segmentos es importante tener en cuenta las siguientes premisas:</para>
+
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para>Pueden crearse tantos bindings como se quiera.</para>
+					</listitem>
+					<listitem>
+						<para>Un binding puede estar formado por uno o varios identificadores VLAN y por una o varias redes.</para>
+					</listitem>
+					<listitem>
+						<para>Salvo el binding creado por defecto, si un binding no tiene ningún identificador VLAN ni ninguna red asociado, se considera que está deshabilitado.</para>
+					</listitem>
+					<listitem>
+						<para>Si alguna red o VLAN se ha añadido en más de un binding, el tráfico de esa red o VLAN se asociará al binding que haya sido creado en primer lugar.</para>
+					</listitem>
+					<listitem>
+						<para>Si una red menor está contenida en otra red mayor y ambas se han añadido a bindings distintos, al haber tráfico perteneciente a la red menor y a la red mayor, éste se asociará al binding que haya añadido a la red menor, independientemente del orden de creación del binding.</para>
+					</listitem>
+				</itemizedlist>
+
+				<note>
+					<title>Objetos de tipo VLAN y de tipo NET</title>
+					<para>Los identificadores VLAN y redes deben estar declarados como objetos de tipo VLAN y NET, respectivamente, para que puedan ser incluidos en los bindings. Estos objetos se pueden declarar en la sección <literal>Tools -> Objects</literal> de redBorder Manager.</para>
+				</note>
+
+				<para>Por ejemplo, para un grupo de segmentos cualquiera, podríamos establecer una configuración de bindings como la de la imagen de abajo, en la que se han creado 3 bindings además del ya existente por defecto:</para>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ejemplo_de_configuracion_de_bindings_en_redBorder_IPS.png"/>
+					</imageobject>
+					<caption>
+						<para>Ejemplo de configuración de bindings en redBorder IPS</para>
+					</caption>
+				</mediaobject>
+
+			</section>
+
+			<section>
+				<title>Gestión de bindings</title>
+
+				<para>En esta sección se explica cómo gestionar los bindings de un grupo de segmentos del sensor redBorder IPS. Para ello, se toma como ejemplo un grupo cualquiera.</para>
+
+				<section>
+					<title>Situación inicial</title>
+					<para>Un grupo de segmentos cuenta, por defecto, con un único binding por el que pasa todo el tráfico. A este binding se le da el nombre “default” y no puede ser cambiado.</para>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/binding_por_defecto_de_un_grupo_de_segmentos_cualquiera.png"/>
+						</imageobject>
+						<caption>
+							<para>Binding por defecto de un grupo de segmentos cualquiera</para>
+						</caption>
+					</mediaobject>
+
+					<para>El binding “default” se encuentra habilitado por defecto, por lo que no es necesario realizar ninguna configuración adicional para que el tráfico que pase por este binding pueda ser analizado una vez que se aplique una política de seguridad al mismo.</para>
+
+				</section>
+
+				<section>
+					<title>Creación de bindings</title>
+
+					<para>En el caso de querer añadir más bindings al grupo de segmentos para poder aplicar una configuración más granular al tráfico que transcurra por este grupo, basta con hacer clic en <literal>+Add Binding</literal>. Aparecerá una ventana emergente en la que habrá que incluir el nombre del binding, como se muestra en la siguiente imagen.</para>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/creacion_de_nuevo_binding_lab_network.png"/>
+						</imageobject>
+						<caption>
+							<para>Creación de nuevo binding: Lab network</para>
+						</caption>
+					</mediaobject>
+
+					<warning>
+						<title>Binding deshabilitado por defecto</title>
+						<para>En la ventana emergente de la imagen anterior aparece un aviso indicando que el binding no estará habilitado hasta que no se le asocie una VLAN o red.</para>
+					</warning>
+
+					<para>Una vez añadido el nuevo binding, éste se sitúa en la lista de bindings, como se muestra en la siguiente imagen.</para>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/nuevo_binding_creado.png"/>
+						</imageobject>
+						<caption>
+							<para>Nuevo binding creado</para>
+						</caption>
+					</mediaobject>
+
+				</section>
+
+				<section>
+					<title>Configuración de bindings</title>
+
+					<para>Después de crear los bindings necesarios, el usuario podrá acceder a la interfaz de configuración de los mismos al hacer clic en el botón de edición correspondiente.</para>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/configuracion_de_bindings_boton_de_edicion.png"/>
+						</imageobject>
+						<caption>
+							<para>Configuración de bindings: botón de edición</para>
+						</caption>
+					</mediaobject>
+
+					<para>En esta interfaz el usuario podrá modificar la siguiente información:</para>
+
+					<variablelist>
+						<varlistentry>
+							<term>
+								<literal>Name</literal>
+							</term>
+							<listitem>
+								<para>Editar nombre del binding (inhabilitado para el binding “default”).</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>Description</literal>
+							</term>
+							<listitem>
+								<para>Añadir una descripción al binding.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>IPS/IDS Settings</literal>
+							</term>
+							<listitem>
+								<para>Configuración de los parámetros de Snort a nivel de binding (sólo para los campos <literal>Threshold Count</literal> y <literal>Threshold Seconds</literal>).</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>IP Variables</literal>
+							</term>
+							<listitem>
+								<para>Listado de valores para las variables IP de Snort a nivel de binding. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>Port Variables</literal>
+							</term>
+							<listitem>
+								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>VLANs</literal>
+							</term>
+							<listitem>
+								<para>En este apartado se configuran las VLANs asociadas al binding (no disponible para el binding “default”).</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>
+								<literal>Networks</literal>
+							</term>
+							<listitem>
+								<para>En este apartado se configuran las redes asociadas al binding (no disponible para el binding “default”).</para>
+							</listitem>
+						</varlistentry>
+					</variablelist>
+
+					<note>
+						<title>Herencia en bindings</title>
+						<para>Recuerde que el binding mostrará la configuración que ha heredado del grupo de segmentos. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de binding.</para>
+					</note>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/interfaz_de_configuracion_de_bindings.png"/>
+						</imageobject>
+						<caption>
+							<para>Interfaz de configuración de bindings</para>
+						</caption>
+					</mediaobject>
+
+				</section>
+
+				<section>
+					<title>Eliminación de bindings</title>
+
+					<para>Salvo el binding “default”, es posible eliminar el resto de bindings creados mediante el icono de eliminación. El sistema mostrará un mensaje de confirmación.</para>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" align="center" width="450" fileref="images/eliminacion_de_binding.png"/>
+						</imageobject>
+						<caption>
+							<para>Eliminación de binding</para>
+						</caption>
+					</mediaobject>
+
+					<important>
+						<title>Bindings eliminados y políticas</title>
+						<para>En caso de que un binding tuviera asignada una serie de políticas, al eliminar el binding, estas dejarán de aplicarse en las VLANs y/o redes definidas en el binding, y el tráfico que pase por éstas se analizará según la configuración y las políticas del binding por defecto.</para>
+					</important>
+
+				</section>
+			</section>
 		</section>
-	</section>	
+
+		<section>
+			<title>Consideraciones de jerarquía para grupos de segmentos y bindings</title>
+
+			<para>En cuanto a la jerarquía establecida entre los sensores redBorder IPS, sus grupos de segmentos y los bindings de cada grupo de segmento, por defecto, cada binding cuelga del grupo donde haya sido creado, de la misma forma que cada grupo cuelga del sensor donde haya sido creado.</para>
+
+			<para>En la imagen de abajo se muestra un ejemplo de cómo sería esta estructura jerárquica creada por defecto.</para>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Estructura jerárquica creada por defecto para sensores, grupos y bindings</para>
+				</caption>
+			</mediaobject>
+
+			<para>En este ejemplo hay dos sensores redBorder IPS (<literal>ips01</literal> e <literal>ips02</literal>). Ambos cuentan dos grupos de segmentos (<literal>group01</literal> y <literal>group02</literal> para <literal>ips01</literal> y <literal>DMZ</literal> e <literal>Internal Network</literal> para <literal>ips02</literal>). El primer grupo de cada sensor tiene un binding además del binding por defecto, y el segundo grupo solo tiene el binding por defecto. Debajo aparece también una pequeña estructura de dominios.</para>
+
+			<para>Es posible modificar la estructura jerárquica creada por defecto siguiendo las dos siguientes premisas:</para>
+
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Un grupo de segmentos sólo puede colgar del sensor redBorder IPS que lo haya creado o de dominios (incluido <literal>root</literal>).</para>
+				</listitem>
+				<listitem>
+					<para>Un binding sólo puede colgar del grupo que lo haya creado o de dominios (incluido <literal>root</literal>).</para>
+				</listitem>
+				<listitem>
+					<para>Salvo el binding creado por defecto, si un binding no tiene ningún identificador VLAN ni ninguna red asociado, se considera que está deshabilitado.</para>
+				</listitem>
+			</itemizedlist>
+
+			<para>En la imagen de abajo se muestra un ejemplo de cómo se podría modificar la estructura jerárquica creada por defecto.</para>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/estructura_jerarquica_modificada_de_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Estructura jerárquica modificada de sensores, grupos y bindings</para>
+				</caption>
+			</mediaobject>
+
+			<para>En este ejemplo se han hecho los siguientes cambios:</para>
+
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Grupo <literal>group01</literal> del sensor <literal>ips01</literal> movido al dominio <literal>Domain 1</literal>.</para>
+				</listitem>
+				<listitem>
+					<para>Binding <literal>g01-binding01</literal> del grupo <literal>group01</literal> del sensor <literal>ips01</literal> movido al dominio <literal>Sub-domain</literal>.</para>
+				</listitem>
+				<listitem>
+					<para>Grupo <literal>DMZ</literal> del sensor <literal>ips02</literal> movido al dominio <literal>Sub-domain</literal>.</para>
+				</listitem>
+				<listitem>
+					<para>Binding <literal>Lab network</literal> del grupo <literal>DMZ</literal> del sensor <literal>ips02</literal> movido al dominio <literal>Domain 2</literal>.</para>
+				</listitem>
+			</itemizedlist>
+
+			<para>Estos movimientos son permitidos para poder aprovechar los beneficios de contar con una estructura jerárquica, como pueden ser la gestión de usuarios o la aplicación de políticas jerarquizada.</para>
+
+			<para>Estos cambios pueden ser deshechos moviendo en la jerarquía cada grupo o binding dentro de los sensores o grupos que los crearon.</para>
+
+		</section>
+	</section>
 </chapter>
