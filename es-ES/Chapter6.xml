@@ -641,7 +641,7 @@
 				<variablelist>
 					<varlistentry>
 						<term>
-							<literal>Name</literal>
+							<para><literal>Name</literal></para>
 							<!--
 								¿ <para><literal>Name</literal></para>
 							-->
