@@ -764,7 +764,7 @@
 							<literal>Port Variables</literal>
 						</term>
 						<listitem>
-							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -772,7 +772,7 @@
 							<literal>Bindings</literal>
 						</term>
 						<listitem>
-							<para>Los bindings son particiones del tráfico a través de red o VLAN. Actúan como hijos del grupo a nivel de herencias y aplicación de políticas.</para>
+							<para>Los bindings son particiones del tráfico a través de red o VLAN. Actúan como hijos del grupo a nivel de herencias y aplicación de políticas.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -991,7 +991,7 @@
 								<literal>Port Variables</literal>
 							</term>
 							<listitem>
-								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
