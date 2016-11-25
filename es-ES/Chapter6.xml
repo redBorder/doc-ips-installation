@@ -1045,28 +1045,10 @@
 -->
 			<mediaobject>
 				<imageobject>
-					<imagedata align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
-				</imageobject>
-				<caption>
-					<para>Test 1: align="center" width="240"</para>
-				</caption>
-			</mediaobject>
-
-			<mediaobject>
-				<imageobject>
 					<imagedata scalefit="1" align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
-					<para>Test 2: scalefit="1" align="center" width="240"</para>
-				</caption>
-			</mediaobject>
-
-			<mediaobject>
-				<imageobject>
-					<imagedata align="center" width="180" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
-				</imageobject>
-				<caption>
-					<para>Test 3: align="center" width="180"</para>
+					<para>Test 1: scalefit="1" align="center" width="240"</para>
 				</caption>
 			</mediaobject>
 
@@ -1075,25 +1057,25 @@
 					<imagedata scalefit="1" align="center" width="180" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
-					<para>Test 4: scalefit="1" align="center" width="180"</para>
+					<para>Test 2: scalefit="1" align="center" width="180"</para>
 				</caption>
 			</mediaobject>
 
 			<mediaobject>
 				<imageobject>
-					<imagedata align="center" width="120" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata scale="75" align="center" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
-					<para>Test 1: align="center" width="120"</para>
+					<para>Test 3: scale="75" align="center"</para>
 				</caption>
 			</mediaobject>
 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="120" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata scale="70" align="center" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
-					<para>Test 2: scalefit="1" align="center" width="120"</para>
+					<para>Test 3: scale="70" align="center"</para>
 				</caption>
 			</mediaobject>
 
