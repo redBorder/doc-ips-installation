@@ -45,7 +45,7 @@
 		</listitem>
 	</itemizedlist>
 	<section>
-	<title>Editar la configuración del sensor IPS/IDS</title>
+		<title>Editar la configuración del sensor IPS/IDS</title>
 		<para>En todos los casos descritos el usuario accede a una pantalla en la que puede realizar la configuración de los parámetros básicos de los sensores IPS/IDS.</para>
 		<para>Los campos del formulario de configuración varían según se esté editando un sensor, grupo de segmentos o binding.	Este paso es muy importante puesto que una configuración u otra determinará el modo de funcionamiento del sensor<phrase condition="malware"> según se instale en un escenario u otro (IPS o Malware)</phrase>. Estas opciones se definen en el apartado <emphasis role="bold">Configuración IPS/IDS</emphasis>.</para>
 		<para>A continuación se enumeran los campos que se muestran en el formulario de configuración de un sensor IPS:</para>
