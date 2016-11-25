@@ -1033,13 +1033,67 @@
 			<para>En cuanto a la jerarquía establecida entre los sensores redBorder IPS, sus grupos de segmentos y los bindings de cada grupo de segmento, por defecto, cada binding cuelga del grupo donde haya sido creado, de la misma forma que cada grupo cuelga del sensor donde haya sido creado.</para>
 
 			<para>En la imagen de abajo se muestra un ejemplo de cómo sería esta estructura jerárquica creada por defecto.</para>
-
+<!--
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
 					<para>Estructura jerárquica creada por defecto para sensores, grupos y bindings</para>
+				</caption>
+			</mediaobject>
+-->
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 1:</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata align="center" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 2: align="center"</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 3: width="240"</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 4: align="center" width="240"</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 5: scalefit="1" width="240"</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+				</imageobject>
+				<caption>
+					<para>Test 6: scalefit="1" align="center" width="240"</para>
 				</caption>
 			</mediaobject>
 
