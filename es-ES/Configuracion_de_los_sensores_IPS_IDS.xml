@@ -158,8 +158,7 @@
 		</itemizedlist>
 		<para><literal>PF_RING Clustermode</literal></para>
 		<para>Divide el tráfico entrante en varios anillos. Especialmente indicado para <emphasis role="bold">distribuir la carga</emphasis> al posibilitar que una misma interfaz sea leída desde varios programas de Snort.</para>
-		<para>Indica el número de parámetros usados para determinar el hash y el balanceo del tráfico entre los diferentes procesos Snort. 
-		Dependiendo del número elementos que se agregan a la tupla el tráfico se distribuirá de una forma distinta:</para>
+		<para>Indica el número de parámetros usados para determinar el hash y el balanceo del tráfico entre los diferentes procesos Snort. Dependiendo del número elementos que se agregan a la tupla el tráfico se distribuirá de una forma distinta:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
 				<para>2 tuple flow: IP de origen+IP de destino</para>
@@ -175,8 +174,7 @@
 			</listitem>
 		</itemizedlist>
 		<para><literal>Bypass controlled by Snort</literal></para>
-		<para>Cuando la máquina arranca Snort puede tomar el control de los bypass automáticamente.
-		 Esta acción puede provocar un flapping indeseado del firewall para evitar que Snort esté habilitado para el control de los bypass.</para>
+		<para>Cuando la máquina arranca Snort puede tomar el control de los bypass automáticamente. Esta acción puede provocar un flapping indeseado del firewall para evitar que Snort esté habilitado para el control de los bypass.</para>
 		<para><literal>Threshold Count</literal></para>
 		<para>Número máximo de ocurrencias en un rango de tiempo determinado para que un evento sea enviado.</para>
 		<para><literal>Threshold Seconds</literal></para>
@@ -188,8 +186,7 @@
 		</note>
 		<para><literal>Best effort Configuration</literal></para>
 		<para>Esta configuración solo aplica en el modo <emphasis role="bold">IDS</emphasis>.</para>
-		<para>Al habilitar esta opción, el tráfico es copiado en una cola interna de trabajo y, posteriormente, desviado. Solo en el caso de que no existan más paquetes que desviar, se procesarán los paquetes que se encuentran en la cola interna. 
-		Si la cola interna se encontrase llena, los paquetes no serán analizados. Esto aumenta la fiabilidad del desvío, pero disminuye el rendimiento del análisis. </para>
+		<para>Al habilitar esta opción, el tráfico es copiado en una cola interna de trabajo y, posteriormente, desviado. Solo en el caso de que no existan más paquetes que desviar, se procesarán los paquetes que se encuentran en la cola interna. Si la cola interna se encontrase llena, los paquetes no serán analizados. Esto aumenta la fiabilidad del desvío, pero disminuye el rendimiento del análisis. </para>
 		<para><literal>Software Bypass Configuration</literal></para>
 		<para>Esta configuración solo aplica en el modo <emphasis role="bold">IPS</emphasis>.</para>
 		<para>La activación de esta opción implica que, si la ocupación del anillo de la interfaz es alta, el IPS desviará los paquetes sin analizar hasta que la ocupación se encuentre por debajo de otro valor predeterminado.</para>
@@ -208,8 +205,7 @@
 			</caption>
 		</mediaobject>
 		<para><literal>Groups</literal></para>
-		<para>Es posible crear grupos de segmentos y bindings con el fin de aplicar diferentes políticas a diferentes niveles de un mismo sensor: sensor, grupo o binding.
-		Esta funcionalidad permite que con una sola máquina el usuario pueda crear numerosos entornos a los que aplicar distintas políticas según sus necesidades.</para>
+		<para>Es posible crear grupos de segmentos y bindings con el fin de aplicar diferentes políticas a diferentes niveles de un mismo sensor: sensor, grupo o binding. Esta funcionalidad permite que con una sola máquina el usuario pueda crear numerosos entornos a los que aplicar distintas políticas según sus necesidades.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch06_img008.png"/>
