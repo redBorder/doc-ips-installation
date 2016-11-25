@@ -316,23 +316,23 @@
 	</section>
 	<section>
 		<title>Segmentos</title>
-		<para>En este apartado se muestra un listado con los segmentos de inspección que se han creado durante el proceso de configuración del sensor. Por estos segmentos pasa el tráfico que redBorder IPS debe analizar. En el apartado "Grupos" se explica cómo se puede editar el sensor para que, por cada segmento, se analice el tráfico en función de distintas políticas de seguridad.</para>
+		<para>En este apartado se muestra un listado con los segmentos de inspección que se han creado durante el proceso de configuración del sensor. Por estos segmentos pasa el tráfico que redBorder IPS debe analizar. En el apartado "Groups" se explica cómo se puede editar el sensor para que, por cada segmento, se analice el tráfico en función de distintas políticas de seguridad.</para>
 		<para>En el listado de segmentos aparece la siguiente información:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para><emphasis role="bold">Segment</emphasis>: nombre del segmento.</para>
+				<para><literal>Segment</literal>: nombre del segmento.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Interfaces</emphasis>: interfaces de red que conforman el segmento.</para>
+				<para><literal>Interfaces</literal>: interfaces de red que conforman el segmento.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Bypass</emphasis>: casilla de activación o desactivación del bypass por hardware.</para>
+				<para><literal>Bypass</literal>: casilla de activación o desactivación del bypass por hardware.</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Type</emphasis>: tipo de segmento (fibra o cobre).</para>
+				<para><literal>Type</literal>: tipo de segmento (fibra o cobre).</para>
 			</listitem>
 			<listitem>
-				<para><emphasis role="bold">Speed</emphasis>: velocidad en bits por segundo.</para>
+				<para><literal>Speed</literal>: velocidad en bits por segundo.</para>
 			</listitem>
 		</itemizedlist> 
 		<mediaobject>
