@@ -1063,7 +1063,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata align="center" width="180" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
 					<para>Test 3: align="center" width="180"</para>
@@ -1072,7 +1072,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata scalefit="1" align="center" width="180" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
 					<para>Test 4: scalefit="1" align="center" width="180"</para>
@@ -1081,7 +1081,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata align="center" width="120" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
 					<para>Test 1: align="center" width="120"</para>
@@ -1090,7 +1090,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="240" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
+					<imagedata scalefit="1" align="center" width="120" fileref="images/estructura_jerarquica_creada_por_defecto_para_sensores_grupos_y_bindings.png"/>
 				</imageobject>
 				<caption>
 					<para>Test 2: scalefit="1" align="center" width="120"</para>
