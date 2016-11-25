@@ -394,7 +394,7 @@
 		<title>IP Variables</title> 
 		<para>En este apartado se muestran los valores de la configuración de Snort para las variables de tipo IP.</para>
 		<para>Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Por ejemplo, en el caso de que se hayan configurado redes locales con IPs públicas. </para>
-		<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+		<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la columna <literal>Inherited</literal>.</para>
 		<para><emphasis role="bold">Acciones disponibles</emphasis>: exportar, importar, editar y eliminar las variables IP. </para>
 		<mediaobject>
 			<imageobject>
@@ -442,7 +442,7 @@
 	<section>
 		<title>Port Variables</title>
 		<para>En este apartado se muestran los valores de la configuración de Snort para las variables de tipo puerto.</para>
-		<para>Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la casilla <literal>Inherited</literal>.</para>
+		<para>Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la columna <literal>Inherited</literal>.</para>
 		<para><emphasis role="bold">Acciones disponibles</emphasis>: exportar, importar, editar y eliminar las variables de puertos. </para>
 		<mediaobject>
 			<imageobject>
@@ -687,8 +687,8 @@
 				</mediaobject>
 
 				<important>
-					<title>Asignación de CPUs y balanceo de carga</title>
-					<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen CPUs diferentes a cada grupo para distribuir los procesos y, de este modo, balancear la carga de cada CPU.</para>			
+					<title>Asignación de CPUs y reparto de carga</title>
+					<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen CPUs diferentes a cada grupo para distribuir los procesos y, de este modo, repartir la carga de cada CPU.</para>			
 				</important>
 
 				<para>Una vez realizados estos ajustes iniciales, es posible acceder a la siguiente interfaz de configuración al hacer clic en el botón de edición de cada grupo.</para>
@@ -732,7 +732,7 @@
 							<literal>IP Variables</literal>
 						</term>
 						<listitem>
-							<para>Listado de valores para las variables IP de Snort a nivel de grupo. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+							<para>Listado de valores para las variables IP de Snort a nivel de grupo. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la columna <literal>Inherited</literal>.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -740,7 +740,7 @@
 							<literal>Port Variables</literal>
 						</term>
 						<listitem>
-							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+							<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la columna <literal>Inherited</literal>.</para>
 						</listitem>
 					</varlistentry>
 					<varlistentry>
@@ -785,7 +785,7 @@
 
 				<important>
 					<title>Grupos eliminados y políticas</title>
-					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. Los segmentos quedarán libres para ser seleccionados en otro grupo.</para>			
+					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. Los segmentos quedarán libres para ser seleccionados por otro grupo.</para>			
 				</important>
 
 			</section>
@@ -831,7 +831,7 @@
 						<para>Un binding puede estar formado por uno o varios identificadores VLAN y por una o varias redes.</para>
 					</listitem>
 					<listitem>
-						<para>Salvo el binding creado por defecto, si un binding no tiene ningún identificador VLAN ni ninguna red asociado, se considera que está deshabilitado.</para>
+						<para>Salvo el binding creado por defecto, si un binding no tiene asociado ningún identificador VLAN ni ninguna red, se considera que está deshabilitado.</para>
 					</listitem>
 					<listitem>
 						<para>Si alguna red o VLAN se ha añadido en más de un binding, el tráfico de esa red o VLAN se asociará al binding que haya sido creado en primer lugar.</para>
@@ -959,7 +959,7 @@
 								<literal>IP Variables</literal>
 							</term>
 							<listitem>
-								<para>Listado de valores para las variables IP de Snort a nivel de binding. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal>Inherited</literal>.</para>
+								<para>Listado de valores para las variables IP de Snort a nivel de binding. Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la columna <literal>Inherited</literal>.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -967,7 +967,7 @@
 								<literal>Port Variables</literal>
 							</term>
 							<listitem>
-								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la casilla <literal>Inherited</literal>.</para>
+								<para>En este apartado se muestran los valores para las variables de los puertos Snort a nivel de binding. Los valores de estas variables también pueden ser editados en casos excepcionales en los que se hayan definido puertos no convencionales. De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas con un check en la columna <literal>Inherited</literal>.</para>
 							</listitem>
 						</varlistentry>
 						<varlistentry>
@@ -1053,9 +1053,6 @@
 				</listitem>
 				<listitem>
 					<para>Un binding sólo puede colgar del grupo que lo haya creado o de dominios (incluido <literal>root</literal>).</para>
-				</listitem>
-				<listitem>
-					<para>Salvo el binding creado por defecto, si un binding no tiene ningún identificador VLAN ni ninguna red asociado, se considera que está deshabilitado.</para>
 				</listitem>
 			</itemizedlist>
 
