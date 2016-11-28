@@ -370,7 +370,7 @@
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch06_img015.png"/>
 			</imageobject>
 			<caption>
-				<para>Añadir localización del sensor: +Add Location</para>
+				<para>Añadir localización del sensor: <literal>+Add Location</literal></para>
 			</caption>
 		</mediaobject>
 		<mediaobject>
