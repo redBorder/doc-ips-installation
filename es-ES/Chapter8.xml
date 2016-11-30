@@ -391,7 +391,7 @@
 			<warning>
 				<title>Aplicación de configuración a grupos deshabilitados</title>
 
-				<para>Si el proceso de aplicación de configuración falla, se mostrará un error en la columna <literal>Options</literal> de la tabla Stored Jobs. Tras revisar la información del proceso en cuestión, es posible que exista un mensaje del siguiente tipo:</para>
+				<para>Si el proceso de aplicación de configuración falla, se mostrará un error en la columna <literal>Options</literal> de la tabla <literal>Stored Jobs</literal>. Tras revisar la información del proceso en cuestión, es posible que exista un mensaje del siguiente tipo:</para>
 
 				<para><literal>ERROR: the group id 0 doesn't exist or has no CPUs assigned</literal></para>
 
