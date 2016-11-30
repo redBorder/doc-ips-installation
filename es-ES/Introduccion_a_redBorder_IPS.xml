@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2015">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Introducción a redBorder IPS</title>
+	<para>La presente guía tiene como objetivo transmitir al lector todo el conocimiento necesario para poder utilizar la plataforma redborder y, en particular, <emphasis role="bold">redBorder IPS</emphasis>.</para>
+	<para>Para ello, en la guía se describen todos los pasos necesarios para realizar una correcta instalación y configuración de redBorder IPS, así como una posterior administración y operación sobre el Manager de redBorder.</para>
+
+	<section>
+		<title>¿Qué es redBorder?</title>
+		<para><emphasis role="bold">redBorder</emphasis> es una plataforma abierta de inteligencia activa de seguridad y visibilidad de red.</para>
+		<para>Esta plataforma se encuentra integrada por una serie de Apps que recogen los datos (a través de sensores interpuestos en la red) para su análisis o gestión activa de seguridad de la red a través de la plataforma web redBorder.</para>
+		<para>Como se verá más adelante, dependiendo de las aplicaciones que se encuentren integradas en la plataforma, el usuario visualizará una u otras opciones en la barra de menú.</para>
+		<para>Las Apps que se encuentran disponibles en esta nueva versión de redBorder son las siguientes:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Flow</para>
+			</listitem>
+			<listitem>
+				<para>IPS</para>
+			</listitem>
+			<listitem>
+				<para>Social</para>
+			</listitem>
+			<listitem>
+				<para>Malware</para>
+			</listitem>
+		</itemizedlist>
+
+		<section>
+			<title>¿Qué es un IDS?</title>
+			<para>Un <emphasis role="bold">IDS</emphasis> (de sus siglas en inglés Intrusion Detection System) es un Sistema de Detección de Intrusiones en la red o redes a proteger en una organización.</para> 
+			<para>Suele ser un software específico que se ejecuta en el espacio de usuario y que sondea el tráfico que se refleja (puerto mirror o SPAN) en una interfaz del sistema o el que circula entre dos interfaces unidas en un bridge (switch por software).</para>
+			<para>Dicho tráfico es analizado buscando anomalías, firmas específicas o comportamientos sospechosos.</para> 
+			<para>El objetivo del IDS es <emphasis role="bold">detectar intrusiones y lanzar alertas sin interferir en el tráfico de la organización.</emphasis></para>
+		</section>
+
+		<section>
+			<title>¿Qué es un IPS?</title>
+			<para>Un <emphasis role="bold">IPS</emphasis> es un sistema de Prevención de Intrusiones en la red o redes de la organización.</para> 
+			<para>Su operativa es idéntica a la del IDS (de hecho suele ser el mismo software con un comportamiento adaptado), excepto que en este caso	sí interfiere en el tráfico de la organización, de manera que cuando se detecta una comunicación correspondiente a un ataque el sistema puede optar no sólo por <emphasis role="bold">lanzar alertas sino incluso por descartar los paquetes de dicha comunicación, creando el mismo efecto que un cortafuegos.</emphasis></para>
+		</section>
+
+		<section>
+			<title>Conociendo la Guía Oficial de Instalación de redBorder IPS</title>
+			<para>Esta guía contiene información muy útil que le ayudará a realizar una correcta instalación y configuración de redBorder IPS.</para>
+			<para>En ella se explica detenidamente cómo moverse por el asistente de instalación del IPS y es válido tanto para instalación en máquina física como para instalación en máquina virtual. La instalación completa de la plataforma comprende dos fases:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Instalación y configuración de redBorder IPS.</para>
+				</listitem>
+				<listitem>
+					<para>Configuración y registro contra redBorder Manager.</para>
+				</listitem>
+			</itemizedlist>
+			<para>Este documento es ideal tanto para los usuarios que deseen reemplazar la antigua versión, como aquellos que instalen por primera vez la versión 3 redBorder.</para>
+			<para>Si es un usuario con experiencia y ya ha realizado la instalación de redBorder IPS en otras ocasiones, puede pasar directamente al capítulo 3 en el que aprenderá a moverse por la plataforma web redBorder.</para>
+		</section>
+	</section>
+
+	<section>
+		<title>Requisitos para la instalación de redBorder IPS</title>
+		<para>La plataforma redBorder se puede instalar mediante dos infraestructuras posibles:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para><emphasis role="bold">Máquina física:</emphasis> disco local de su equipo (Hardware).</para>
+			</listitem>
+			<listitem>
+				<para><emphasis role="bold">Máquina virtual:</emphasis> estructura de virtualización.</para>
+			</listitem>
+		</itemizedlist>
+		<important>
+			<title>Importante</title>
+			<para>Requisitos de instalación de redBorder IPS en un equipo físico o virtual para un entorno de poco tráfico (en torno a 1 Gbps) y no crítico:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Memoria: 4 GB de RAM.</para>
+				</listitem>
+				<listitem>
+					<para>Almacenamiento: 5 GB.</para>
+				</listitem>
+				<listitem>
+					<para>Gestión: al menos una interfaz de red.</para>
+				</listitem>
+				<listitem>
+					<para>Inspección: al menos una interfaz de red.</para>
+				</listitem>
+			</itemizedlist>
+			<para>Para entornos críticos o con un mayor tráfico, por favor, consulte el datasheet oficial.</para>
+		</important>
+	</section>
+
+	<section>
+		<title>Versiones de software de redBorder IPS</title>
+		<para>redBorder IPS cuenta, entre otras, con las siguientes versiones de software:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>snort 2.9.8.0</para>
+			</listitem>
+			<listitem>
+				<para>barnyard2 2.1.13</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+
+	<section>
+		<title>Conceptos importantes antes de instalar redborder IPS</title>
+		<para>Antes de comenzar con la instalación y configuración de redBorder es conveniente tener en cuenta ciertos aspectos importantes, como pueden ser conocer el escenario en el que se integrará redBorder IPS o saber más acerca del asistente de configuración de redBorder.</para>
+
+		<section>
+			<title>Escenario básico para la instalación de redBorder IPS</title>
+			<para>Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización.</para>
+			<para>Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS).</para>
+			<para>Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales:</para>
+			<itemizedlist mark="circle">
+				<listitem>
+					<para><emphasis role="bold">Los segmentos bypass</emphasis> (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán en medio del tráfico a analizar.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Las interfaces de gestión</emphasis> (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Las interfaces de acceso IPMI para la gestión remota del hardware</emphasis> (conexión SOL o Serial Over Lan, iKVM y comandos IPMI como inicio, reinicio y apagado).</para>
+				</listitem>
+			</itemizedlist>
+			<para>Para el <emphasis role="bold">Manager,</emphasis> al no ser necesario un hardware específico, la única condición es <emphasis role="bold">la existencia de, al menos, dos interfaces de red. </emphasis></para>
+			<para>De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).</para>
+			<warning>
+				<title>Advertencia</title>
+				<para>Es MUY IMPORTANTE que primero se realice la configuración de redBorder Manager antes de configurar y registrar los sensores.</para>
+				<para>El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager. <footnote><para>El escenario de instalación del redBorder Manager es el mismo, independientemente de los sensores que se instalen y registren en él.</para></footnote>.</para>
+			</warning>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img001.png"/>
+				</imageobject>
+				<textobject>
+					<phrase>Escenario básico para instalación del Manager</phrase>
+				</textobject>
+				<caption>
+					<para>Escenario básico para la instalación del Manager</para>
+				</caption>
+			</mediaobject>
+		</section>
+
+		<section>
+			<title>Estructura y operativa del asistente de configuración de redBorder</title>
+			<para><emphasis role="bold">Menú, submenú y línea de comandos</emphasis></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img002.png"/>
+				</imageobject>
+				<textobject>
+					<phrase>Estructura y operativa de los menús del asistente de instalación redBorder</phrase>
+				</textobject>
+				<caption>
+					<para>Estructura y operativa de los menús del asistente de instalación redBorder</para>
+				</caption>
+			</mediaobject>
+			<para><emphasis>Menú</emphasis></para>
+			<para>En el margen izquierdo de la pantalla encontrará un listado con las opciones disponibles. Para seleccionar cualquiera de ellas solo debe introducir el número o letra que corresponda a la opción que desea elegir.</para>
+			<para><emphasis>Submenú</emphasis></para>
+			<para>En caso de que se puedan realizar diferentes acciones sobre la opción seleccionada, aparecerá un submenú en el margen derecho de la pantalla.</para>
+			<para><emphasis>Línea de comandos/ selector de opciones</emphasis></para>
+			<para>En el margen inferior, y separado gráficamente del menú y submenú, encontramos el área en el que se deberán indicar las selecciones en la línea en la que figura <literal>Selection</literal> e introducir los comandos o datos que se soliciten para ejecutar las acciones pertinentes. En esta zona visualizaremos la fecha y la hora del sistema (por defecto en UTC).</para>
+			<section>
+				<title>Selección de opciones</title>
+				<para><emphasis role="bold">Opciones predeterminadas</emphasis></para>
+				<para>En algunos casos, el sistema mostrará una serie de opciones predeterminadas. Si se trata de la respuesta a una pregunta, la opción definida por defecto se visualizará en mayúsculas.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img003.png"/>
+					</imageobject>
+					<caption>
+						<para>Selección de opciones predeterminadas</para>
+					</caption>
+				</mediaobject>
+				<para><emphasis role="bold">Opciones disponibles en el menú del asistente de instalación de redBorder</emphasis></para>
+				<itemizedlist mark="bullet">
+					<listitem>
+						<para>Selección de opción por defecto: pulse <keycap>Enter</keycap>.</para>
+					</listitem>
+					<listitem>
+						<para>Otras opciones: introduzca la letra o comando que corresponda.</para>
+					</listitem>
+					<listitem>
+						<para>Salir: cuando quiera salir de una pantalla para regresar al menú inicial seleccione la opción <literal>quit</literal>, introduciendo la letra <keycap>q</keycap>.</para>
+					</listitem>
+					<listitem>
+						<para>Aplicar cambios: para guardar las modificaciones realizadas y aplicar los cambios, seleccione la opción <literal>apply</literal> introduciendo la letra <keycap>a</keycap>.</para>
+					</listitem>
+				</itemizedlist>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img004.png"/>
+					</imageobject>
+					<caption>
+						<para>Opciones disponibles en el menú del asistente de instalación de redBorder</para>
+					</caption>
+				</mediaobject>
+				<warning>
+					<title>Advertencia</title>
+					<para><literal>Need to "apply" to activate changes</literal></para>
+					<para>Si visualiza este mensaje deberá seleccionar la opción <keycap>a</keycap>. En caso contrario, el sistema no guardará ni aplicará las modificaciones realizadas.</para>
+				</warning>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img005.png"/>
+					</imageobject>
+					<caption>
+						<para>Aplicar cambios para guardar las modificaciones</para>
+					</caption>
+				</mediaobject>
+			</section>
+		</section>
+
+	</section>
+
+</chapter>

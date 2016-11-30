@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+    <section>
+        <title>Bienvenidos a redBorder</title>
+        <para>Muchas gracias por descargar o adquirir la versión 3 de redBorder.</para>
+        <para>Este manual va dirigido a aquellos usuarios que disponen de la versión <emphasis role="bold">Enterprise.</emphasis></para>
+    </section>

@@ -9,12 +9,11 @@
 <book>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Preface.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter1.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter2.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter3.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Introduccion_a_redBorder_IPS.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Instalacion_y_registro_de_los_sensores_IPS_IDS.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter4.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter5.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter6.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Configuracion_de_los_sensores_IPS_IDS.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter7.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter8.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter9.xml"/>

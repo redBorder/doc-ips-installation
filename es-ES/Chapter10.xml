@@ -92,7 +92,7 @@
 					</mediaobject>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Tipo de gŕafica:</emphasis> muestra los diferentes tipos de gráfica entre los que podemos elegir para mostrar los datos. Los tipos de gráficas disponibles varían según el tipo de vista seleccionada. Estos son los siguientes:</para>
+					<para><emphasis role="bold">Tipo de gráfica:</emphasis> muestra los diferentes tipos de gráfica entre los que podemos elegir para mostrar los datos. Los tipos de gráficas disponibles varían según el tipo de vista seleccionada. Estos son los siguientes:</para>
 					<para>-Streams</para>
 					<para>-Area</para>
 					<para>-Line</para>

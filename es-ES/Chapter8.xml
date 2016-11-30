@@ -387,6 +387,19 @@
 			<para>Este proceso puede durar varios minutos, dependiendo del número de reglas a aplicar. Todo el proceso se realizará con un trabajo 
 			en segundo plano que podremos consultar en <literal>Tools->Worker &amp; Job Queue.</literal></para>
 			<para>Una vez haya terminado el proceso de asignación, dicho sensor contará con la política aplicada.</para>
+
+			<warning>
+				<title>Aplicación de configuración a grupos deshabilitados</title>
+
+				<para>Si el proceso de aplicación de configuración falla, se mostrará un error en la columna <literal>Options</literal> de la tabla <literal>Stored Jobs</literal>. Tras revisar la información del proceso en cuestión, es posible que exista un mensaje del siguiente tipo:</para>
+
+				<para><literal>ERROR: the group id 0 doesn't exist or has no CPUs assigned</literal></para>
+
+				<para>Esto significa que se ha intentado aplicar la configuración a un grupo de segmentos deshabilitado, es decir, un grupo que no cuenta con ninguna CPU o ningún segmento de red asignado.</para>
+
+				<para>En este caso, es necesario comprobar la configuración del grupo de segmentos del sensor redBorder IPS. Ante cualquier duda relacionada, por favor, <emphasis role="bold">consulte la sección “Groups” del capítulo “Configuración de los sensores IPS/IDS”</emphasis>.</para>
+			</warning>
+
 			<section>
 				<title>Acciones disponibles para la gestión de las políticas</title>
 				<para>El icono "Editar" que acompaña a cada política encontramos un menú con las siguientes opciones:</para>
