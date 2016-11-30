@@ -397,7 +397,7 @@
 
 				<para>Esto significa que se ha intentado aplicar la configuración a un grupo de segmentos deshabilitado, es decir, un grupo que no cuenta con ninguna CPU o ningún segmento de red asignado.</para>
 
-				<para>En este caso, es necesario comprobar la configuración del grupo de segmentos del sensor redBorder IPS. Ante cualquier duda relacionado con esto, <emphasis role="bold">consulte la sección “Groups” del capítulo “Configuración de los sensores IPS/IDS”</emphasis>.</para>
+				<para>En este caso, es necesario comprobar la configuración del grupo de segmentos del sensor redBorder IPS. Ante cualquier duda relacionado con esto, <emphasis role="bold">consulte la sección “Groups” del capítulo “Configuración de los sensores IPS/IDS”</emphasis>.</para>
 			</warning>
 
 			<section>
